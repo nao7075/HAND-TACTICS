@@ -144,6 +144,7 @@ graph TD
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Home_Detailed.txt を参照。
   
 ![alt text](DCG_game_images/home.png)
+![alt text](DCG_game_images/move_home.png)
 
 #### **3.2.3. デッキ一覧・選択画面 (Scene: DeckList, DeckSelect)**
 
@@ -191,8 +192,43 @@ graph TD
   * **手札:** 画面下部中央。  
 * **演出:** ターン開始時、画面中央にカットインパネルが表示される。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Battle_Detailed.txt を参照。
+  
+* **UIのみ**
 
 ![alt text](DCG_game_images/Bttle.png)
+
+* **マリガン時**
+
+![alt text](DCG_game_images/Mulligan.png)
+
+* **自分ターン開始時**
+
+![alt text](DCG_game_images/your_turn.png)
+
+* **相手ターン開始時**
+
+![alt text](DCG_game_images/enemy_turn.png)
+
+* **じゃんけん時**
+
+![alt text](DCG_game_images/janken.png)
+
+* **ゲームプレイ時**
+
+![alt text](DCG_game_images/in_battle.png)
+
+* **ゲーム勝利時**
+
+![alt text](DCG_game_images/you_win.png)
+
+* **ゲーム敗北時**
+
+![alt text](DCG_game_images/you_lose.png)
+
+* **対戦相手が抜けた時**
+
+![alt text](DCG_game_images/left_enemy.png)
+
 
 ## **4. アセット・データリスト**
 
