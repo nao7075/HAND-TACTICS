@@ -1,0 +1,744 @@
+Prefab Name: Card
+========================================
+[GameObject] Card (Active: True, Tag: Card, Layer: UI)
+  - (Component) RectTransform
+  - (Component) CanvasRenderer
+  - (Component) Image
+    > m_Script: Image (MonoScript)
+    > m_RaycastTarget: True
+    > m_Maskable: True
+    > m_Sprite: Background (Sprite)
+    > m_Type: Sliced
+    > m_PreserveAspect: False
+    > m_FillCenter: True
+    > m_FillMethod: Radial 360
+    > m_FillAmount: 1
+    > m_FillClockwise: True
+    > m_FillOrigin: 0
+    > m_UseSpriteMesh: False
+    > m_PixelsPerUnitMultiplier: 1
+  - (Component) CardController
+    > m_Script: CardController (MonoScript)
+    > destroycards: False
+  - (Component) CardView
+    > m_Script: CardView (MonoScript)
+    > costText: CostText (TextMeshProUGUI)
+    > nameText: NameText (TextMeshProUGUI)
+    > powerText: PowerText  (TextMeshProUGUI)
+    > jankenText: jankenText (TextMeshProUGUI)
+    > iconImage: CardImage (Image)
+    > janiconImage: jankenImage (Image)
+    > costImage: CostImage (Image)
+    > canAttackPanel: CanUsePanel (GameObject)
+    > canUsePanel: CanUsePanel (GameObject)
+    > abilityText: AbilityText (TextMeshProUGUI)
+    > cardPanel1: CardPanel1 (GameObject)
+    > cardPanel2: CardPanel2 (GameObject)
+    > cardPanel3: CardPanel3 (GameObject)
+    > powerPanel: PowerPanel (GameObject)
+    > jankenPanel: jankenPanel (GameObject)
+    > countPanel: CountPanel (GameObject)
+    > countText: ContText (TextMeshProUGUI)
+    > DestoroyPanel: DestroyPanel (GameObject)
+  - (Component) CardMovement
+    > m_Script: CardMovement (MonoScript)
+    > canMove: False
+  - (Component) CanvasGroup
+  - (Component) BattleCardMovement
+    > m_Script: BattleCardMovement (MonoScript)
+  - (Component) AttackedCard
+    > m_Script: AttackedCard (MonoScript)
+  [GameObject] CanUsePanel (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: frame_silver (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] CardPanel1 (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: blank_red (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] CardPanel2 (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: blank_green (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] CardPanel3 (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: blank_blue (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] CardImageFrame (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: frame_board_silver (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] CardImage (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: card8 (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: True
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] CardFrame (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: frame_silver (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] NamePanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: ability_btn (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] NameText (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "チャーリー"
+        > m_isRightToLeft: False
+        > m_fontAsset: NotoSansJP-Medium SDF (TMP_FontAsset)
+        > m_sharedMaterial: NotoSansJP-Medium SDF Material (Material)
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_tintAllSprites: False
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 13
+        > m_fontSizeBase: 36
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: True
+        > m_fontSizeMin: 5
+        > m_fontSizeMax: 13
+        > m_fontStyle: -1
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+  [GameObject] CostPanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: frame_circle_silver (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] CostImage (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: equip_glow (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+    [GameObject] CostText (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "8"
+        > m_isRightToLeft: False
+        > m_fontAsset: mplus-1m-medium SDF (TMP_FontAsset)
+        > m_sharedMaterial: mplus-1m-medium SDF Material (Material)
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_tintAllSprites: False
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 30
+        > m_fontSizeBase: 30
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: -1
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+  [GameObject] CountPanel (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: Background (Sprite)
+      > m_Type: Sliced
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "×"
+        > m_isRightToLeft: False
+        > m_fontAsset: LiberationSans SDF (TMP_FontAsset)
+        > m_sharedMaterial: LiberationSans SDF Material (Material)
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_tintAllSprites: False
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 20
+        > m_fontSizeBase: 20
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Bold
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+    [GameObject] ContText (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "10"
+        > m_isRightToLeft: False
+        > m_fontAsset: LiberationSans SDF (TMP_FontAsset)
+        > m_sharedMaterial: LiberationSans SDF Material (Material)
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_tintAllSprites: False
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 30
+        > m_fontSizeBase: 30
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Normal
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+  [GameObject] AbilityPanel (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: Background (Sprite)
+      > m_Type: Sliced
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] AbilityText (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "ability"
+        > m_isRightToLeft: False
+        > m_fontAsset: LiberationSans SDF (TMP_FontAsset)
+        > m_sharedMaterial: LiberationSans SDF Material (Material)
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_tintAllSprites: False
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 15
+        > m_fontSizeBase: 15
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Normal
+        > m_HorizontalAlignment: Justified
+        > m_VerticalAlignment: Top
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+  [GameObject] PowerPanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: frame_circle_silver (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: equip_glow (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+    [GameObject] PowerText  (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "6"
+        > m_isRightToLeft: False
+        > m_fontAsset: mplus-1m-medium SDF (TMP_FontAsset)
+        > m_sharedMaterial: mplus-1m-medium SDF Material (Material)
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_tintAllSprites: False
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 30
+        > m_fontSizeBase: 30
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: -1
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+  [GameObject] jankenPanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: frame_circle_silver (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: True
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: equip_glow (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+    [GameObject] jankenImage (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: janken_gu (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: True
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+  [GameObject] jankenText (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) TextMeshProUGUI
+      > m_Script: TextMeshProUGUI (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_text: "4"
+      > m_isRightToLeft: False
+      > m_fontAsset: LiberationSans SDF (TMP_FontAsset)
+      > m_sharedMaterial: LiberationSans SDF Material (Material)
+      > m_enableVertexGradient: False
+      > m_colorMode: Four Corners Gradient
+      > m_tintAllSprites: False
+      > m_TextStyleHashCode: -1183493901
+      > m_overrideHtmlColors: False
+      > m_fontSize: 10
+      > m_fontSizeBase: 10
+      > m_fontWeight: Regular
+      > m_enableAutoSizing: False
+      > m_fontSizeMin: 18
+      > m_fontSizeMax: 72
+      > m_fontStyle: Normal
+      > m_HorizontalAlignment: Center
+      > m_VerticalAlignment: Middle
+      > m_textAlignment: Converted
+      > m_characterSpacing: 0
+      > m_wordSpacing: 0
+      > m_lineSpacing: 0
+      > m_lineSpacingMax: 0
+      > m_paragraphSpacing: 0
+      > m_charWidthMaxAdj: 0
+      > m_enableWordWrapping: True
+      > m_wordWrappingRatios: 0.4
+      > m_overflowMode: Overflow
+      > m_enableKerning: True
+      > m_enableExtraPadding: False
+      > checkPaddingRequired: False
+      > m_isRichText: True
+      > m_parseCtrlCharacters: True
+      > m_isOrthographic: True
+      > m_isCullingEnabled: False
+      > m_horizontalMapping: Character
+      > m_verticalMapping: Character
+      > m_uvLineOffset: 0
+      > m_geometrySortingOrder: Normal
+      > m_IsTextObjectScaleStatic: False
+      > m_VertexBufferAutoSizeReduction: False
+      > m_useMaxVisibleDescender: True
+      > m_pageToDisplay: 1
+      > m_isUsingLegacyAnimationComponent: False
+      > m_isVolumetricText: False
+      > m_hasFontAssetChanged: False
+  [GameObject] DestroyPanel (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: Background (Sprite)
+      > m_Type: Sliced
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: 24390951 (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1

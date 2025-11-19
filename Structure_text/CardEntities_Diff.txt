@@ -1,0 +1,601 @@
+All CardEntities Dump [Diff Only (Based on 'default')]
+========================================
+[Base Entity Found]: default (Path: Assets/Resources/CardEntityList/default.asset)
+----------------------------------------
+[Card] Card0
+  > cardID: 0
+  > name: "チャーリー"
+  > cost: 1
+  > power: 1
+  > janken: 1
+  > cardImage: card0 (Sprite)
+  > janicon: janken_gu (Sprite)
+
+[Card] Card1
+  > cardID: 1
+  > name: "エーテルキャット"
+  > cost: 1
+  > power: 1
+  > janken: 2
+  > cardImage: card1.1 (Sprite)
+  > janicon: janken_choki (Sprite)
+
+[Card] Card2
+  > cardID: 2
+  > name: "CC ミニスター"
+  > cost: 1
+  > power: 1
+  > janken: 3
+  > cardImage: card2 (Sprite)
+  > janicon: janken_pa (Sprite)
+
+[Card] Card3
+  > cardID: 3
+  > name: "ボルトン"
+  > cost: 1
+  > janken: 1
+  > cardImage: card3 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー"
+  > janwinspeed: True
+
+[Card] Card4
+  > cardID: 4
+  > name: "ナイトバーク"
+  > cost: 1
+  > janken: 2
+  > cardImage: card4 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー
+"
+  > janwinspeed: True
+
+[Card] Card5
+  > cardID: 5
+  > name: "CC シェルスター"
+  > cost: 1
+  > janken: 3
+  > cardImage: card5 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー"
+  > janwinspeed: True
+
+[Card] Card6
+  > cardID: 6
+  > name: "ポップボット"
+  > cost: 2
+  > power: 2
+  > janken: 1
+  > cardImage: card6 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "自分がグーならパワー+1"
+  > janhandpower: 1
+
+[Card] Card7
+  > cardID: 7
+  > name: "グリムファング"
+  > cost: 2
+  > power: 2
+  > janken: 2
+  > cardImage: card7 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "自分がチョキならパワー+1"
+  > janhandpower: 1
+
+[Card] Card8
+  > cardID: 8
+  > name: "CC オービット"
+  > cost: 2
+  > power: 2
+  > janken: 3
+  > cardImage: card8 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "自分がパーならパワー+1"
+  > janhandpower: 1
+
+[Card] Card9
+  > cardID: 9
+  > name: "エジソン"
+  > cost: 2
+  > power: 2
+  > janken: 1
+  > cardImage: card9 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "じゃんけん勝っていたら1ドロー"
+  > janwindraw: 1
+
+[Card] Card10
+  > cardID: 10
+  > name: "デスパウ "
+  > cost: 2
+  > power: 2
+  > janken: 2
+  > cardImage: card10 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "じゃんけん勝っていたら、スピードアタッカー"
+  > janwinspeed: True
+
+[Card] Card11
+  > cardID: 11
+  > name: "CC クエーサー"
+  > cost: 2
+  > power: 2
+  > janken: 3
+  > cardImage: card11 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "じゃんけん勝っていたら、パワー+2
+"
+  > janwinpower: 2
+
+[Card] Card12
+  > cardID: 12
+  > name: "フレキシ"
+  > cost: 3
+  > power: 2
+  > janken: 1
+  > cardImage: card12.1 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
+  > chgMyLeaderHpNum: 2
+  > janwinPHp: 2
+
+[Card] Card13
+  > cardID: 13
+  > name: "羊飼いの僧侶"
+  > cost: 3
+  > power: 2
+  > janken: 2
+  > cardImage: card13 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
+  > chgMyLeaderHpNum: 2
+  > janwinPHp: 2
+
+[Card] Card14
+  > cardID: 14
+  > name: "CC メカニック"
+  > cost: 3
+  > power: 2
+  > janken: 3
+  > cardImage: card14 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
+  > chgMyLeaderHpNum: 2
+  > janwinPHp: 2
+
+[Card] Card15
+  > cardID: 15
+  > name: "ダーヴィン"
+  > cost: 3
+  > power: 2
+  > janken: 1
+  > cardImage: card15 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "ManaPoint＋１
+"
+  > manaBoostNum: 1
+
+[Card] Card16
+  > cardID: 16
+  > name: "リトルデーモン"
+  > cost: 3
+  > power: 2
+  > janken: 2
+  > cardImage: card16 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "相手に3ダメージ
+"
+  > chgEnemyLeaderHpNum: -3
+
+[Card] Card17
+  > cardID: 17
+  > name: "CC トルーパー"
+  > cost: 3
+  > power: 2
+  > janken: 3
+  > cardImage: card17 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "出した手がパーなら１ドロー
+"
+  > janhanddraw: 1
+
+[Card] Card18
+  > cardID: 18
+  > name: "イグナイト"
+  > cost: 4
+  > power: 3
+  > janken: 1
+  > cardImage: card18 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "相手のパーを一体ランダムで破壊
+"
+  > destroyjan: 3
+
+[Card] Card19
+  > cardID: 19
+  > name: "レッドデーモン"
+  > cost: 4
+  > power: 3
+  > janken: 2
+  > cardImage: card19 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "相手のグーを一体破壊
+"
+  > destroyjan: 1
+
+[Card] Card20
+  > cardID: 20
+  > name: "CC フルクラム"
+  > cost: 4
+  > power: 3
+  > janken: 3
+  > cardImage: card20 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "相手のチョキを一体破壊
+"
+  > destroyjan: 2
+
+[Card] Card21
+  > cardID: 21
+  > name: "アンビュール"
+  > cost: 4
+  > power: 3
+  > janken: 1
+  > cardImage: card21 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "じゃんけん負けていれば、チョキを召喚
+"
+  > janlosesummonCardsList: [1]
+
+[Card] Card22
+  > cardID: 22
+  > name: "デュアルサモナー"
+  > cost: 4
+  > power: 3
+  > janken: 2
+  > cardImage: card22 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "じゃんけん負けていれば、パーを召喚
+"
+  > janlosesummonCardsList: [2]
+
+[Card] Card23
+  > cardID: 23
+  > name: "CC ブルースター"
+  > cost: 4
+  > power: 3
+  > janken: 3
+  > cardImage: card23 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "じゃんけん負けていれば、グーを召喚
+"
+  > janlosesummonCardsList: [0]
+
+[Card] Card24
+  > cardID: 24
+  > name: "アキレス"
+  > cost: 5
+  > power: 4
+  > janken: 1
+  > cardImage: card24 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "スピードアタッカー
+"
+  > isSpeedAttacker: True
+
+[Card] Card25
+  > cardID: 25
+  > name: "スノーフォックス"
+  > cost: 5
+  > power: 4
+  > janken: 2
+  > cardImage: card25.1 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "スピードアタッカー
+"
+  > isSpeedAttacker: True
+
+[Card] Card26
+  > cardID: 26
+  > name: "CC　ホーネット"
+  > cost: 5
+  > power: 4
+  > janken: 3
+  > cardImage: card26 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "スピードアタッカー"
+  > isSpeedAttacker: True
+
+[Card] Card27
+  > cardID: 27
+  > name: "グラハム"
+  > cost: 5
+  > power: 3
+  > janken: 1
+  > cardImage: card27 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "スピードチョキとスピードパーを手札に加える
+"
+  > addCardsList: [4, 5]
+
+[Card] Card28
+  > cardID: 28
+  > name: "フェンリル"
+  > cost: 5
+  > power: 3
+  > janken: 2
+  > cardImage: card28 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "スピードグーとスピードパーを手札に加える
+"
+  > addCardsList: [3, 5]
+
+[Card] Card29
+  > cardID: 29
+  > name: "CC ヴィンセンス"
+  > cost: 5
+  > power: 3
+  > janken: 3
+  > cardImage: card29 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "スピードチョキとスピードグーを手札に加える
+"
+  > addCardsList: [3, 4]
+
+[Card] Card30
+  > cardID: 30
+  > name: "ギアパンクファング"
+  > cost: 6
+  > power: 3
+  > janken: 1
+  > cardImage: card30 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "自分がグーならパワーを＋2、
+スピードアッタッカーを得る
+"
+  > janhandspeed: True
+  > janhandpower: 2
+
+[Card] Card31
+  > cardID: 31
+  > name: "グリフォン"
+  > cost: 6
+  > power: 3
+  > janken: 2
+  > cardImage: card31 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "自分がチョキならパワーを＋2、スピードアッタッカーを得る
+"
+  > janhandspeed: True
+  > janhandpower: 2
+
+[Card] Card32
+  > cardID: 32
+  > name: "CC ヤマト"
+  > cost: 6
+  > power: 3
+  > janken: 3
+  > cardImage: card32 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "自分がパーならパワーを＋2、スピードアッタッカーを得る
+"
+  > janhandspeed: True
+  > janhandpower: 2
+
+[Card] Card33
+  > cardID: 33
+  > name: "クシナガラ"
+  > cost: 6
+  > power: 5
+  > janken: 1
+  > cardImage: card33 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "ライフを4回復、自分がグーで勝利していれば、さらに２回復"
+  > chgMyLeaderHpNum: 4
+  > specificHand: True
+  > janwinPHp: 2
+
+[Card] Card34
+  > cardID: 34
+  > name: "マーメイド"
+  > cost: 6
+  > power: 5
+  > janken: 2
+  > cardImage: card34 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "ライフを4回復、自分がチョキで勝利していれば、さらに２回復
+"
+  > chgMyLeaderHpNum: 4
+  > specificHand: True
+  > janwinPHp: 2
+
+[Card] Card35
+  > cardID: 35
+  > name: "CC アストロフォートレス"
+  > cost: 6
+  > power: 5
+  > janken: 3
+  > cardImage: card35 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "ライフを4回復、自分がぱーで勝利していれば、さらに２回復
+"
+  > chgMyLeaderHpNum: 4
+  > specificHand: True
+  > janwinPHp: 2
+
+[Card] Card36
+  > cardID: 36
+  > name: "阿修羅"
+  > cost: 7
+  > power: 5
+  > janken: 1
+  > cardImage: card36.1 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "自分がグーで勝利していれば、
+チョキトークン、パートークンを召喚
+"
+  > specificHand: True
+  > janwinsummonCardsList: [49, 50]
+
+[Card] Card37
+  > cardID: 37
+  > name: "有翼のユニコーン"
+  > cost: 7
+  > power: 5
+  > janken: 2
+  > cardImage: card37.1 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "自分がチョキで勝利していれば、速攻。
+負けてればパワー＋２
+"
+  > specificHand: True
+  > janwinspeed: True
+  > janlosepower: 2
+
+[Card] Card38
+  > cardID: 38
+  > name: "CC アポカリプス"
+  > cost: 7
+  > power: 5
+  > janken: 3
+  > cardImage: card38.1 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "自分がパーなら、自分を４回復して２ドロー
+"
+  > janhanddraw: 2
+  > janhandPHp: 4
+
+[Card] Card39
+  > cardID: 39
+  > name: "ギアジャイアント"
+  > cost: 8
+  > power: 7
+  > janken: 1
+  > cardImage: card39 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "相手のグー、パーを全て破壊
+"
+  > destroyjan2: 1
+
+[Card] Card40
+  > cardID: 40
+  > name: "ニーズヘッグ"
+  > cost: 8
+  > power: 7
+  > janken: 2
+  > cardImage: card40 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "相手のグー、チョキを全て破壊
+"
+  > destroyjan2: 2
+
+[Card] Card41
+  > cardID: 41
+  > name: "CC アルカディア"
+  > cost: 8
+  > power: 7
+  > janken: 3
+  > cardImage: card41.1 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "相手のチョキ、パーを全て破壊
+"
+  > destroyjan2: 3
+
+[Card] Card42
+  > cardID: 42
+  > name: "じゃんけん"
+  > cost: 1
+  > janken: 3
+  > cardImage: card42 (Sprite)
+  > cardType: Spell
+  > abilityText: "じゃんけんする"
+  > jankenstart: True
+
+[Card] Card43
+  > cardID: 43
+  > name: "ラウンチロケット"
+  > cost: 2
+  > janken: 3
+  > cardImage: card43 (Sprite)
+  > cardType: Spell
+  > abilityText: "1ドロー"
+  > drawCardNum: 1
+
+[Card] Card44
+  > cardID: 44
+  > name: "神の恵み"
+  > cost: 3
+  > janken: 2
+  > cardImage: card44 (Sprite)
+  > cardType: Spell
+  > abilityText: "マナポイント+1"
+  > manaBoostNum: 1
+
+[Card] Card45
+  > cardID: 45
+  > name: "二本の薬品"
+  > cost: 4
+  > janken: 2
+  > cardImage: card45 (Sprite)
+  > cardType: Spell
+  > abilityText: "自分を２回復、相手に２ダメージ
+"
+  > chgMyLeaderHpNum: 2
+  > chgEnemyLeaderHpNum: -2
+
+[Card] Card46
+  > cardID: 46
+  > name: "トランスミューテション"
+  > cost: 5
+  > janken: 1
+  > cardImage: card46 (Sprite)
+  > cardType: Spell
+  > abilityText: "グーチョキパーを召喚.
+
+"
+  > summonCardsList: [48, 49, 50]
+
+[Card] Card47
+  > cardID: 47
+  > name: "神罰"
+  > cost: 6
+  > janken: 2
+  > cardImage: card47 (Sprite)
+  > cardType: Spell
+  > abilityText: "全破壊
+"
+  > alldestroy: True
+
+[Card] Card48
+  > cardID: 48
+  > name: "グートークン"
+  > power: 1
+  > janken: 1
+  > cardImage: janken_gu (Sprite)
+  > janicon: janken_gu (Sprite)
+  > abilityText: "スピードアタッカー"
+  > isSpeedAttacker: True
+
+[Card] Card49
+  > cardID: 49
+  > name: "チョキトークン"
+  > power: 1
+  > janken: 2
+  > cardImage: janken_choki (Sprite)
+  > janicon: janken_choki (Sprite)
+  > abilityText: "スピードアタッカー"
+  > isSpeedAttacker: True
+
+[Card] Card50
+  > cardID: 50
+  > name: "パートークン"
+  > power: 1
+  > janken: 3
+  > cardImage: janken_pa (Sprite)
+  > janicon: janken_pa (Sprite)
+  > abilityText: "スピードアタッカー"
+  > isSpeedAttacker: True
+

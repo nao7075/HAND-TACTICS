@@ -1,0 +1,2334 @@
+All CardEntities Dump
+========================================
+[Asset] Card0 (Path: Assets/Resources/CardEntityList/Card0.asset)
+  > cardID: 0
+  > name: "チャーリー"
+  > cost: 1
+  > power: 1
+  > janken: 1
+  > cardImage: card0 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: ""
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card1 (Path: Assets/Resources/CardEntityList/Card1.asset)
+  > cardID: 1
+  > name: "エーテルキャット"
+  > cost: 1
+  > power: 1
+  > janken: 2
+  > cardImage: card1.1 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: ""
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card2 (Path: Assets/Resources/CardEntityList/Card2.asset)
+  > cardID: 2
+  > name: "CC ミニスター"
+  > cost: 1
+  > power: 1
+  > janken: 3
+  > cardImage: card2 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: ""
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card3 (Path: Assets/Resources/CardEntityList/Card3.asset)
+  > cardID: 3
+  > name: "ボルトン"
+  > cost: 1
+  > power: 0
+  > janken: 1
+  > cardImage: card3 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: True
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card4 (Path: Assets/Resources/CardEntityList/Card4.asset)
+  > cardID: 4
+  > name: "ナイトバーク"
+  > cost: 1
+  > power: 0
+  > janken: 2
+  > cardImage: card4 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: True
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card5 (Path: Assets/Resources/CardEntityList/Card5.asset)
+  > cardID: 5
+  > name: "CC シェルスター"
+  > cost: 1
+  > power: 0
+  > janken: 3
+  > cardImage: card5 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: True
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card6 (Path: Assets/Resources/CardEntityList/Card6.asset)
+  > cardID: 6
+  > name: "ポップボット"
+  > cost: 2
+  > power: 2
+  > janken: 1
+  > cardImage: card6 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がグーならパワー+1"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 1
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card7 (Path: Assets/Resources/CardEntityList/Card7.asset)
+  > cardID: 7
+  > name: "グリムファング"
+  > cost: 2
+  > power: 2
+  > janken: 2
+  > cardImage: card7 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がチョキならパワー+1"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 1
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card8 (Path: Assets/Resources/CardEntityList/Card8.asset)
+  > cardID: 8
+  > name: "CC オービット"
+  > cost: 2
+  > power: 2
+  > janken: 3
+  > cardImage: card8 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がパーならパワー+1"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 1
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card9 (Path: Assets/Resources/CardEntityList/Card9.asset)
+  > cardID: 9
+  > name: "エジソン"
+  > cost: 2
+  > power: 2
+  > janken: 1
+  > cardImage: card9 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけん勝っていたら1ドロー"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 1
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card10 (Path: Assets/Resources/CardEntityList/Card10.asset)
+  > cardID: 10
+  > name: "デスパウ "
+  > cost: 2
+  > power: 2
+  > janken: 2
+  > cardImage: card10 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけん勝っていたら、スピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: True
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card11 (Path: Assets/Resources/CardEntityList/Card11.asset)
+  > cardID: 11
+  > name: "CC クエーサー"
+  > cost: 2
+  > power: 2
+  > janken: 3
+  > cardImage: card11 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけん勝っていたら、パワー+2
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 2
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card12 (Path: Assets/Resources/CardEntityList/Card12.asset)
+  > cardID: 12
+  > name: "フレキシ"
+  > cost: 3
+  > power: 2
+  > janken: 1
+  > cardImage: card12.1 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 2
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 2
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card13 (Path: Assets/Resources/CardEntityList/Card13.asset)
+  > cardID: 13
+  > name: "羊飼いの僧侶"
+  > cost: 3
+  > power: 2
+  > janken: 2
+  > cardImage: card13 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 2
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 2
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card14 (Path: Assets/Resources/CardEntityList/Card14.asset)
+  > cardID: 14
+  > name: "CC メカニック"
+  > cost: 3
+  > power: 2
+  > janken: 3
+  > cardImage: card14 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 2
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 2
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card15 (Path: Assets/Resources/CardEntityList/Card15.asset)
+  > cardID: 15
+  > name: "ダーヴィン"
+  > cost: 3
+  > power: 2
+  > janken: 1
+  > cardImage: card15 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "ManaPoint＋１
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 1
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card16 (Path: Assets/Resources/CardEntityList/Card16.asset)
+  > cardID: 16
+  > name: "リトルデーモン"
+  > cost: 3
+  > power: 2
+  > janken: 2
+  > cardImage: card16 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "相手に3ダメージ
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: -3
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card17 (Path: Assets/Resources/CardEntityList/Card17.asset)
+  > cardID: 17
+  > name: "CC トルーパー"
+  > cost: 3
+  > power: 2
+  > janken: 3
+  > cardImage: card17 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "出した手がパーなら１ドロー
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 1
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card18 (Path: Assets/Resources/CardEntityList/Card18.asset)
+  > cardID: 18
+  > name: "イグナイト"
+  > cost: 4
+  > power: 3
+  > janken: 1
+  > cardImage: card18 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "相手のパーを一体ランダムで破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 3
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card19 (Path: Assets/Resources/CardEntityList/Card19.asset)
+  > cardID: 19
+  > name: "レッドデーモン"
+  > cost: 4
+  > power: 3
+  > janken: 2
+  > cardImage: card19 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "相手のグーを一体破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 1
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card20 (Path: Assets/Resources/CardEntityList/Card20.asset)
+  > cardID: 20
+  > name: "CC フルクラム"
+  > cost: 4
+  > power: 3
+  > janken: 3
+  > cardImage: card20 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "相手のチョキを一体破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 2
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card21 (Path: Assets/Resources/CardEntityList/Card21.asset)
+  > cardID: 21
+  > name: "アンビュール"
+  > cost: 4
+  > power: 3
+  > janken: 1
+  > cardImage: card21 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけん負けていれば、チョキを召喚
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 1)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card22 (Path: Assets/Resources/CardEntityList/Card22.asset)
+  > cardID: 22
+  > name: "デュアルサモナー"
+  > cost: 4
+  > power: 3
+  > janken: 2
+  > cardImage: card22 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけん負けていれば、パーを召喚
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 1)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card23 (Path: Assets/Resources/CardEntityList/Card23.asset)
+  > cardID: 23
+  > name: "CC ブルースター"
+  > cost: 4
+  > power: 3
+  > janken: 3
+  > cardImage: card23 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "じゃんけん負けていれば、グーを召喚
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 1)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card24 (Path: Assets/Resources/CardEntityList/Card24.asset)
+  > cardID: 24
+  > name: "アキレス"
+  > cost: 5
+  > power: 4
+  > janken: 1
+  > cardImage: card24 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードアタッカー
+"
+  > isCostDown: False
+  > isSpeedAttacker: True
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card25 (Path: Assets/Resources/CardEntityList/Card25.asset)
+  > cardID: 25
+  > name: "スノーフォックス"
+  > cost: 5
+  > power: 4
+  > janken: 2
+  > cardImage: card25.1 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードアタッカー
+"
+  > isCostDown: False
+  > isSpeedAttacker: True
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card26 (Path: Assets/Resources/CardEntityList/Card26.asset)
+  > cardID: 26
+  > name: "CC　ホーネット"
+  > cost: 5
+  > power: 4
+  > janken: 3
+  > cardImage: card26 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: True
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card27 (Path: Assets/Resources/CardEntityList/Card27.asset)
+  > cardID: 27
+  > name: "グラハム"
+  > cost: 5
+  > power: 3
+  > janken: 1
+  > cardImage: card27 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードチョキとスピードパーを手札に加える
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 2)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card28 (Path: Assets/Resources/CardEntityList/Card28.asset)
+  > cardID: 28
+  > name: "フェンリル"
+  > cost: 5
+  > power: 3
+  > janken: 2
+  > cardImage: card28 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードグーとスピードパーを手札に加える
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 2)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card29 (Path: Assets/Resources/CardEntityList/Card29.asset)
+  > cardID: 29
+  > name: "CC ヴィンセンス"
+  > cost: 5
+  > power: 3
+  > janken: 3
+  > cardImage: card29 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードチョキとスピードグーを手札に加える
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 2)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card30 (Path: Assets/Resources/CardEntityList/Card30.asset)
+  > cardID: 30
+  > name: "ギアパンクファング"
+  > cost: 6
+  > power: 3
+  > janken: 1
+  > cardImage: card30 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がグーならパワーを＋2、
+スピードアッタッカーを得る
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: True
+  > janhandpower: 2
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card31 (Path: Assets/Resources/CardEntityList/Card31.asset)
+  > cardID: 31
+  > name: "グリフォン"
+  > cost: 6
+  > power: 3
+  > janken: 2
+  > cardImage: card31 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がチョキならパワーを＋2、スピードアッタッカーを得る
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: True
+  > janhandpower: 2
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card32 (Path: Assets/Resources/CardEntityList/Card32.asset)
+  > cardID: 32
+  > name: "CC ヤマト"
+  > cost: 6
+  > power: 3
+  > janken: 3
+  > cardImage: card32 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がパーならパワーを＋2、スピードアッタッカーを得る
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: True
+  > janhandpower: 2
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card33 (Path: Assets/Resources/CardEntityList/Card33.asset)
+  > cardID: 33
+  > name: "クシナガラ"
+  > cost: 6
+  > power: 5
+  > janken: 1
+  > cardImage: card33 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "ライフを4回復、自分がグーで勝利していれば、さらに２回復"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 4
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: True
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 2
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card34 (Path: Assets/Resources/CardEntityList/Card34.asset)
+  > cardID: 34
+  > name: "マーメイド"
+  > cost: 6
+  > power: 5
+  > janken: 2
+  > cardImage: card34 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "ライフを4回復、自分がチョキで勝利していれば、さらに２回復
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 4
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: True
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 2
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card35 (Path: Assets/Resources/CardEntityList/Card35.asset)
+  > cardID: 35
+  > name: "CC アストロフォートレス"
+  > cost: 6
+  > power: 5
+  > janken: 3
+  > cardImage: card35 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "ライフを4回復、自分がぱーで勝利していれば、さらに２回復
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 4
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: True
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 2
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card36 (Path: Assets/Resources/CardEntityList/Card36.asset)
+  > cardID: 36
+  > name: "阿修羅"
+  > cost: 7
+  > power: 5
+  > janken: 1
+  > cardImage: card36.1 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がグーで勝利していれば、
+チョキトークン、パートークンを召喚
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: True
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 2)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card37 (Path: Assets/Resources/CardEntityList/Card37.asset)
+  > cardID: 37
+  > name: "有翼のユニコーン"
+  > cost: 7
+  > power: 5
+  > janken: 2
+  > cardImage: card37.1 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がチョキで勝利していれば、速攻。
+負けてればパワー＋２
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: True
+  > janwinspeed: True
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 2
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card38 (Path: Assets/Resources/CardEntityList/Card38.asset)
+  > cardID: 38
+  > name: "CC アポカリプス"
+  > cost: 7
+  > power: 5
+  > janken: 3
+  > cardImage: card38.1 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "自分がパーなら、自分を４回復して２ドロー
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 2
+  > janhandPHp: 4
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card39 (Path: Assets/Resources/CardEntityList/Card39.asset)
+  > cardID: 39
+  > name: "ギアジャイアント"
+  > cost: 8
+  > power: 7
+  > janken: 1
+  > cardImage: card39 (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "相手のグー、パーを全て破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 1
+  > alldestroy: False
+
+[Asset] Card40 (Path: Assets/Resources/CardEntityList/Card40.asset)
+  > cardID: 40
+  > name: "ニーズヘッグ"
+  > cost: 8
+  > power: 7
+  > janken: 2
+  > cardImage: card40 (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "相手のグー、チョキを全て破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 2
+  > alldestroy: False
+
+[Asset] Card41 (Path: Assets/Resources/CardEntityList/Card41.asset)
+  > cardID: 41
+  > name: "CC アルカディア"
+  > cost: 8
+  > power: 7
+  > janken: 3
+  > cardImage: card41.1 (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "相手のチョキ、パーを全て破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 3
+  > alldestroy: False
+
+[Asset] Card42 (Path: Assets/Resources/CardEntityList/Card42.asset)
+  > cardID: 42
+  > name: "じゃんけん"
+  > cost: 1
+  > power: 0
+  > janken: 3
+  > cardImage: card42 (Sprite)
+  > janicon: null
+  > cardType: Spell
+  > abilityText: "じゃんけんする"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: True
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card43 (Path: Assets/Resources/CardEntityList/Card43.asset)
+  > cardID: 43
+  > name: "ラウンチロケット"
+  > cost: 2
+  > power: 0
+  > janken: 3
+  > cardImage: card43 (Sprite)
+  > janicon: null
+  > cardType: Spell
+  > abilityText: "1ドロー"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 1
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card44 (Path: Assets/Resources/CardEntityList/Card44.asset)
+  > cardID: 44
+  > name: "神の恵み"
+  > cost: 3
+  > power: 0
+  > janken: 2
+  > cardImage: card44 (Sprite)
+  > janicon: null
+  > cardType: Spell
+  > abilityText: "マナポイント+1"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 1
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card45 (Path: Assets/Resources/CardEntityList/Card45.asset)
+  > cardID: 45
+  > name: "二本の薬品"
+  > cost: 4
+  > power: 0
+  > janken: 2
+  > cardImage: card45 (Sprite)
+  > janicon: null
+  > cardType: Spell
+  > abilityText: "自分を２回復、相手に２ダメージ
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 2
+  > chgEnemyLeaderHpNum: -2
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card46 (Path: Assets/Resources/CardEntityList/Card46.asset)
+  > cardID: 46
+  > name: "トランスミューテション"
+  > cost: 5
+  > power: 0
+  > janken: 1
+  > cardImage: card46 (Sprite)
+  > janicon: null
+  > cardType: Spell
+  > abilityText: "グーチョキパーを召喚.
+
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 3)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card47 (Path: Assets/Resources/CardEntityList/Card47.asset)
+  > cardID: 47
+  > name: "神罰"
+  > cost: 6
+  > power: 0
+  > janken: 2
+  > cardImage: card47 (Sprite)
+  > janicon: null
+  > cardType: Spell
+  > abilityText: "全破壊
+"
+  > isCostDown: False
+  > isSpeedAttacker: False
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: True
+
+[Asset] Card48 (Path: Assets/Resources/CardEntityList/Card48.asset)
+  > cardID: 48
+  > name: "グートークン"
+  > cost: 0
+  > power: 1
+  > janken: 1
+  > cardImage: janken_gu (Sprite)
+  > janicon: janken_gu (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: True
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card49 (Path: Assets/Resources/CardEntityList/Card49.asset)
+  > cardID: 49
+  > name: "チョキトークン"
+  > cost: 0
+  > power: 1
+  > janken: 2
+  > cardImage: janken_choki (Sprite)
+  > janicon: janken_choki (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: True
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+
+[Asset] Card50 (Path: Assets/Resources/CardEntityList/Card50.asset)
+  > cardID: 50
+  > name: "パートークン"
+  > cost: 0
+  > power: 1
+  > janken: 3
+  > cardImage: janken_pa (Sprite)
+  > janicon: janken_pa (Sprite)
+  > cardType: Monster
+  > abilityText: "スピードアタッカー"
+  > isCostDown: False
+  > isSpeedAttacker: True
+  > drawCardNum: 0
+  > addCardsList: Array (size: 0)
+  > summonCardsList: Array (size: 0)
+  > chgMyLeaderHpNum: 0
+  > chgEnemyLeaderHpNum: 0
+  > manaBoostNum: 0
+  > jankenstart: False
+  > specificHand: False
+  > janwinspeed: False
+  > janwinpower: 0
+  > janwindraw: 0
+  > janwinPHp: 0
+  > janwinEHp: 0
+  > janwinaddCardsList: Array (size: 0)
+  > janwinsummonCardsList: Array (size: 0)
+  > janlosespeed: False
+  > janlosepower: 0
+  > janlosedraw: 0
+  > janlosePHp: 0
+  > janloseEHp: 0
+  > janloseaddCardsList: Array (size: 0)
+  > janlosesummonCardsList: Array (size: 0)
+  > janhandspeed: False
+  > janhandpower: 0
+  > janhanddraw: 0
+  > janhandPHp: 0
+  > janhandEHp: 0
+  > janhandaddCardsList: Array (size: 0)
+  > janhandsummonCardsList: Array (size: 0)
+  > destroyjan: 0
+  > destroyjan2: 0
+  > alldestroy: False
+

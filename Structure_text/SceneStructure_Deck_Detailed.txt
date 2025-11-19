@@ -1,0 +1,1652 @@
+Scene Name: Deck (Detailed Mode)
+========================================
+[GameObject] Main Camera (Active: True, Tag: MainCamera, Layer: Default)
+  - (Component) Transform
+  - (Component) Camera
+  - (Component) AudioListener
+[GameObject] Canvas (Active: True, Tag: Untagged, Layer: UI)
+  - (Component) RectTransform
+  - (Component) Canvas
+  - (Component) CanvasScaler
+    > m_Script: CanvasScaler (MonoScript)
+    > m_UiScaleMode: Scale With Screen Size
+    > m_ReferencePixelsPerUnit: 100
+    > m_ScaleFactor: 1
+    > m_ScreenMatchMode: Match Width Or Height
+    > m_MatchWidthOrHeight: 0
+    > m_PhysicalUnit: Points
+    > m_FallbackScreenDPI: 96
+    > m_DefaultSpriteDPI: 96
+    > m_DynamicPixelsPerUnit: 1
+    > m_PresetInfoIsWorld: False
+  - (Component) GraphicRaycaster
+    > m_Script: GraphicRaycaster (MonoScript)
+    > m_IgnoreReversedGraphics: True
+    > m_BlockingObjects: None
+  [GameObject] Panel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: box3 (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+  [GameObject] DeckPanel1 (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: bg_menu (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] DeckCardsTrans (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: bg_menu (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) GridLayoutGroup
+        > m_Script: GridLayoutGroup (MonoScript)
+        > m_ChildAlignment: Upper Left
+        > m_StartCorner: Upper Left
+        > m_StartAxis: Horizontal
+        > m_Constraint: Flexible
+        > m_ConstraintCount: 2
+      [GameObject] Panel1 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel2 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel3 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel4 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel5 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel6 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel7 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel8 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel9 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel10 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel11 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel12 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel13 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel14 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel15 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel16 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+  [GameObject] DeckPanel 2 (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: null
+      > m_Type: Sliced
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] DeckCardsTrans2 (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: bg_menu (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) GridLayoutGroup
+        > m_Script: GridLayoutGroup (MonoScript)
+        > m_ChildAlignment: Upper Left
+        > m_StartCorner: Upper Left
+        > m_StartAxis: Horizontal
+        > m_Constraint: Flexible
+        > m_ConstraintCount: 2
+      [GameObject] Panel17 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel18 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel19 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel20 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel21 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel22 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel23 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel24 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel25 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel26 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel27 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel28 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel29 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel30 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel31 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel32 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+  [GameObject] StockPanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: collection_section (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] StockCardsTrans (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: bg_menu (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) GridLayoutGroup
+        > m_Script: GridLayoutGroup (MonoScript)
+        > m_ChildAlignment: Upper Left
+        > m_StartCorner: Upper Left
+        > m_StartAxis: Horizontal
+        > m_Constraint: Flexible
+        > m_ConstraintCount: 2
+      [GameObject] Panel1 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel2 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel3 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel4 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel5 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] Panel6 (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame1 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+    [GameObject] NextButton (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: button_square (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) Button
+        > m_Script: Button (MonoScript)
+        > m_Transition: Color Tint
+        > m_Interactable: True
+        > m_TargetGraphic: NextButton (Image)
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) TextMeshProUGUI
+          > m_Script: TextMeshProUGUI (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_text: "Next"
+          > m_isRightToLeft: False
+          > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+          > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+          > m_fontSharedMaterials: []
+          > m_fontMaterial: null
+          > m_fontMaterials: []
+          > m_enableVertexGradient: False
+          > m_colorMode: Four Corners Gradient
+          > m_fontColorGradientPreset: null
+          > m_spriteAsset: null
+          > m_tintAllSprites: False
+          > m_StyleSheet: null
+          > m_TextStyleHashCode: -1183493901
+          > m_overrideHtmlColors: False
+          > m_fontSize: 40
+          > m_fontSizeBase: 40
+          > m_fontWeight: Regular
+          > m_enableAutoSizing: False
+          > m_fontSizeMin: 18
+          > m_fontSizeMax: 72
+          > m_fontStyle: -1
+          > m_HorizontalAlignment: Center
+          > m_VerticalAlignment: Middle
+          > m_textAlignment: Converted
+          > m_characterSpacing: 0
+          > m_wordSpacing: 0
+          > m_lineSpacing: 0
+          > m_lineSpacingMax: 0
+          > m_paragraphSpacing: 0
+          > m_charWidthMaxAdj: 0
+          > m_enableWordWrapping: True
+          > m_wordWrappingRatios: 0.4
+          > m_overflowMode: Overflow
+          > m_linkedTextComponent: null
+          > parentLinkedComponent: null
+          > m_enableKerning: True
+          > m_enableExtraPadding: False
+          > checkPaddingRequired: False
+          > m_isRichText: True
+          > m_parseCtrlCharacters: True
+          > m_isOrthographic: True
+          > m_isCullingEnabled: False
+          > m_horizontalMapping: Character
+          > m_verticalMapping: Character
+          > m_uvLineOffset: 0
+          > m_geometrySortingOrder: Normal
+          > m_IsTextObjectScaleStatic: False
+          > m_VertexBufferAutoSizeReduction: False
+          > m_useMaxVisibleDescender: True
+          > m_pageToDisplay: 1
+          > m_isUsingLegacyAnimationComponent: False
+          > m_isVolumetricText: False
+          > m_hasFontAssetChanged: False
+          > m_baseMaterial: null
+      [GameObject] frame (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame2 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] arrow (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: arrow (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+    [GameObject] PrevButton (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: button_square (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) Button
+        > m_Script: Button (MonoScript)
+        > m_Transition: Color Tint
+        > m_Interactable: True
+        > m_TargetGraphic: PrevButton (Image)
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) TextMeshProUGUI
+          > m_Script: TextMeshProUGUI (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_text: "<"
+          > m_isRightToLeft: False
+          > m_fontAsset: mplus-1p-light SDF (TMP_FontAsset)
+          > m_sharedMaterial: mplus-1p-light SDF Material (Material)
+          > m_fontSharedMaterials: []
+          > m_fontMaterial: null
+          > m_fontMaterials: []
+          > m_enableVertexGradient: False
+          > m_colorMode: Four Corners Gradient
+          > m_fontColorGradientPreset: null
+          > m_spriteAsset: null
+          > m_tintAllSprites: False
+          > m_StyleSheet: null
+          > m_TextStyleHashCode: -1183493901
+          > m_overrideHtmlColors: False
+          > m_fontSize: 150
+          > m_fontSizeBase: 150
+          > m_fontWeight: Regular
+          > m_enableAutoSizing: False
+          > m_fontSizeMin: 18
+          > m_fontSizeMax: 72
+          > m_fontStyle: Bold
+          > m_HorizontalAlignment: Center
+          > m_VerticalAlignment: Middle
+          > m_textAlignment: Converted
+          > m_characterSpacing: 0
+          > m_wordSpacing: 0
+          > m_lineSpacing: 0
+          > m_lineSpacingMax: 0
+          > m_paragraphSpacing: 0
+          > m_charWidthMaxAdj: 0
+          > m_enableWordWrapping: True
+          > m_wordWrappingRatios: 0.4
+          > m_overflowMode: Overflow
+          > m_linkedTextComponent: null
+          > parentLinkedComponent: null
+          > m_enableKerning: True
+          > m_enableExtraPadding: False
+          > checkPaddingRequired: False
+          > m_isRichText: True
+          > m_parseCtrlCharacters: True
+          > m_isOrthographic: True
+          > m_isCullingEnabled: False
+          > m_horizontalMapping: Character
+          > m_verticalMapping: Character
+          > m_uvLineOffset: 0
+          > m_geometrySortingOrder: Normal
+          > m_IsTextObjectScaleStatic: False
+          > m_VertexBufferAutoSizeReduction: False
+          > m_useMaxVisibleDescender: True
+          > m_pageToDisplay: 1
+          > m_isUsingLegacyAnimationComponent: False
+          > m_isVolumetricText: False
+          > m_hasFontAssetChanged: False
+          > m_baseMaterial: null
+      [GameObject] frame (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: avatar_frame2 (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+      [GameObject] arrow (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) Image
+          > m_Script: Image (MonoScript)
+          > m_Material: null
+          > m_RaycastTarget: True
+          > m_Maskable: True
+          > m_Sprite: arrow (Sprite)
+          > m_Type: Simple
+          > m_PreserveAspect: False
+          > m_FillCenter: True
+          > m_FillMethod: Radial 360
+          > m_FillAmount: 1
+          > m_FillClockwise: True
+          > m_FillOrigin: 0
+          > m_UseSpriteMesh: False
+          > m_PixelsPerUnitMultiplier: 1
+  [GameObject] DropPanel (Active: False, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: Background (Sprite)
+      > m_Type: Sliced
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    [GameObject] DeckDropPanel (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: Background (Sprite)
+        > m_Type: Sliced
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) DropDeckCardPlace
+        > m_Script: DropDeckCardPlace (MonoScript)
+    [GameObject] StockDropPanel (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: Background (Sprite)
+        > m_Type: Sliced
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+      - (Component) DropStockCardPlace
+        > m_Script: DropStockCardPlace (MonoScript)
+  [GameObject] ResetButton (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: button_thin (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    - (Component) Button
+      > m_Script: Button (MonoScript)
+      > m_Transition: Color Tint
+      > m_Interactable: True
+      > m_TargetGraphic: ResetButton (Image)
+    [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "Reset"
+        > m_isRightToLeft: False
+        > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+        > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+        > m_fontSharedMaterials: []
+        > m_fontMaterial: null
+        > m_fontMaterials: []
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_fontColorGradientPreset: null
+        > m_spriteAsset: null
+        > m_tintAllSprites: False
+        > m_StyleSheet: null
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 50
+        > m_fontSizeBase: 50
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Bold
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_linkedTextComponent: null
+        > parentLinkedComponent: null
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+        > m_baseMaterial: null
+    [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: avatar_frame2 (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+  [GameObject] SaveButton (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: button_thin (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    - (Component) Button
+      > m_Script: Button (MonoScript)
+      > m_Transition: Color Tint
+      > m_Interactable: True
+      > m_TargetGraphic: SaveButton (Image)
+    [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "Save/Back"
+        > m_isRightToLeft: False
+        > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+        > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+        > m_fontSharedMaterials: []
+        > m_fontMaterial: null
+        > m_fontMaterials: []
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_fontColorGradientPreset: null
+        > m_spriteAsset: null
+        > m_tintAllSprites: False
+        > m_StyleSheet: null
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 45
+        > m_fontSizeBase: 45
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Bold
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_linkedTextComponent: null
+        > parentLinkedComponent: null
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+        > m_baseMaterial: null
+    [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_Sprite: avatar_frame2 (Sprite)
+        > m_Type: Simple
+        > m_PreserveAspect: False
+        > m_FillCenter: True
+        > m_FillMethod: Radial 360
+        > m_FillAmount: 1
+        > m_FillClockwise: True
+        > m_FillOrigin: 0
+        > m_UseSpriteMesh: False
+        > m_PixelsPerUnitMultiplier: 1
+  [GameObject] page1Button (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: arrow (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    - (Component) Button
+      > m_Script: Button (MonoScript)
+      > m_Transition: Color Tint
+      > m_Interactable: True
+      > m_TargetGraphic: page1Button (Image)
+    [GameObject] Text (TMP) (Active: False, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "Button"
+        > m_isRightToLeft: False
+        > m_fontAsset: LiberationSans SDF (TMP_FontAsset)
+        > m_sharedMaterial: LiberationSans SDF Material (Material)
+        > m_fontSharedMaterials: []
+        > m_fontMaterial: null
+        > m_fontMaterials: []
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_fontColorGradientPreset: null
+        > m_spriteAsset: null
+        > m_tintAllSprites: False
+        > m_StyleSheet: null
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 24
+        > m_fontSizeBase: 24
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Normal
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_linkedTextComponent: null
+        > parentLinkedComponent: null
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+        > m_baseMaterial: null
+  [GameObject] page2Button (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Sprite: arrow (Sprite)
+      > m_Type: Simple
+      > m_PreserveAspect: False
+      > m_FillCenter: True
+      > m_FillMethod: Radial 360
+      > m_FillAmount: 1
+      > m_FillClockwise: True
+      > m_FillOrigin: 0
+      > m_UseSpriteMesh: False
+      > m_PixelsPerUnitMultiplier: 1
+    - (Component) Button
+      > m_Script: Button (MonoScript)
+      > m_Transition: Color Tint
+      > m_Interactable: True
+      > m_TargetGraphic: page2Button (Image)
+    [GameObject] Text (TMP) (Active: False, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_Material: null
+        > m_RaycastTarget: True
+        > m_Maskable: True
+        > m_text: "Button"
+        > m_isRightToLeft: False
+        > m_fontAsset: LiberationSans SDF (TMP_FontAsset)
+        > m_sharedMaterial: LiberationSans SDF Material (Material)
+        > m_fontSharedMaterials: []
+        > m_fontMaterial: null
+        > m_fontMaterials: []
+        > m_enableVertexGradient: False
+        > m_colorMode: Four Corners Gradient
+        > m_fontColorGradientPreset: null
+        > m_spriteAsset: null
+        > m_tintAllSprites: False
+        > m_StyleSheet: null
+        > m_TextStyleHashCode: -1183493901
+        > m_overrideHtmlColors: False
+        > m_fontSize: 24
+        > m_fontSizeBase: 24
+        > m_fontWeight: Regular
+        > m_enableAutoSizing: False
+        > m_fontSizeMin: 18
+        > m_fontSizeMax: 72
+        > m_fontStyle: Normal
+        > m_HorizontalAlignment: Center
+        > m_VerticalAlignment: Middle
+        > m_textAlignment: Converted
+        > m_characterSpacing: 0
+        > m_wordSpacing: 0
+        > m_lineSpacing: 0
+        > m_lineSpacingMax: 0
+        > m_paragraphSpacing: 0
+        > m_charWidthMaxAdj: 0
+        > m_enableWordWrapping: True
+        > m_wordWrappingRatios: 0.4
+        > m_overflowMode: Overflow
+        > m_linkedTextComponent: null
+        > parentLinkedComponent: null
+        > m_enableKerning: True
+        > m_enableExtraPadding: False
+        > checkPaddingRequired: False
+        > m_isRichText: True
+        > m_parseCtrlCharacters: True
+        > m_isOrthographic: True
+        > m_isCullingEnabled: False
+        > m_horizontalMapping: Character
+        > m_verticalMapping: Character
+        > m_uvLineOffset: 0
+        > m_geometrySortingOrder: Normal
+        > m_IsTextObjectScaleStatic: False
+        > m_VertexBufferAutoSizeReduction: False
+        > m_useMaxVisibleDescender: True
+        > m_pageToDisplay: 1
+        > m_isUsingLegacyAnimationComponent: False
+        > m_isVolumetricText: False
+        > m_hasFontAssetChanged: False
+        > m_baseMaterial: null
+[GameObject] EventSystem (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) EventSystem
+    > m_Script: EventSystem (MonoScript)
+    > m_FirstSelected: null
+    > m_sendNavigationEvents: True
+    > m_DragThreshold: 10
+  - (Component) StandaloneInputModule
+    > m_Script: StandaloneInputModule (MonoScript)
+    > m_SendPointerHoverToParent: True
+    > m_HorizontalAxis: "Horizontal"
+    > m_VerticalAxis: "Vertical"
+    > m_SubmitButton: "Submit"
+    > m_CancelButton: "Cancel"
+    > m_InputActionsPerSecond: 10
+    > m_RepeatDelay: 0.5
+[GameObject] DeckEditManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) DeckEditManager
+    > m_Script: DeckEditManager (MonoScript)
+    > cardPrefab: Card (CardController)
+    > deckCardTrans1page: DeckCardsTrans (RectTransform)
+    > deckCardTrans2page: DeckCardsTrans2 (RectTransform)
+    > DeckPanel1: DeckPanel1 (GameObject)
+    > DeckPanel2: DeckPanel 2 (GameObject)
+    > page1Button: page1Button (GameObject)
+    > page2Button: page2Button (GameObject)
+    > deckCardTrans1: Panel1 (RectTransform)
+    > deckCardTrans2: Panel2 (RectTransform)
+    > deckCardTrans3: Panel3 (RectTransform)
+    > deckCardTrans4: Panel4 (RectTransform)
+    > deckCardTrans5: Panel5 (RectTransform)
+    > deckCardTrans6: Panel6 (RectTransform)
+    > deckCardTrans7: Panel7 (RectTransform)
+    > deckCardTrans8: Panel8 (RectTransform)
+    > deckCardTrans9: Panel9 (RectTransform)
+    > deckCardTrans10: Panel10 (RectTransform)
+    > deckCardTrans11: Panel11 (RectTransform)
+    > deckCardTrans12: Panel12 (RectTransform)
+    > deckCardTrans13: Panel13 (RectTransform)
+    > deckCardTrans14: Panel14 (RectTransform)
+    > deckCardTrans15: Panel15 (RectTransform)
+    > deckCardTrans16: Panel16 (RectTransform)
+    > deckCardTrans17: Panel17 (RectTransform)
+    > deckCardTrans18: Panel18 (RectTransform)
+    > deckCardTrans19: Panel19 (RectTransform)
+    > deckCardTrans20: Panel20 (RectTransform)
+    > deckCardTrans21: Panel21 (RectTransform)
+    > deckCardTrans22: Panel22 (RectTransform)
+    > deckCardTrans23: Panel23 (RectTransform)
+    > deckCardTrans24: Panel24 (RectTransform)
+    > deckCardTrans25: Panel25 (RectTransform)
+    > deckCardTrans26: Panel26 (RectTransform)
+    > deckCardTrans27: Panel27 (RectTransform)
+    > deckCardTrans28: Panel28 (RectTransform)
+    > deckCardTrans29: Panel29 (RectTransform)
+    > deckCardTrans30: Panel30 (RectTransform)
+    > deckCardTrans31: Panel31 (RectTransform)
+    > deckCardTrans32: Panel32 (RectTransform)
+    > stockCardTrans: StockCardsTrans (RectTransform)
+    > stockCardTrans1: Panel1 (RectTransform)
+    > stockCardTrans2: Panel2 (RectTransform)
+    > stockCardTrans3: Panel3 (RectTransform)
+    > stockCardTrans4: Panel4 (RectTransform)
+    > stockCardTrans5: Panel5 (RectTransform)
+    > stockCardTrans6: Panel6 (RectTransform)
+    > DropPanels: DropPanel (GameObject)
+    > deckCardsList: []
+    > stockCardsList: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    > page: 0
+    > deckpage: 0
+[GameObject] GameManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) GameManager
+    > m_Script: GameManager (MonoScript)
+    > cardPrefab: Card (CardController)
+    > cardDetailsPanelPrefab: CardDetailPanel (CardDetailPanel)
+  - (Component) AspectRatioEnforcer
+    > m_Script: AspectRatioEnforcer (MonoScript)
+    > targetAspect: 1.777778
+[GameObject] SceneTransitionManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) SceneTransitionManager
+    > m_Script: SceneTransitionManager (MonoScript)
+[GameObject] SoundManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) AudioSource
+    > [Sound Info]
+      Clip: None
+      Volume: 0.179
+      Loop: False
+      Mute: False
+      PlayOnAwake: True
+      Pitch: 1
+  - (Component) SoundManager
+    > m_Script: SoundManager (MonoScript)
+    > seAudioSource: null
+    > audioSourceSE: SoundManager (AudioSource)
+    > audioClipsSE: [UIボタン (AudioClip), 編集ボタン (AudioClip), リセット (AudioClip), カードを置く (AudioClip)]
+[GameObject] BgmMnager (Active: False, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) AudioSource
+    > [Sound Info]
+      Clip: menuBGM
+      Volume: 1
+      Loop: True
+      Mute: False
+      PlayOnAwake: True
+      Pitch: 1
+  - (Component) BGMManager
+    > m_Script: BGMManager (MonoScript)
+    > BGMAudioSource: null
+    > audioSourceSE: BgmMnager (AudioSource)
+    > audioClipsSE: [null]
