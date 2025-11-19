@@ -133,7 +133,7 @@ graph TD
 * **UI:** 画面下部に点滅する「TAP SCREEN」の文字。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Start_Detailed.txt [text](SceneStructure_Start_Detailed.txt)を参照。
   
-![alt text](start.png)
+![alt text](DCG_game_images/start.png)
 
 #### **3.2.2. ホーム画面 (Scene: Home)**
 
@@ -143,7 +143,7 @@ graph TD
   * [デッキ編集] (Deck)  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Home_Detailed.txt を参照。
   
-![alt text](home.png)
+![alt text](DCG_game_images/home.png)
 
 #### **3.2.3. デッキ一覧・選択画面 (Scene: DeckList, DeckSelect)**
 
@@ -155,7 +155,7 @@ graph TD
 * **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_DeckList_Detailed.txt, SceneStructure_DeckSelect_Detailed.txt を参照。
   
-![alt text](DeckSelect.png)
+![alt text](DCG_game_images/DeckSelect.png)
 
 #### **3.2.4. デッキ構築画面 (Scene: Deck)**
 
@@ -166,14 +166,14 @@ graph TD
 * **操作:** 下段から上段へ（またはその逆へ）カードをドラッグ＆ドロップして入れ替え。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Deck_Detailed.txt を参照。
 
-![alt text](DeckList.png)
+![alt text](DCG_game_images/DeckList.png)
 
 #### **3.2.5. マッチング待機画面 (Scene: Matching)**
 
 * **レイアウト:** 中央に「マッチングする（またはマッチング中）」のウィンドウ表示。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Matching_Detailed.txt を参照。
 
-![alt text](Matching.png)
+![alt text](DCG_game_images/Matching.png)
 
 #### **3.2.6. ゲームメイン画面 (Scene: Battle)**
 
@@ -192,7 +192,7 @@ graph TD
 * **演出:** ターン開始時、画面中央にカットインパネルが表示される。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Battle_Detailed.txt を参照。
 
-![alt text](Bttle.png)
+![alt text](DCG_game_images/Bttle.png)
 
 ## **4. アセット・データリスト**
 
@@ -209,7 +209,7 @@ graph TD
 * **枠色:** 属性に応じて赤・緑・青に変化 (CardPanel1/2/3)。  
 * **詳細なオブジェクト構造・パラメータ:** PrefabStructure_Card.txt を参照。
 
-![alt text](cardprefab.png)
+![alt text](DCG_game_images/cardprefab.png)
 
 ### **4.2. カードリスト**
 
