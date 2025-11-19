@@ -131,7 +131,7 @@ graph TD
 * **背景:** 赤・緑・青の3色パネルを背景に、中央に「HAND TACTICS」のロゴ。  
 * **演出:** ✊✌️✋の手のイラストがロゴと共に回転。  
 * **UI:** 画面下部に点滅する「TAP SCREEN」の文字。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Start_Detailed.txt [text](SceneStructure_Start_Detailed.txt)を参照。
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Start_Detailed.txt [text](Structure_text/SceneStructure_Start_Detailed.txt)を参照。
   
 ![alt text](DCG_game_images/start.png)
 
@@ -141,7 +141,7 @@ graph TD
 * **UI構成:** 画面下部に大きなボタンを配置。  
   * [バトル] (Battle)  
   * [デッキ編集] (Deck)  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Home_Detailed.txt を参照。
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Home_Detailed.txt [text](Structure_text/SceneStructure_Home_Detailed.txt) を参照。
   
 ![alt text](DCG_game_images/home.png)
 ![alt text](DCG_game_images/move_home.png)
@@ -154,7 +154,7 @@ graph TD
   * [Deck2を編集/でバトル]  
 * **ヘッダー:** 左上に「Back」ボタン。  
 * **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_DeckList_Detailed.txt, SceneStructure_DeckSelect_Detailed.txt を参照。
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_DeckList_Detailed.txt [text](Structure_text/SceneStructure_DeckList_Detailed.txt), SceneStructure_DeckSelect_Detailed.txt [text](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
   
 ![alt text](DCG_game_images/DeckSelect.png)
 
@@ -165,14 +165,14 @@ graph TD
   * **下段 (Stock):** 所持カード一覧。1列×6枚が表示される（左右矢印でスクロール）。  
   * **ヘッダー:** 「Reset」「Save/Back」ボタン。  
 * **操作:** 下段から上段へ（またはその逆へ）カードをドラッグ＆ドロップして入れ替え。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Deck_Detailed.txt を参照。
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Deck_Detailed.txt [text](Structure_text/SceneStructure_Deck_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/DeckList.png)
 
 #### **3.2.5. マッチング待機画面 (Scene: Matching)**
 
 * **レイアウト:** 中央に「マッチングする（またはマッチング中）」のウィンドウ表示。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Matching_Detailed.txt を参照。
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Matching_Detailed.txt  [text](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/Matching.png)
 
@@ -191,7 +191,7 @@ graph TD
     * 設定（歯車）、サウンド（スピーカー）アイコン。  
   * **手札:** 画面下部中央。  
 * **演出:** ターン開始時、画面中央にカットインパネルが表示される。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Battle_Detailed.txt を参照。
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Battle_Detailed.txt [text](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
   
 * **UIのみ**
 
@@ -243,7 +243,7 @@ graph TD
 * **属性:** 右下（✊✌️✋のアイコン）。  
 * **テキスト:** 下部（効果説明文）。  
 * **枠色:** 属性に応じて赤・緑・青に変化 (CardPanel1/2/3)。  
-* **詳細なオブジェクト構造・パラメータ:** PrefabStructure_Card.txt を参照。
+* **詳細なオブジェクト構造・パラメータ:** PrefabStructure_Card.txt [text](Structure_text/PrefabStructure_Card.txt)を参照。
 
 ![alt text](DCG_game_images/cardprefab.png)
 
@@ -252,7 +252,7 @@ graph TD
 全51種類のカードデータ（ID: 0〜50）。
 
 * **属性 (Attr):** ✊=グー, ✌️=チョキ, ✋=パー  
-* **詳細パラメータ（効果値など）:** AllCardEntities.txt または CardEntities_Diff.txt を参照。
+* **詳細パラメータ（効果値など）:** AllCardEntities.txt  [text](Structure_text/AllCardEntities.txt)または CardEntities_Diff.txt [text](Structure_text/CardEntities_Diff.txt)を参照。
 
 | ID | Name | Attr | Type | Stat | Image File | Ability (効果概要) |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -331,4 +331,4 @@ graph TD
   * mix_2m57s...: バトル画面  
 * **SE:**  
   * ターンエンドボタン2, Attack2..., 召喚3, 魔法, 決定ボタンを押す50 など全18種。  
-  * **詳細データ参照:** SceneStructure_Battle_Detailed.txt (SoundManagerの項目)
+  * **詳細データ参照:** SceneStructure_Battle_Detailed.txt (SoundManagerの項目) [text](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
