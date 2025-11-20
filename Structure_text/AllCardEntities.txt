@@ -1517,7 +1517,8 @@ All CardEntities Dump
   > cardImage: card33 (Sprite)
   > janicon: janken_gu (Sprite)
   > cardType: Monster
-  > abilityText: "ライフを4回復、自分がグーで勝利していれば、さらに２回復"
+  > abilityText: "ライフを4回復、自分がグーで勝利していれば、さらに２回復
+"
   > isCostDown: False
   > isSpeedAttacker: False
   > drawCardNum: 0
