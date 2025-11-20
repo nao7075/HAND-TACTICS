@@ -280,9 +280,9 @@ graph TD
 
 ### **4.1. カード構造 (Prefab: Card)**
 
-カードUIは以下のレイアウトで構成される。
+**カードUIは以下のレイアウトで構成される。**
 
-* **コスト:** 左上（茶色の丸枠）。  
+* **コスト:** 左上（白の丸枠）。  
 * **カード名:** 上部帯（白背景）。  
 * **イラスト:** 中央（大きく配置）。  
 * **パワー:** 左下（拳アイコンのような丸枠）。  
@@ -292,6 +292,10 @@ graph TD
 * **詳細なオブジェクト構造・パラメータ:** PrefabStructure_Card.txt [text](Structure_text/PrefabStructure_Card.txt)を参照。
 
 ![alt text](DCG_game_images/cardprefab.png)
+
+**どのシーンでもカードをクリックするとCardDetailPanelが開かれる、もう一度画面をクリックすると閉じる。**
+
+![alt text](DCG_game_images/card_detail.png)
 
 ### **4.2. カードリスト**
 
