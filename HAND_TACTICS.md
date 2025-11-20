@@ -282,11 +282,11 @@ graph TD
 
 **カードUIは以下のレイアウトで構成される。**
 
-* **コスト:** 左上（白の丸枠）。  
+* **コスト:** 左上（白の丸枠に属性に応じた色に白文字）。  
 * **カード名:** 上部帯（白背景）。  
 * **イラスト:** 中央（大きく配置）。  
-* **パワー:** 左下（拳アイコンのような丸枠）。  
-* **属性:** 右下（✊✌️✋のアイコン）。  
+* **パワー:** 右下（白の丸枠に黒字）。  
+* **属性:** 左下（✊✌️✋のアイコン）。  
 * **テキスト:** 下部（効果説明文）。  
 * **枠色:** 属性に応じて赤・緑・青に変化 (CardPanel1/2/3)。  
 * **詳細なオブジェクト構造・パラメータ:** PrefabStructure_Card.txt [text](Structure_text/PrefabStructure_Card.txt)を参照。
@@ -295,6 +295,7 @@ graph TD
 
 **どのシーンでもカードをクリックするとCardDetailPanelが開かれる、もう一度画面をクリックすると閉じる。**
 
+* **詳細なオブジェクト構造・パラメータ:** PrefabStructure_CardDtailPanel.txt [text](Structure_text/PrefabStructure_CardDetailPanel.txt)を参照。
 ![alt text](DCG_game_images/card_detail.png)
 
 ### **4.2. カードリスト**
