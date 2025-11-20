@@ -212,6 +212,7 @@ graph TD
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Matching_Detailed.txt  [text](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/Matching.png)
+![alt text](DCG_game_images/in_matching.png)
 
 #### **3.2.7. バトル (Scene: Battle)**
 
