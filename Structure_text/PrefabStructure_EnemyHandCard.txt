@@ -1,0 +1,29 @@
+Prefab Name: EnemyHandCard
+========================================
+[GameObject] EnemyHandCard (Active: True, Tag: Untagged, Layer: UI)
+  - (Component) RectTransform
+  - (Component) CanvasRenderer
+  - (Component) Image
+    > m_Script: Image (MonoScript)
+    > m_Material: null
+    > m_RaycastTarget: True
+    > m_Maskable: True
+    > m_Sprite: Background (Sprite)
+    > m_Type: Sliced
+    > m_PreserveAspect: False
+    > m_FillCenter: True
+    > m_FillMethod: Radial 360
+    > m_FillAmount: 1
+    > m_FillClockwise: True
+    > m_FillOrigin: 0
+    > m_UseSpriteMesh: False
+    > m_PixelsPerUnitMultiplier: 1
+  [GameObject] RawImage (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) RawImage
+      > m_Script: RawImage (MonoScript)
+      > m_Material: null
+      > m_RaycastTarget: True
+      > m_Maskable: True
+      > m_Texture: cardback_gold (Texture2D)
