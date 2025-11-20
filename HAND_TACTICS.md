@@ -3,23 +3,32 @@
 ## **目次**
 
 *   
-  1\. 概要  
+  **1\.概要**
   * 1.1. ゲームのコンセプト  
   * 1.2. ターゲット層  
   * 1.3. プレイ想定（プラットフォーム）
 *   
-  2\. ゲームシステム  
+  **2\. ゲームシステム**  
   * 2.1. 勝利条件・基本ルール  
   * 2.2. ゲームフロー  
-  * 2.3. コアメカニクス（じゃんけんバトル）  
+  * 2.3. コアメカニクス（じゃんけんバトル） 
+    * 2.3.1 ターン開始時の「手」の選択
+    * 2.3.2 バトル時の属性相性
   * 2.4. デッキ構築  
   * 2.5. オンライン機能  
 *   
-  3\. 画面仕様詳細・オブジェクト構造  
+  **3\. 画面仕様詳細・オブジェクト構造**  
   * 3.1. 画面遷移図  
   * 3.2. 各画面の詳細レイアウト  
+    * 3.2.1 タイトル (Scene: Start)
+    * 3.2.2 ホーム (Scene: Home)
+    * 3.2.3 デッキ一覧(Scene: DeckList)
+    * 3.2.4 デッキ構築 (Scene: Deck)
+    * 3.2.5 対戦デッキ選択 (Scene: DeckSelect)
+    * 3.2.6 マッチング待機 (Scene: Matching)
+    * 3.2.7 バトル (Scene: Battle)
 *   
-  4\. アセット・データリスト  
+  **4\. アセット・データリスト**  
   * 4.1. カード構造 (Prefab)  
   * 4.2. カードリスト  
   * 4.3. グラフィック・UI素材  
@@ -29,13 +38,13 @@
 
 ### **1.1. ゲームのコンセプト**
 
-「運」と「戦略」が融合した、じゃんけんカードバトル  
+「運」と「読み合い」が融合した、じゃんけんカードバトル  
 デジタルカードゲームの戦略性に、誰もが知る「じゃんけん」の要素をミックス。  
 単なる属性相性だけでなく、「毎ターンのじゃんけん勝負」の結果がカードの強さを変化させる独自のシステムにより、高度な読み合いと劇的な逆転要素を提供する。
 
 ### **1.2. ターゲット層**
 
-* ムシキングや恐竜キングをプレイしていた世代（20代〜30代）。  
+* ムシキングや恐竜キングをプレイしていた世代（20代）。  
 * 「読み合い」と「運要素」の揺らぎを求めているプレイヤー。
 
 ### **1.3. プラットフォーム**
@@ -54,8 +63,8 @@
 
 ### **2.2. ゲームフロー**
 
-1. **タイトル画面**  
-2. **ホーム画面**  
+1. **タイトル**  
+2. **ホーム**  
 3. **準備フェイズ**  
    * デッキ構築（所持カードから32枚を選択）  
    * マッチング（オンラインで対戦相手を検索）  
@@ -69,7 +78,7 @@
 
 このゲーム最大の特徴である「じゃんけんシステム」は、以下の2層構造で成り立っている。
 
-#### **A. ターン開始時の「手」の選択**
+#### **2.3.1. ターン開始時の「手」の選択**
 
 毎ターン開始時、プレイヤーは グー チョキ パー のいずれかを選択する。この結果は、そのターン中の全てのカード効果に影響を与える。
 
@@ -77,7 +86,7 @@
 * **Lose Bonus (敗北時):** 負けている時のみ発動する強力なカウンター効果（スピードアタッカー化、トークン召喚など）。  
 * **Hand Sync (属性一致):** 自分が選んだ「手」と同じ属性のカードはボーナスを得る(基本はコストマイナス１)。
 
-#### **B. バトル時の属性相性**
+#### **2.3.2. バトル時の属性相性**
 
 ユニット同士の戦闘でもじゃんけん属性（✊✌️✋）が勝敗を分ける。
 
@@ -106,19 +115,28 @@
 
 ## **3. 画面仕様詳細・オブジェクト構造**
 
+### **3.1. シーン一覧**
+  * タイトル **(Start)**
+  * ホーム **(Home)**
+  * デッキ一覧 **(DeckList)**
+  * デッキ構築 **(Deck)**
+  * 対戦デッキ選択 **(DeckSelect)**
+  * マッチング待機 **(Matching)**
+  * バトル **(Battle)**
+
 ### **3.1. 画面遷移図**
 ```mermaid
 graph TD  
-    Start[タイトル画面] --> Home[ホーム画面];  
+    Start[タイトル] --> Home[ホーム];  
       
     Home -->|DeckButton| DeckList[デッキ一覧];  
-    DeckList -->|DeckListButton| Deck[デッキ構築画面];  
+    DeckList -->|DeckListButton| Deck[デッキ構築];  
     Deck -->|Save  Back| DeckList;  
     DeckList -->|Back| Home;  
       
-    Home -->|BattleButton| DeckSelect[対戦デッキ選択];  
+    Home -->|BattleButton| DeckSelect[対戦対戦デッキ選択];  
     DeckSelect -->|Start| Matching[マッチング待機];  
-    Matching -->|Matched| Battle[バトル画面];  
+    Matching -->|Matched| Battle[バトル];  
       
     Battle --> GameEnd[リザルト];  
     GameEnd -->|Retry| Battle;  
@@ -126,57 +144,76 @@ graph TD
 ```
 ### **3.2. 各画面の詳細レイアウト**
 
-#### **3.2.1. タイトル画面 (Scene: Start)**
+#### **3.2.1. タイトル (Scene: Start)**
 
 * **背景:** 赤・緑・青の3色パネルを背景に、中央に「HAND TACTICS」のロゴ。  
 * **演出:** ✊✌️✋の手のイラストがロゴと共に回転。  
-* **UI:** 画面下部に点滅する「TAP SCREEN」の文字。  
+* **UI** 
+  * 画面下部に大小する「TAP SCREEN」の文字(パルスアニメーション)。
+  * 画面をクリックするとホーム(Home)へシーン遷移、画面全体をボタンにする。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Start_Detailed.txt [text](Structure_text/SceneStructure_Start_Detailed.txt)を参照。
   
 ![alt text](DCG_game_images/start.png)
 
-#### **3.2.2. ホーム画面 (Scene: Home)**
+#### **3.2.2. ホーム (Scene: Home)**
 
 * **背景:** ダークブルーの背景 (bg_menu) に、カードが上から降り注ぐ演出 (MenuCardSpawner)。  
 * **UI構成:** 画面下部に大きなボタンを配置。  
-  * [バトル] (Battle)  
-  * [デッキ編集] (Deck)  
+  * [バトル] ボタン : クリックでDeckSelectへシーン遷移。
+  * [デッキ編集] ボタン : クリックでDeckListへシーン遷移。
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Home_Detailed.txt [text](Structure_text/SceneStructure_Home_Detailed.txt) を参照。
   
 ![alt text](DCG_game_images/home.png)
 ![alt text](DCG_game_images/move_home.png)
 
-#### **3.2.3. デッキ一覧・選択画面 (Scene: DeckList, DeckSelect)**
+#### **3.2.3. デッキ一覧(Scene: DeckList)**
 
 * **レイアウト:** 中央に縦並びのボタンリスト。  
-  * [Defaultを編集/でバトル]  
-  * [Deck1を編集/でバトル]  
-  * [Deck2を編集/でバトル]  
-* **ヘッダー:** 左上に「Back」ボタン。  
-* **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_DeckList_Detailed.txt [text](Structure_text/SceneStructure_DeckList_Detailed.txt), SceneStructure_DeckSelect_Detailed.txt [text](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
+  * [Defaultを編集]  ボタン : Defaultの情報をもってDeckへシーン遷移。
+  * [Deck1を編集]  ボタン : Deck1の情報をもってDeckへシーン遷移。
+  * [Deck2を編集]  ボタン : Deck2の情報をもってDeckへシーン遷移。
+* **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移    
+* **詳細なオブジェクト構造・パラメータ:** SceneStructure_DeckList_Detailed.txt [text](Structure_text/SceneStructure_DeckList_Detailed.txt), 
   
-![alt text](DCG_game_images/DeckSelect.png)
+![alt text](DCG_game_images/DeckList.png)
 
-#### **3.2.4. デッキ構築画面 (Scene: Deck)**
+#### **3.2.4. デッキ構築 (Scene: Deck)**
 
 * **レイアウト:**  
   * **上段 (Deck):** 編集中のデッキ内容。2列×8枚＝16枚が表示される（左右の矢印でページ切り替え）。  
   * **下段 (Stock):** 所持カード一覧。1列×6枚が表示される（左右矢印でスクロール）。  
-  * **ヘッダー:** 「Reset」「Save/Back」ボタン。  
+  * **ヘッダー:** 
+    * 「Reset」ボタン : デッキをクリア。
+    * 「Save/Back」ボタン :　保存してDeckListにシーン遷移。  
 * **操作:** 下段から上段へ（またはその逆へ）カードをドラッグ＆ドロップして入れ替え。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Deck_Detailed.txt [text](Structure_text/SceneStructure_Deck_Detailed.txt) を参照。
 
-![alt text](DCG_game_images/DeckList.png)
+![alt text](DCG_game_images/Deck.png)
+![alt text](DCG_game_images/Deck2.png)
 
-#### **3.2.5. マッチング待機画面 (Scene: Matching)**
+#### **3.2.5. 対戦デッキ選択 (Scene: DeckSelect)**
+
+* **レイアウト:** 中央に縦並びのボタンリスト。  
+  * [Defaultでバトル]  ボタン : Defaultの情報をもってBattleへシーン遷移。
+  * [Deck1でバトル]  ボタン : Deck1の情報をもってBattleへシーン遷移。
+  * [Deck2でバトル]  ボタン : Deck2の情報をもってBattleへシーン遷移。
+* **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移。  
+* **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
+* **詳細なオブジェクト構造・パラメータ:**SceneStructure_DeckSelect_Detailed.txt [text](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
+
+![alt text](DCG_game_images/DeckSelect.png)
+![alt text](DCG_game_images/DeckSelect2.png)
+
+#### **3.2.6. マッチング待機 (Scene: Matching)**
 
 * **レイアウト:** 中央に「マッチングする（またはマッチング中）」のウィンドウ表示。  
+  * [マッチングする] ボタン : サーバーに接続し、マッチング開始。
+* **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移。
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Matching_Detailed.txt  [text](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/Matching.png)
 
-#### **3.2.6. ゲームメイン画面 (Scene: Battle)**
+#### **3.2.7. バトル (Scene: Battle)**
 
 * **全体レイアウト:**  
   * **フィールド:** 画面中央。カードを配置するプレイエリア。  
@@ -188,12 +225,13 @@ graph TD
     * **マナ表示:** 中部。赤（敵）と青（自分）のダイヤ型アイコンで数値 (10/10など) を表示。  
     * **TurnEndボタン:** 下部。青い円形ボタン。  
   * **サイドバー (左側):**  
-    * 設定（歯車）、サウンド（スピーカー）アイコン。  
+    * 設定（歯車）ボタン : Home遷移ボタンのUIが出る。
+    * サウンド（スピーカー）ボタン : 音量調節のUIが出る。 
   * **手札:** 画面下部中央。  
 * **演出:** ターン開始時、画面中央にカットインパネルが表示される。  
 * **詳細なオブジェクト構造・パラメータ:** SceneStructure_Battle_Detailed.txt [text](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
   
-* **UIのみ**
+* **背景UIのみ**
 
 ![alt text](DCG_game_images/Bttle.png)
 
@@ -229,6 +267,13 @@ graph TD
 
 ![alt text](DCG_game_images/left_enemy.png)
 
+* **歯車ボタンを押したとき**
+
+![alt text](DCG_game_images/settei.png)
+
+* **スピーカーボタンを押したとき**
+  
+![alt text](DCG_game_images/speaker.png)
 
 ## **4. アセット・データリスト**
 
@@ -251,7 +296,8 @@ graph TD
 
 全51種類のカードデータ（ID: 0〜50）。
 
-* **属性 (Attr):** ✊=グー, ✌️=チョキ, ✋=パー  
+* **属性 (Attr):** ✊=グー(1), ✌️=チョキ(2), ✋=パー(3)
+* **Stat:**  Cost / Power  
 * **詳細パラメータ（効果値など）:** AllCardEntities.txt  [text](Structure_text/AllCardEntities.txt)または CardEntities_Diff.txt [text](Structure_text/CardEntities_Diff.txt)を参照。
 
 | ID | Name | Attr | Type | Stat | Image File | Ability (効果概要) |
@@ -322,13 +368,13 @@ graph TD
 | **button_endturn** | ターン終了ボタン |
 | **arrow** | ページ送り矢印 |
 | **equip_glow** | ステータス発光エフェクト |
-| **collection_section** | デッキ構築画面のストック枠 |
+| **collection_section** | デッキ構築のストック枠 |
 
 ### **4.4. サウンド**
 
 * **BGM:**  
-  * menuBGM: タイトル〜デッキ選択  
-  * mix_2m57s...: バトル画面  
+  * menuBGM: タイトル〜対戦デッキ選択  
+  * mix_2m57s...: バトル  
 * **SE:**  
   * ターンエンドボタン2, Attack2..., 召喚3, 魔法, 決定ボタンを押す50 など全18種。  
   * **詳細データ参照:** SceneStructure_Battle_Detailed.txt (SoundManagerの項目) [text](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
