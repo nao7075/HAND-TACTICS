@@ -26,4 +26,4 @@ Prefab Name: EnemyHandCard
       > m_Material: null
       > m_RaycastTarget: True
       > m_Maskable: True
-      > m_Texture: cardback_gold (Texture2D)
+      > m_Texture: cardback_gold2 (Texture2D)
