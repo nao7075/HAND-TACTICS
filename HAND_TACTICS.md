@@ -362,20 +362,18 @@ graph TD
 | **50** | パートークン | ✋ | Monster | 0/1 | janken_pa.png | 速攻 (トークン) |
 
 ### **4.3. グラフィック・UI素材**
+* **[CollectedImages_Scene_Start](CollectedImages_Scene_Start)** Startシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_Home](CollectedImages_Scene_Home)** Homeシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_DeckList](CollectedImages_Scene_DeckList)** DeckListシーンの画像素材フォルダ。
+* **[CollectedImages_Deck](CollectedImages_Deck)** Deckシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_DeckSelect](CollectedImages_Scene_DeckSelect)** DeckSelectシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_Matching](CollectedImages_Scene_Matching)** Matchingシーンの画像素材フォルダ。
+* **[CollectedImages_Battle](CollectedImages_Battle)** Battleシーンの画像素材フォルダ。
+* **[CollectedImages_Card](CollectedImages_Card)** CardPrefabの画像素材フォルダ。
+* **[CollectedImages_CardDetailPanel](CollectedImages_CardDetailPanel)** CardDetailPanelPrefabの画像素材フォルダ。
+* **[CollectedImages_EnemyHandCard](CollectedImages_EnemyHandCard)** EnemyHandCardPrefabの画像素材フォルダ。
 
-| ファイル名 | 用途 |
-| :---- | :---- |
-| **janken_gu / choki / pa** | 属性アイコン、選択ボタン |
-| **heart** | リーダーHPアイコン |
-| **rarity_uncommon / mythic** | マナ表示用ジェム（青/赤） |
-| **secret_icon** | 相手の選択隠し（？） |
-| **box3 / bg_menu** | 共通背景 |
-| **Frame_mid / _2** | 各種ウィンドウ枠 |
-| **blue_box / red_box** | リーダー枠（青/赤） |
-| **button_endturn** | ターン終了ボタン |
-| **arrow** | ページ送り矢印 |
-| **equip_glow** | ステータス発光エフェクト |
-| **collection_section** | デッキ構築のストック枠 |
+
 
 ### **4.4. サウンド**
 
@@ -384,4 +382,8 @@ graph TD
   * mix_2m57s...: バトル  
 * **SE:**  
   * ターンエンドボタン2, Attack2..., 召喚3, 魔法, 決定ボタンを押す50 など全18種。  
-  * **詳細データ参照:**  [SceneStructure_Battle_Detailed.txt](Structure_text/SceneStructure_Battle_Detailed.txt) (SoundManagerの項目)を参照。
+  * **詳細なオブジェクト:**  [SceneStructure_Battle_Detailed.txt](Structure_text/SceneStructure_Battle_Detailed.txt) (SoundManagerの項目)を参照。
+  
+* **音声ファイル:**
+  * [Assets_Sounds](Assets_Sounds)を参照。
+
