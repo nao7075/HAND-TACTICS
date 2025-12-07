@@ -1,5 +1,5 @@
 ﻿# File: PhotonRigidbody2DView.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_Code_Views.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonRigidbody2DView.cs`
 

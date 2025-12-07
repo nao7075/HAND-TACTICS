@@ -1,5 +1,5 @@
 ﻿# File: FriendListCell.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_Demos_PunCockpit_Scripts_Lists.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/Demos/PunCockpit/Scripts/Lists/FriendListCell.cs`
 

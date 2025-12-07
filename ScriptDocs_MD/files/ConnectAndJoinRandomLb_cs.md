@@ -1,5 +1,5 @@
 ﻿# File: ConnectAndJoinRandomLb.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonRealtime_Demos_DemoLoadBalancing.md)
 
 > **Path:** `Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs`
 

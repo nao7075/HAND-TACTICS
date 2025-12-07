@@ -1,5 +1,5 @@
 ﻿# File: TMP_TextSelector_B.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_TextMesh_Pro_Examples_&_Extras_Scripts.md)
 
 > **Path:** `Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextSelector_B.cs`
 

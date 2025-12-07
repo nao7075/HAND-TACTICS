@@ -1,5 +1,5 @@
 ﻿# File: RoomListEntry.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_Demos_DemoAsteroids_Scripts_Lobby.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Lobby/RoomListEntry.cs`
 

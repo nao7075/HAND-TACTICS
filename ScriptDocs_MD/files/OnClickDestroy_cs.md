@@ -1,5 +1,5 @@
 ﻿# File: OnClickDestroy.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_UtilityScripts_Prototyping.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/UtilityScripts/Prototyping/OnClickDestroy.cs`
 

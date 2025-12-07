@@ -1,5 +1,5 @@
 ﻿# File: IChatClientListener.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonChat_Code.md)
 
 > **Path:** `Assets/Photon/PhotonChat/Code/IChatClientListener.cs`
 

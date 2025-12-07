@@ -1,5 +1,5 @@
 ﻿# File: TMPro_InstructionOverlay.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_TextMesh_Pro_Examples_&_Extras_Scripts.md)
 
 > **Path:** `Assets/TextMesh Pro/Examples & Extras/Scripts/TMPro_InstructionOverlay.cs`
 

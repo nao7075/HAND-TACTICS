@@ -1,5 +1,5 @@
 ﻿# File: ToDemoHubButton.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_Demos_DemoHub_Scripts.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/Demos/DemoHub/Scripts/ToDemoHubButton.cs`
 

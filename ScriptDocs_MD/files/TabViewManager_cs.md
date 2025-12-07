@@ -1,5 +1,5 @@
 ﻿# File: TabViewManager.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_UtilityScripts_UI.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/UtilityScripts/UI/TabViewManager.cs`
 

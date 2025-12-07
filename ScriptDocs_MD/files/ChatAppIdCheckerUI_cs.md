@@ -1,5 +1,5 @@
 ﻿# File: ChatAppIdCheckerUI.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonChat_Demos_DemoChat.md)
 
 > **Path:** `Assets/Photon/PhotonChat/Demos/DemoChat/ChatAppIdCheckerUI.cs`
 

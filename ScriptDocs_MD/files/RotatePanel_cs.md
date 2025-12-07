@@ -1,5 +1,5 @@
 ﻿# File: RotatePanel.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Scripts.md)
 
 > **Path:** `Assets/Scripts/RotatePanel.cs`
 

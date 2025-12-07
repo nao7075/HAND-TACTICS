@@ -1,5 +1,5 @@
 ﻿# File: SlotLanes.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Photon_PhotonUnityNetworking_Demos_DemoSlotRacer_Scripts.md)
 
 > **Path:** `Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Scripts/SlotLanes.cs`
 

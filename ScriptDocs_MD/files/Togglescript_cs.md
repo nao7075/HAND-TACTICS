@@ -1,5 +1,5 @@
 ﻿# File: Togglescript.cs
-[< トップページへ戻る](../Index.md)
+[< トップページ](../index.md) | [< フォルダ一覧](../folders/Assets_Free_UI_build_package_Script.md)
 
 > **Path:** `Assets/Free UI build package/Script/Togglescript.cs`
 
