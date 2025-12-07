@@ -1,0 +1,39 @@
+# **フォルダ、ファイル概要**
+
+## Assets_Editor
+* Unityエディタ用の拡張ツール（デバッグ・分析用ユーティリティ）のフォルダ
+## Assets_Scripts
+### **$\color{red}{重要}$** 
+* **PhotonやDOTweenを除いた、ゲームシステムの主要スクリプト**
+## CollectedImages_Battle
+* Unityエディタ用の拡張ツールImageCollector.csで集めたBattleシーンで使用している画像フォルダ
+## CollectedImages_Card
+* Unityエディタ用の拡張ツールImageCollector.csで集めたCardPrefabで使用している画像フォルダ
+## CollectedImages_CardDetailPanel
+* Unityエディタ用の拡張ツールImageCollector.csで集めたCardDetailPanelPrefabで使用している画像フォルダ
+## CollectedImages_Deck
+* Unityエディタ用の拡張ツールImageCollector.csで集めたDeckシーンで使用している画像フォルダ
+## CollectedImages_EnemyHandCard
+* Unityエディタ用の拡張ツールImageCollector.csで集めたEnemyHandCardPrefabで使用している画像フォルダ
+## CollectedImages_Scene_DeckList
+* Unityエディタ用の拡張ツールImageCollector.csで集めたDeckListシーンで使用している画像フォルダ
+## CollectedImages_Scene_DeckSelect
+* Unityエディタ用の拡張ツールImageCollector.csで集めたDeckSelectシーンで使用している画像フォルダ
+## CollectedImages_Scene_Home
+* Unityエディタ用の拡張ツールImageCollector.csで集めたHomeシーンで使用している画像フォルダ
+## CollectedImages_Scene_Matching
+* Unityエディタ用の拡張ツールImageCollector.csで集めたMatchingシーンで使用している画像フォルダ
+## CollectedImages_Scene_Start
+* Unityエディタ用の拡張ツールImageCollector.csで集めたStartシーンで使用している画像フォルダ
+## CollectedImages_Selection
+* Unityエディタ用の拡張ツールImageCollector.csで集めたCardEntityで使用している画像フォルダ
+## DCG_game_images
+* HAND_TACTICS.mdで使用している画像のリンク先
+## ScriptDocs
+* c#スクリプトの設計書(HTML)、**index.html**からアクセスする。
+## Structure_text
+* Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。HAND_TACTICS.mdからアクセス可能
+## HAND_TACTICS.md
+### **$\color{red}{重要}$** 
+* HAND TACTICSの仕様書
+
