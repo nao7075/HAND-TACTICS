@@ -305,7 +305,7 @@ graph TD
 * **属性 (Attr):** ✊=グー(1), ✌️=チョキ(2), ✋=パー(3)
 * **Stat:**  Cost / Power  
 * **詳細パラメータ（効果値など）:** AllCardEntities.txt  [text](Structure_text/AllCardEntities.txt)または CardEntities_Diff.txt [text](Structure_text/CardEntities_Diff.txt)を参照。
-* **使用画像 :** CollectedImages_Card [folder](C:\Users\nao70\github\HAND-TACTICS\CollectedImages_Card)を参照
+* **使用画像 :** CollectedImages_Card [folder](CollectedImages_Card)を参照
 
 | ID | Name | Attr | Type | Stat | Image File | Ability (効果概要) |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
