@@ -29,7 +29,7 @@
 ## [DCG_game_images](DCG_game_images)
 * HAND_TACTICS.mdで使用している画像のリンク先
 ## [ScriptDocs_MD](ScriptDocs_MD)
-* c#スクリプトの仕様書(.md)、 [Index.md](ScriptDocs_MD/Index.md) からアクセスする。
+* c#スクリプトの仕様書(.md)、 [Index.md](ScriptDocs_MD/Index.md) からアクセスする。Assets/Scriptsがメインスクリプト。
 ## [Structure_text](Structure_text)
 * Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。[HAND_TACTICS.md](HAND_TACTICS.md)からアクセス可能
 ## [HAND_TACTICS.md](HAND_TACTICS.md)
