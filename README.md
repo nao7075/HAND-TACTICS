@@ -28,8 +28,8 @@
 * Unityエディタ用の拡張ツールImageCollector.csで集めたCardEntityで使用している画像フォルダ
 ## [DCG_game_images](DCG_game_images)
 * HAND_TACTICS.mdで使用している画像のリンク先
-## [ScriptDocs](ScriptDocs)
-* c#スクリプトの設計書(HTML)、**index.html**からアクセスする。
+## [ScriptDocs_MD](ScriptDocs_MD)
+* c#スクリプトの仕様書(.md)、**Index.md**からアクセスする。
 ## [Structure_text](Structure_text)
 * Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。HAND_TACTICS.mdからアクセス可能
 ## [HAND_TACTICS.md](HAND_TACTICS.md)
