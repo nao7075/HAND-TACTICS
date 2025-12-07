@@ -2,28 +2,71 @@ Prefab Name: EnemyHandCard
 ========================================
 [GameObject] EnemyHandCard (Active: True, Tag: Untagged, Layer: UI)
   - (Component) RectTransform
+    [Inspector Preview]
+      Anchor Preset: Middle Center
+      Pos X: 0
+      Width: 180
+      Pos Y: 0
+      Height: 240
+      Pivot: (0.50, 0.50)
+      Rotation: (0.00, 0.00, 0.00)
+      Scale: (1.00, 1.00, 1.00)
+    -------------------------
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (0.00, 0.00, 0.00)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+    > Anchor Min: (0.50, 0.50)
+    > Anchor Max: (0.50, 0.50)
+    > Anchored Position: (0.00, 0.00)
+    > Size Delta: (180.00, 240.00)
+    > Pivot: (0.50, 0.50)
   - (Component) CanvasRenderer
+    > Cull Transparent Mesh: True
   - (Component) Image
-    > m_Script: Image (MonoScript)
-    > m_Material: null
-    > m_RaycastTarget: True
-    > m_Maskable: True
-    > m_Sprite: Background (Sprite)
-    > m_Type: Sliced
-    > m_PreserveAspect: False
-    > m_FillCenter: True
-    > m_FillMethod: Radial 360
-    > m_FillAmount: 1
-    > m_FillClockwise: True
-    > m_FillOrigin: 0
-    > m_UseSpriteMesh: False
-    > m_PixelsPerUnitMultiplier: 1
+    > Material: null
+    > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+    > Raycast Target: True
+    > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+    > Maskable: True
+    > Sprite: Background (Sprite)
+    > Type: Sliced
+    > Preserve Aspect: False
+    > Fill Center: True
+    > Fill Method: Radial 360
+    > Fill Amount: 1
+    > Fill Clockwise: True
+    > Fill Origin: 0
+    > Use Sprite Mesh: False
+    > Pixels Per Unit Multiplier: 1
   [GameObject] RawImage (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Stretch All (Full Rect)
+        Left: 4
+        Right: 4
+        Top: 4
+        Bottom: 4
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (0.00, 0.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.00, 0.00)
+      > Anchor Max: (1.00, 1.00)
+      > Anchored Position: (0.00, 0.00)
+      > Size Delta: (-8.00, -8.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) RawImage
-      > m_Script: RawImage (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_Texture: cardback_gold2 (Texture2D)
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Texture: cardback_gold2 (Texture2D)
+      > UV Rect: (x:0.00, y:0.00, width:1.00, height:1.00)

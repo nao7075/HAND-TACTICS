@@ -2,269 +2,429 @@ Prefab Name: CardDetailPanel
 ========================================
 [GameObject] CardDetailPanel (Active: True, Tag: Untagged, Layer: UI)
   - (Component) RectTransform
+    [Inspector Preview]
+      Anchor Preset: Stretch All (Full Rect)
+      Left: 0
+      Right: 0
+      Top: 0
+      Bottom: 0
+      Pivot: (0.50, 0.50)
+      Rotation: (0.00, 0.00, 0.00)
+      Scale: (1.00, 1.00, 1.00)
+    -------------------------
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (0.00, 0.00, 0.00)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+    > Anchor Min: (0.00, 0.00)
+    > Anchor Max: (1.00, 1.00)
+    > Anchored Position: (0.00, 0.00)
+    > Size Delta: (0.00, 0.00)
+    > Pivot: (0.50, 0.50)
   - (Component) CanvasRenderer
+    > Cull Transparent Mesh: True
   - (Component) Image
-    > m_Script: Image (MonoScript)
-    > m_Material: null
-    > m_RaycastTarget: True
-    > m_Maskable: True
-    > m_Sprite: Background (Sprite)
-    > m_Type: Sliced
-    > m_PreserveAspect: False
-    > m_FillCenter: True
-    > m_FillMethod: Radial 360
-    > m_FillAmount: 1
-    > m_FillClockwise: True
-    > m_FillOrigin: 0
-    > m_UseSpriteMesh: False
-    > m_PixelsPerUnitMultiplier: 1
+    > Material: null
+    > Color: RGBA(1.000, 1.000, 1.000, 0.392)
+    > Raycast Target: True
+    > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+    > Maskable: True
+    > Sprite: Background (Sprite)
+    > Type: Sliced
+    > Preserve Aspect: False
+    > Fill Center: True
+    > Fill Method: Radial 360
+    > Fill Amount: 1
+    > Fill Clockwise: True
+    > Fill Origin: 0
+    > Use Sprite Mesh: False
+    > Pixels Per Unit Multiplier: 1
   - (Component) CardDetailPanel
-    > m_Script: CardDetailPanel (MonoScript)
-    > cardNameText: NameText (TextMeshProUGUI)
-    > cardAbilityText: Abilitytext (TextMeshProUGUI)
-    > cardTrans: CardTrans (RectTransform)
+    > Card Name Text: NameText (TextMeshProUGUI)
+    > Card Ability Text: Abilitytext (TextMeshProUGUI)
+    > Card Trans: CardTrans (RectTransform)
   [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Stretch All (Full Rect)
+        Left: 0
+        Right: 0
+        Top: 0
+        Bottom: 0
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (0.00, 0.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.00, 0.00)
+      > Anchor Max: (1.00, 1.00)
+      > Anchored Position: (0.00, 0.00)
+      > Size Delta: (0.00, 0.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) Image
-      > m_Script: Image (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_Sprite: CardDetail-640x360 (Sprite)
-      > m_Type: Simple
-      > m_PreserveAspect: False
-      > m_FillCenter: True
-      > m_FillMethod: Radial 360
-      > m_FillAmount: 1
-      > m_FillClockwise: True
-      > m_FillOrigin: 0
-      > m_UseSpriteMesh: False
-      > m_PixelsPerUnitMultiplier: 1
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Sprite: CardDetail-640x360 (Sprite)
+      > Type: Simple
+      > Preserve Aspect: False
+      > Fill Center: True
+      > Fill Method: Radial 360
+      > Fill Amount: 1
+      > Fill Clockwise: True
+      > Fill Origin: 0
+      > Use Sprite Mesh: False
+      > Pixels Per Unit Multiplier: 1
   [GameObject] CardTrans (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Middle Center
+        Pos X: -575
+        Width: 500
+        Pos Y: -34
+        Height: 700
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (-575.00, -34.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.50, 0.50)
+      > Anchor Max: (0.50, 0.50)
+      > Anchored Position: (-575.00, -34.00)
+      > Size Delta: (500.00, 700.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) Image
-      > m_Script: Image (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_Sprite: Background (Sprite)
-      > m_Type: Sliced
-      > m_PreserveAspect: False
-      > m_FillCenter: True
-      > m_FillMethod: Radial 360
-      > m_FillAmount: 1
-      > m_FillClockwise: True
-      > m_FillOrigin: 0
-      > m_UseSpriteMesh: False
-      > m_PixelsPerUnitMultiplier: 1
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 0.392)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Sprite: Background (Sprite)
+      > Type: Sliced
+      > Preserve Aspect: False
+      > Fill Center: True
+      > Fill Method: Radial 360
+      > Fill Amount: 1
+      > Fill Clockwise: True
+      > Fill Origin: 0
+      > Use Sprite Mesh: False
+      > Pixels Per Unit Multiplier: 1
   [GameObject] NameText (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Middle Center
+        Pos X: -365
+        Width: 925
+        Pos Y: 415
+        Height: 90
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (-365.00, 415.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.50, 0.50)
+      > Anchor Max: (0.50, 0.50)
+      > Anchored Position: (-365.00, 415.00)
+      > Size Delta: (925.00, 90.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) TextMeshProUGUI
-      > m_Script: TextMeshProUGUI (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_text: "Name"
-      > m_isRightToLeft: False
-      > m_fontAsset: NotoSansJP-Medium SDF (TMP_FontAsset)
-      > m_sharedMaterial: NotoSansJP-Medium SDF Material (Material)
-      > m_fontSharedMaterials: []
-      > m_fontMaterial: null
-      > m_fontMaterials: []
-      > m_enableVertexGradient: False
-      > m_colorMode: Four Corners Gradient
-      > m_fontColorGradientPreset: null
-      > m_spriteAsset: null
-      > m_tintAllSprites: False
-      > m_StyleSheet: null
-      > m_TextStyleHashCode: -1183493901
-      > m_overrideHtmlColors: False
-      > m_fontSize: 60
-      > m_fontSizeBase: 60
-      > m_fontWeight: Regular
-      > m_enableAutoSizing: False
-      > m_fontSizeMin: 18
-      > m_fontSizeMax: 72
-      > m_fontStyle: Bold
-      > m_HorizontalAlignment: Left
-      > m_VerticalAlignment: Middle
-      > m_textAlignment: Converted
-      > m_characterSpacing: 0
-      > m_wordSpacing: 0
-      > m_lineSpacing: 0
-      > m_lineSpacingMax: 0
-      > m_paragraphSpacing: 0
-      > m_charWidthMaxAdj: 0
-      > m_enableWordWrapping: True
-      > m_wordWrappingRatios: 0.4
-      > m_overflowMode: Overflow
-      > m_linkedTextComponent: null
-      > parentLinkedComponent: null
-      > m_enableKerning: True
-      > m_enableExtraPadding: False
-      > checkPaddingRequired: False
-      > m_isRichText: True
-      > m_parseCtrlCharacters: True
-      > m_isOrthographic: True
-      > m_isCullingEnabled: False
-      > m_horizontalMapping: Character
-      > m_verticalMapping: Character
-      > m_uvLineOffset: 0
-      > m_geometrySortingOrder: Normal
-      > m_IsTextObjectScaleStatic: False
-      > m_VertexBufferAutoSizeReduction: False
-      > m_useMaxVisibleDescender: True
-      > m_pageToDisplay: 1
-      > m_isUsingLegacyAnimationComponent: False
-      > m_isVolumetricText: False
-      > m_hasFontAssetChanged: False
-      > m_baseMaterial: null
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Text: "Name"
+      > Is Right To Left: False
+      > Font Asset: NotoSansJP-Medium SDF (TMP_FontAsset)
+      > Shared Material: NotoSansJP-Medium SDF Material (Material)
+      > Font Shared Materials: []
+      > Font Material: null
+      > Font Materials: []
+      > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Enable Vertex Gradient: False
+      > Color Mode: Four Corners Gradient
+      > Font Color Gradient Preset: null
+      > Sprite Asset: null
+      > Tint All Sprites: False
+      > Style Sheet: null
+      > Text Style Hash Code: -1183493901
+      > Override Html Colors: False
+      > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Font Size: 60
+      > Font Size Base: 60
+      > Font Weight: Regular
+      > Enable Auto Sizing: False
+      > Font Size Min: 18
+      > Font Size Max: 72
+      > Font Style: Bold
+      > Horizontal Alignment: Left
+      > Vertical Alignment: Middle
+      > Text Alignment: Converted
+      > Character Spacing: 0
+      > Word Spacing: 0
+      > Line Spacing: 0
+      > Line Spacing Max: 0
+      > Paragraph Spacing: 0
+      > Char Width Max Adj: 0
+      > Enable Word Wrapping: True
+      > Word Wrapping Ratios: 0.4
+      > Overflow Mode: Overflow
+      > Linked Text Component: null
+      > Parent Linked Component: null
+      > Enable Kerning: True
+      > Enable Extra Padding: False
+      > Check Padding Required: False
+      > Is Rich Text: True
+      > Parse Ctrl Characters: True
+      > Is Orthographic: True
+      > Is Culling Enabled: False
+      > Horizontal Mapping: Character
+      > Vertical Mapping: Character
+      > Uv Line Offset: 0
+      > Geometry Sorting Order: Normal
+      > Is Text Object Scale Static: False
+      > Vertex Buffer Auto Size Reduction: False
+      > Use Max Visible Descender: True
+      > Page To Display: 1
+      > Margin: (0.00, 0.00, 0.00, 0.00)
+      > Is Using Legacy Animation Component: False
+      > Is Volumetric Text: False
+      > Has Font Asset Changed: False
+      > Base Material: null
+      > Mask Offset: (0.00, 0.00, 0.00, 0.00)
   [GameObject] Abilitytext (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Middle Center
+        Pos X: 311.5892
+        Width: 972.1785
+        Pos Y: -36
+        Height: 515
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (311.59, -36.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.50, 0.50)
+      > Anchor Max: (0.50, 0.50)
+      > Anchored Position: (311.59, -36.00)
+      > Size Delta: (972.18, 515.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) TextMeshProUGUI
-      > m_Script: TextMeshProUGUI (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_text: "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-      > m_isRightToLeft: False
-      > m_fontAsset: NotoSansJP-Medium SDF (TMP_FontAsset)
-      > m_sharedMaterial: NotoSansJP-Medium SDF Material (Material)
-      > m_fontSharedMaterials: []
-      > m_fontMaterial: null
-      > m_fontMaterials: []
-      > m_enableVertexGradient: False
-      > m_colorMode: Four Corners Gradient
-      > m_fontColorGradientPreset: null
-      > m_spriteAsset: null
-      > m_tintAllSprites: False
-      > m_StyleSheet: null
-      > m_TextStyleHashCode: -1183493901
-      > m_overrideHtmlColors: False
-      > m_fontSize: 48
-      > m_fontSizeBase: 48
-      > m_fontWeight: Regular
-      > m_enableAutoSizing: False
-      > m_fontSizeMin: 18
-      > m_fontSizeMax: 72
-      > m_fontStyle: Bold
-      > m_HorizontalAlignment: Left
-      > m_VerticalAlignment: Top
-      > m_textAlignment: Converted
-      > m_characterSpacing: 0
-      > m_wordSpacing: 0
-      > m_lineSpacing: 0
-      > m_lineSpacingMax: 0
-      > m_paragraphSpacing: 0
-      > m_charWidthMaxAdj: 0
-      > m_enableWordWrapping: True
-      > m_wordWrappingRatios: 0.4
-      > m_overflowMode: Overflow
-      > m_linkedTextComponent: null
-      > parentLinkedComponent: null
-      > m_enableKerning: True
-      > m_enableExtraPadding: False
-      > checkPaddingRequired: False
-      > m_isRichText: True
-      > m_parseCtrlCharacters: True
-      > m_isOrthographic: True
-      > m_isCullingEnabled: False
-      > m_horizontalMapping: Character
-      > m_verticalMapping: Character
-      > m_uvLineOffset: 0
-      > m_geometrySortingOrder: Normal
-      > m_IsTextObjectScaleStatic: False
-      > m_VertexBufferAutoSizeReduction: False
-      > m_useMaxVisibleDescender: True
-      > m_pageToDisplay: 1
-      > m_isUsingLegacyAnimationComponent: False
-      > m_isVolumetricText: False
-      > m_hasFontAssetChanged: False
-      > m_baseMaterial: null
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Text: "Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      > Is Right To Left: False
+      > Font Asset: NotoSansJP-Medium SDF (TMP_FontAsset)
+      > Shared Material: NotoSansJP-Medium SDF Material (Material)
+      > Font Shared Materials: []
+      > Font Material: null
+      > Font Materials: []
+      > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Enable Vertex Gradient: False
+      > Color Mode: Four Corners Gradient
+      > Font Color Gradient Preset: null
+      > Sprite Asset: null
+      > Tint All Sprites: False
+      > Style Sheet: null
+      > Text Style Hash Code: -1183493901
+      > Override Html Colors: False
+      > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Font Size: 48
+      > Font Size Base: 48
+      > Font Weight: Regular
+      > Enable Auto Sizing: False
+      > Font Size Min: 18
+      > Font Size Max: 72
+      > Font Style: Bold
+      > Horizontal Alignment: Left
+      > Vertical Alignment: Top
+      > Text Alignment: Converted
+      > Character Spacing: 0
+      > Word Spacing: 0
+      > Line Spacing: 0
+      > Line Spacing Max: 0
+      > Paragraph Spacing: 0
+      > Char Width Max Adj: 0
+      > Enable Word Wrapping: True
+      > Word Wrapping Ratios: 0.4
+      > Overflow Mode: Overflow
+      > Linked Text Component: null
+      > Parent Linked Component: null
+      > Enable Kerning: True
+      > Enable Extra Padding: False
+      > Check Padding Required: False
+      > Is Rich Text: True
+      > Parse Ctrl Characters: True
+      > Is Orthographic: True
+      > Is Culling Enabled: False
+      > Horizontal Mapping: Character
+      > Vertical Mapping: Character
+      > Uv Line Offset: 0
+      > Geometry Sorting Order: Normal
+      > Is Text Object Scale Static: False
+      > Vertex Buffer Auto Size Reduction: False
+      > Use Max Visible Descender: True
+      > Page To Display: 1
+      > Margin: (0.00, 0.00, 0.00, 0.00)
+      > Is Using Legacy Animation Component: False
+      > Is Volumetric Text: False
+      > Has Font Asset Changed: False
+      > Base Material: null
+      > Mask Offset: (0.00, 0.00, 0.00, 0.00)
   [GameObject] TouchText (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Stretch All (Full Rect)
+        Left: 700
+        Right: 700
+        Top: 950
+        Bottom: 0
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (0.00, -475.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.00, 0.00)
+      > Anchor Max: (1.00, 1.00)
+      > Anchored Position: (0.00, -475.00)
+      > Size Delta: (-1400.00, -950.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) TextMeshProUGUI
-      > m_Script: TextMeshProUGUI (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_text: "タップして閉じる"
-      > m_isRightToLeft: False
-      > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
-      > m_sharedMaterial: mplus-1p-black SDF Material (Material)
-      > m_fontSharedMaterials: []
-      > m_fontMaterial: null
-      > m_fontMaterials: []
-      > m_enableVertexGradient: False
-      > m_colorMode: Four Corners Gradient
-      > m_fontColorGradientPreset: null
-      > m_spriteAsset: null
-      > m_tintAllSprites: False
-      > m_StyleSheet: null
-      > m_TextStyleHashCode: -1183493901
-      > m_overrideHtmlColors: False
-      > m_fontSize: 36
-      > m_fontSizeBase: 36
-      > m_fontWeight: Regular
-      > m_enableAutoSizing: False
-      > m_fontSizeMin: 18
-      > m_fontSizeMax: 72
-      > m_fontStyle: Bold
-      > m_HorizontalAlignment: Center
-      > m_VerticalAlignment: Middle
-      > m_textAlignment: Converted
-      > m_characterSpacing: 0
-      > m_wordSpacing: 0
-      > m_lineSpacing: 0
-      > m_lineSpacingMax: 0
-      > m_paragraphSpacing: 0
-      > m_charWidthMaxAdj: 0
-      > m_enableWordWrapping: True
-      > m_wordWrappingRatios: 0.4
-      > m_overflowMode: Overflow
-      > m_linkedTextComponent: null
-      > parentLinkedComponent: null
-      > m_enableKerning: True
-      > m_enableExtraPadding: False
-      > checkPaddingRequired: False
-      > m_isRichText: True
-      > m_parseCtrlCharacters: True
-      > m_isOrthographic: True
-      > m_isCullingEnabled: False
-      > m_horizontalMapping: Character
-      > m_verticalMapping: Character
-      > m_uvLineOffset: 0
-      > m_geometrySortingOrder: Normal
-      > m_IsTextObjectScaleStatic: False
-      > m_VertexBufferAutoSizeReduction: False
-      > m_useMaxVisibleDescender: True
-      > m_pageToDisplay: 1
-      > m_isUsingLegacyAnimationComponent: False
-      > m_isVolumetricText: False
-      > m_hasFontAssetChanged: False
-      > m_baseMaterial: null
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Text: "タップして閉じる"
+      > Is Right To Left: False
+      > Font Asset: mplus-1p-black SDF (TMP_FontAsset)
+      > Shared Material: mplus-1p-black SDF Material (Material)
+      > Font Shared Materials: []
+      > Font Material: null
+      > Font Materials: []
+      > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Enable Vertex Gradient: False
+      > Color Mode: Four Corners Gradient
+      > Font Color Gradient Preset: null
+      > Sprite Asset: null
+      > Tint All Sprites: False
+      > Style Sheet: null
+      > Text Style Hash Code: -1183493901
+      > Override Html Colors: False
+      > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Font Size: 36
+      > Font Size Base: 36
+      > Font Weight: Regular
+      > Enable Auto Sizing: False
+      > Font Size Min: 18
+      > Font Size Max: 72
+      > Font Style: Bold
+      > Horizontal Alignment: Center
+      > Vertical Alignment: Middle
+      > Text Alignment: Converted
+      > Character Spacing: 0
+      > Word Spacing: 0
+      > Line Spacing: 0
+      > Line Spacing Max: 0
+      > Paragraph Spacing: 0
+      > Char Width Max Adj: 0
+      > Enable Word Wrapping: True
+      > Word Wrapping Ratios: 0.4
+      > Overflow Mode: Overflow
+      > Linked Text Component: null
+      > Parent Linked Component: null
+      > Enable Kerning: True
+      > Enable Extra Padding: False
+      > Check Padding Required: False
+      > Is Rich Text: True
+      > Parse Ctrl Characters: True
+      > Is Orthographic: True
+      > Is Culling Enabled: False
+      > Horizontal Mapping: Character
+      > Vertical Mapping: Character
+      > Uv Line Offset: 0
+      > Geometry Sorting Order: Normal
+      > Is Text Object Scale Static: False
+      > Vertex Buffer Auto Size Reduction: False
+      > Use Max Visible Descender: True
+      > Page To Display: 1
+      > Margin: (0.00, 0.00, 0.00, 0.00)
+      > Is Using Legacy Animation Component: False
+      > Is Volumetric Text: False
+      > Has Font Asset Changed: False
+      > Base Material: null
+      > Mask Offset: (0.00, 0.00, 0.00, 0.00)
   [GameObject] TouchClosePanel (Active: True, Tag: Untagged, Layer: UI)
     - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Stretch All (Full Rect)
+        Left: 0
+        Right: 0
+        Top: 0
+        Bottom: 0
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (0.00, 0.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.00, 0.00)
+      > Anchor Max: (1.00, 1.00)
+      > Anchored Position: (0.00, 0.00)
+      > Size Delta: (0.00, 0.00)
+      > Pivot: (0.50, 0.50)
     - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
     - (Component) Image
-      > m_Script: Image (MonoScript)
-      > m_Material: null
-      > m_RaycastTarget: True
-      > m_Maskable: True
-      > m_Sprite: Background (Sprite)
-      > m_Type: Sliced
-      > m_PreserveAspect: False
-      > m_FillCenter: True
-      > m_FillMethod: Radial 360
-      > m_FillAmount: 1
-      > m_FillClockwise: True
-      > m_FillOrigin: 0
-      > m_UseSpriteMesh: False
-      > m_PixelsPerUnitMultiplier: 1
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 0.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Sprite: Background (Sprite)
+      > Type: Sliced
+      > Preserve Aspect: False
+      > Fill Center: True
+      > Fill Method: Radial 360
+      > Fill Amount: 1
+      > Fill Clockwise: True
+      > Fill Origin: 0
+      > Use Sprite Mesh: False
+      > Pixels Per Unit Multiplier: 1
     - (Component) TouchClose
-      > m_Script: TouchClose (MonoScript)
