@@ -151,7 +151,7 @@ graph TD
 * **UI** 
   * 画面下部に大小する「TAP SCREEN」の文字(パルスアニメーション)。
   * 画面をクリックするとホーム(Home)へシーン遷移、画面全体をボタンにする。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Start_Detailed.txt [text](Structure_text/SceneStructure_Start_Detailed.txt)を参照。
+* **詳細なオブジェクト構造・パラメータ:** [SceneStructure_Start_Detailed.txt](Structure_text/SceneStructure_Start_Detailed.txt)を参照。
   
 ![alt text](DCG_game_images/start.png)
 
@@ -161,7 +161,7 @@ graph TD
 * **UI構成:** 画面下部に大きなボタンを配置。  
   * [バトル] ボタン : クリックでDeckSelectへシーン遷移。
   * [デッキ編集] ボタン : クリックでDeckListへシーン遷移。
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Home_Detailed.txt [text](Structure_text/SceneStructure_Home_Detailed.txt) を参照。
+* **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Home_Detailed.txt](Structure_text/SceneStructure_Home_Detailed.txt) を参照。
   
 ![alt text](DCG_game_images/home.png)
 ![alt text](DCG_game_images/move_home.png)
@@ -173,7 +173,7 @@ graph TD
   * [Deck1を編集]  ボタン : Deck1の情報をもってDeckへシーン遷移。
   * [Deck2を編集]  ボタン : Deck2の情報をもってDeckへシーン遷移。
 * **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移    
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_DeckList_Detailed.txt [text](Structure_text/SceneStructure_DeckList_Detailed.txt), 
+* **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_DeckList_Detailed.txt](Structure_text/SceneStructure_DeckList_Detailed.txt), 
   
 ![alt text](DCG_game_images/DeckList.png)
 
@@ -186,7 +186,7 @@ graph TD
     * 「Reset」ボタン : デッキをクリア。
     * 「Save/Back」ボタン :　保存してDeckListにシーン遷移。  
 * **操作:** 下段から上段へ（またはその逆へ）カードをドラッグ＆ドロップして入れ替え。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Deck_Detailed.txt [text](Structure_text/SceneStructure_Deck_Detailed.txt) を参照。
+* **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Deck_Detailed.txt](Structure_text/SceneStructure_Deck_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/Deck.png)
 ![alt text](DCG_game_images/Deck2.png)
@@ -199,7 +199,7 @@ graph TD
   * [Deck2でバトル]  ボタン : Deck2の情報をもってBattleへシーン遷移。
 * **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移。  
 * **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
-* **詳細なオブジェクト構造・パラメータ:**SceneStructure_DeckSelect_Detailed.txt [text](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
+* **詳細なオブジェクト構造・パラメータ:** [SceneStructure_DeckSelect_Detailed.txt](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/DeckSelect.png)
 ![alt text](DCG_game_images/DeckSelect2.png)
@@ -209,7 +209,7 @@ graph TD
 * **レイアウト:** 中央に「マッチングする（またはマッチング中）」のウィンドウ表示。  
   * [マッチングする] ボタン : サーバーに接続し、マッチング開始。
 * **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移。
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Matching_Detailed.txt  [text](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
+* **詳細なオブジェクト構造・パラメータ:** [SceneStructure_Matching_Detailed.txt](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/Matching.png)
 ![alt text](DCG_game_images/in_matching.png)
@@ -230,7 +230,7 @@ graph TD
     * サウンド（スピーカー）ボタン : 音量調節のUIが出る。 
   * **手札:** 画面下部中央。  
 * **演出:** ターン開始時、画面中央にカットインパネルが表示される。  
-* **詳細なオブジェクト構造・パラメータ:** SceneStructure_Battle_Detailed.txt [text](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
+* **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Battle_Detailed.txt](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
   
 * **背景UIのみ**
 
@@ -289,13 +289,13 @@ graph TD
 * **属性:** 左下（✊✌️✋のアイコン）。  
 * **テキスト:** 下部（効果説明文）。  
 * **枠色:** 属性に応じて赤・緑・青に変化 (CardPanel1/2/3)。  
-* **詳細なオブジェクト構造・パラメータ:** PrefabStructure_Card.txt [text](Structure_text/PrefabStructure_Card.txt)を参照。
+* **詳細なオブジェクト構造・パラメータ:**  [PrefabStructure_Card.txt](Structure_text/PrefabStructure_Card.txt)を参照。
 
 ![alt text](DCG_game_images/cardprefab.png)
 
 **どのシーンでもカードをクリックするとCardDetailPanelが開かれる、もう一度画面をクリックすると閉じる。**
 
-* **詳細なオブジェクト構造・パラメータ:** PrefabStructure_CardDtailPanel.txt [text](Structure_text/PrefabStructure_CardDetailPanel.txt)を参照。
+* **詳細なオブジェクト構造・パラメータ:**  [PrefabStructure_CardDtailPanel.txt](Structure_text/PrefabStructure_CardDetailPanel.txt)を参照。
 ![alt text](DCG_game_images/card_detail.png)
 
 ### **4.2. カードリスト**
@@ -304,8 +304,8 @@ graph TD
 
 * **属性 (Attr):** ✊=グー(1), ✌️=チョキ(2), ✋=パー(3)
 * **Stat:**  Cost / Power  
-* **詳細パラメータ（効果値など）:** AllCardEntities.txt  [text](Structure_text/AllCardEntities.txt)または CardEntities_Diff.txt [text](Structure_text/CardEntities_Diff.txt)を参照。
-* **使用画像 :** CollectedImages_Selection [folder](CollectedImages_Selection)を参照
+* **詳細パラメータ（効果値など）:**  [AllCardEntities.txt](Structure_text/AllCardEntities.txt)または  [CardEntities_Diff.txt](Structure_text/CardEntities_Diff.txt)を参照。
+* **使用画像 :**  [CollectedImages_Selection](CollectedImages_Selection)を参照
 
 | ID | Name | Attr | Type | Stat | Image File | Ability (効果概要) |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -384,4 +384,4 @@ graph TD
   * mix_2m57s...: バトル  
 * **SE:**  
   * ターンエンドボタン2, Attack2..., 召喚3, 魔法, 決定ボタンを押す50 など全18種。  
-  * **詳細データ参照:** SceneStructure_Battle_Detailed.txt (SoundManagerの項目) [text](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
+  * **詳細データ参照:**  [SceneStructure_Battle_Detailed.txt](Structure_text/SceneStructure_Battle_Detailed.txt) (SoundManagerの項目)を参照。
