@@ -12,7 +12,8 @@
 | アクセス | 名前 | 型 | 説明 | 属性・制約 |
 | :---: | :--- | :---: | :--- | :---: |
 | `private` | connectionStatusMessage | `String` |  |  |
-| `public` | ConnectionStatusText | `Text` | **[UI References]**<br> |  |
+| | **【UI References】** | | | |
+| `public` | ConnectionStatusText | `Text` |  |  |
 
 ### メソッド (Methods)
 | アクセス | 名前 | 引数 | 戻り値 | 説明 |

@@ -11,7 +11,8 @@
 ### フィールド (Variables)
 | アクセス | 名前 | 型 | 説明 | 属性・制約 |
 | :---: | :--- | :---: | :--- | :---: |
-| `public` | PlayerNameText | `Text` | **[UI References]**<br> |  |
+| | **【UI References】** | | | |
+| `public` | PlayerNameText | `Text` |  |  |
 | `public` | PlayerColorImage | `Image` |  |  |
 | `public` | PlayerReadyButton | `Button` |  |  |
 | `public` | PlayerReadyImage | `Image` |  |  |

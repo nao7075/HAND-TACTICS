@@ -14,10 +14,12 @@
 | アクセス | 名前 | 型 | 説明 | 属性・制約 |
 | :---: | :--- | :---: | :--- | :---: |
 | `public` | CountdownStartTime | `String` |  |  |
-| `public` | Countdown | `Single` | **[Countdown time in seconds]**<br> |  |
+| | **【Countdown time in seconds】** | | | |
+| `public` | Countdown | `Single` |  |  |
 | `private` | isTimerRunning | `Boolean` |  |  |
 | `private` | startTime | `Int32` |  |  |
-| `public` | Text | `Text` | **[Reference to a Text component for visualizing the countdown]**<br> |  |
+| | **【Reference to a Text component for visualizing the countdown】** | | | |
+| `public` | Text | `Text` |  |  |
 
 ### メソッド (Methods)
 | アクセス | 名前 | 引数 | 戻り値 | 説明 |

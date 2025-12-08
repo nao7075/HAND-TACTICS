@@ -11,17 +11,23 @@
 ### フィールド (Variables)
 | アクセス | 名前 | 型 | 説明 | 属性・制約 |
 | :---: | :--- | :---: | :--- | :---: |
-| `public` | LoginPanel | `GameObject` | **[Login Panel]**<br> |  |
+| | **【Login Panel】** | | | |
+| `public` | LoginPanel | `GameObject` |  |  |
 | `public` | PlayerNameInput | `InputField` |  |  |
-| `public` | SelectionPanel | `GameObject` | **[Selection Panel]**<br> |  |
-| `public` | CreateRoomPanel | `GameObject` | **[Create Room Panel]**<br> |  |
+| | **【Selection Panel】** | | | |
+| `public` | SelectionPanel | `GameObject` |  |  |
+| | **【Create Room Panel】** | | | |
+| `public` | CreateRoomPanel | `GameObject` |  |  |
 | `public` | RoomNameInputField | `InputField` |  |  |
 | `public` | MaxPlayersInputField | `InputField` |  |  |
-| `public` | JoinRandomRoomPanel | `GameObject` | **[Join Random Room Panel]**<br> |  |
-| `public` | RoomListPanel | `GameObject` | **[Room List Panel]**<br> |  |
+| | **【Join Random Room Panel】** | | | |
+| `public` | JoinRandomRoomPanel | `GameObject` |  |  |
+| | **【Room List Panel】** | | | |
+| `public` | RoomListPanel | `GameObject` |  |  |
 | `public` | RoomListContent | `GameObject` |  |  |
 | `public` | RoomListEntryPrefab | `GameObject` |  |  |
-| `public` | InsideRoomPanel | `GameObject` | **[Inside Room Panel]**<br> |  |
+| | **【Inside Room Panel】** | | | |
+| `public` | InsideRoomPanel | `GameObject` |  |  |
 | `public` | StartGameButton | `Button` |  |  |
 | `public` | PlayerListEntryPrefab | `GameObject` |  |  |
 | `private` | cachedRoomList | `Dictionary`2` |  |  |

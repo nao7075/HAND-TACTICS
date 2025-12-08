@@ -20,28 +20,35 @@
 | `public` | Title | `Text` |  |  |
 | `public` | StateText | `Text` | set in inspector |  |
 | `public` | UserIdText | `Text` | set in inspector |  |
-| `public` | MinimalCanvasGroup | `CanvasGroup` | **[Demo Integration]**<br> |  |
+| | **【Demo Integration】** | | | |
+| `public` | MinimalCanvasGroup | `CanvasGroup` |  |  |
 | `public` | MaximalCanvasGroup | `CanvasGroup` |  |  |
 | `public` | MinimizeButton | `GameObject` |  |  |
 | `public` | MinimalUIEmbeddHelp | `GameObject` |  |  |
-| `public` | ConnectingLabel | `GameObject` | **[Connection UI]**<br> |  |
+| | **【Connection UI】** | | | |
+| `public` | ConnectingLabel | `GameObject` |  |  |
 | `public` | ConnectionPanel | `GameObject` |  |  |
 | `public` | AdvancedConnectionPanel | `GameObject` |  |  |
 | `public` | ConnectAsDropDown | `Dropdown` |  |  |
-| `public` | InfosPanel | `GameObject` | **[Common UI]**<br> |  |
+| | **【Common UI】** | | | |
+| `public` | InfosPanel | `GameObject` |  |  |
 | `public` | MinimalUiInfosPanel | `GameObject` |  |  |
-| `public` | LobbyPanel | `GameObject` | **[Lobby UI]**<br> |  |
+| | **【Lobby UI】** | | | |
+| `public` | LobbyPanel | `GameObject` |  |  |
 | `public` | JoinLobbyButton | `Selectable` |  |  |
 | `public` | RoomListManager | `RoomListView` |  |  |
 | `public` | FriendListManager | `FriendListView` |  |  |
 | `public` | RoomListMatchMakingForm | `GameObject` |  |  |
-| `public` | GamePanel | `GameObject` | **[Game UI]**<br> |  |
+| | **【Game UI】** | | | |
+| `public` | GamePanel | `GameObject` |  |  |
 | `public` | PlayerListManager | `PlayerListView` |  |  |
 | `public` | PlayerDetailsManager | `PlayerDetailsController` |  |  |
 | `public` | RoomCustomPropertyInputfield | `InputField` |  |  |
-| `public` | GameVersionOverride | `String` | **[Photon Settings]**<br>The game version override. This is one way to let the user define the gameversion, and set it properly right after we call connect to override the server settings<br>Check ConnectAndJoinRandom.cs for another example of gameversion overriding |  |
+| | **【Photon Settings】** | | | |
+| `public` | GameVersionOverride | `String` | The game version override. This is one way to let the user define the gameversion, and set it properly right after we call connect to override the server settings<br>Check ConnectAndJoinRandom.cs for another example of gameversion overriding |  |
 | `public` | ResetBestRegionCodeInPreferences | `Boolean` | The reset flag for best cloud ServerSettings.<br>This is one way to let the user define if bestcloud cache should be reseted when connecting. |  |
-| `public` | MaxPlayers | `Int32` | **[Room Options]**<br> |  |
+| | **【Room Options】** | | | |
+| `public` | MaxPlayers | `Int32` |  |  |
 | `public` | PlayerTtl | `Int32` |  |  |
 | `public` | EmptyRoomTtl | `Int32` |  |  |
 | `public` | Plugins | `String` |  |  |
@@ -50,7 +57,8 @@
 | `public` | IsOpen | `Boolean` |  |  |
 | `public` | CleanupCacheOnLeave | `Boolean` |  |  |
 | `public` | DeleteNullProperties | `Boolean` |  |  |
-| `public` | PlayerTtlField | `IntInputField` | **[Room Options UI]**<br> |  |
+| | **【Room Options UI】** | | | |
+| `public` | PlayerTtlField | `IntInputField` |  |  |
 | `public` | EmptyRoomTtlField | `IntInputField` |  |  |
 | `public` | MaxPlayersField | `IntInputField` |  |  |
 | `public` | PluginsField | `StringInputField` |  |  |
@@ -59,8 +67,10 @@
 | `public` | IsOpenField | `BoolInputField` |  |  |
 | `public` | CleanupCacheOnLeaveField | `BoolInputField` |  |  |
 | `public` | DeleteNullPropertiesField | `BoolInputField` |  |  |
-| `public` | FriendsList | `FriendDetail[]` | **[Friends Options]**<br> |  |
-| `public` | ModalWindow | `CanvasGroup` | **[Modal window]**<br> |  |
+| | **【Friends Options】** | | | |
+| `public` | FriendsList | `FriendDetail[]` |  |  |
+| | **【Modal window】** | | | |
+| `public` | ModalWindow | `CanvasGroup` |  |  |
 | `public` | RegionListView | `RegionListView` |  |  |
 | `public` | RegionListLoadingFeedback | `Text` |  |  |
 | `private` | _lbc | `LoadBalancingClient` |  |  |
