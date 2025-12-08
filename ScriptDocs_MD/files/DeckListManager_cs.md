@@ -8,7 +8,7 @@
 **Namespace:** `(Global)`<br>
 **Signature:** `DeckListManager : MonoBehaviour`
 
-> プレイヤーが作成した複数のデッキデータを保持・管理するクラス。  
+> プレイヤーが作成した複数のデッキデータを保持・管理し、永続化（保存・読み込み）を行うクラス。  
 > どのデッキを編集するか、どのデッキで対戦するかを中継する役割を持つ。
 
 ### フィールド (Variables)
@@ -23,10 +23,13 @@
 ### メソッド (Methods)
 | アクセス | 名前 | 引数 | 戻り値 | 説明 |
 | :---: | :--- | :--- | :---: | :--- |
+| `private` | ⚡ Start |  | `Void` | ゲーム開始時に保存されたデータを読み込む |
 | `public` | PushDeckListButton | Int32 deckListNum | `Void` | デッキ選択ボタンが押された時の処理。<br>選択された番号のデッキデータをアクティブにする。 |
 | `public` | BackHomeButtom |  | `Void` | ホーム画面に移動するボタン |
 | `public` | BackButtom |  | `IEnumerator` | BackHomeButtomで実行 |
 | `public` | DeckListButtom |  | `IEnumerator` | デッキ編集画面へ遷移 |
+| `public` | S SaveDeckData |  | `Void` | 現在のデッキリストの状態をPlayerPrefsに保存する |
+| `public` | LoadDeckData |  | `Void` | PlayerPrefsからデッキデータを読み込む |
 
 ---
 

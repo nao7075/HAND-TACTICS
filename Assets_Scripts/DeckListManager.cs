@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// プレイヤーが作成した複数のデッキデータを保持・管理するクラス。
+/// プレイヤーが作成した複数のデッキデータを保持・管理し、永続化（保存・読み込み）を行うクラス。
 /// どのデッキを編集するか、どのデッキで対戦するかを中継する役割を持つ。
 /// </summary>
 public class DeckListManager : MonoBehaviour
@@ -22,6 +22,11 @@ public class DeckListManager : MonoBehaviour
     /// <summary> 保存されているデッキデータ3  </summary>
     public static List<int> deckList3 = new List<int>() { };
 
+
+    private void Start()// ゲーム開始時に保存されたデータを読み込む
+    {
+        LoadDeckData();
+    }
 
     /// <summary>
     /// デッキ選択ボタンが押された時の処理。
@@ -60,5 +65,68 @@ public class DeckListManager : MonoBehaviour
         yield return new WaitForSeconds(0.075f);
         
         SceneTransitionManager.instance.Load("Deck");
+    }
+
+    // --- 保存・読み込み機能 ---
+
+    /// <summary>
+    /// 現在のデッキリストの状態をPlayerPrefsに保存する
+    /// </summary>
+    public static void SaveDeckData()
+    {
+        // List<int> を JSON文字列に変換
+        string json1 = JsonUtility.ToJson(new Serialization<int>(deckList1));
+        string json2 = JsonUtility.ToJson(new Serialization<int>(deckList2));
+        string json3 = JsonUtility.ToJson(new Serialization<int>(deckList3));
+
+        // PlayerPrefsに書き込み
+        PlayerPrefs.SetString("Deck1", json1);
+        PlayerPrefs.SetString("Deck2", json2);
+        PlayerPrefs.SetString("Deck3", json3);
+        
+        // 保存を確定
+        PlayerPrefs.Save();
+        Debug.Log("Deck Data Saved.");
+    }
+
+    /// <summary>
+    /// PlayerPrefsからデッキデータを読み込む
+    /// </summary>
+    public void LoadDeckData()
+    {
+        // 保存データが存在する場合のみ読み込む
+        if (PlayerPrefs.HasKey("Deck1"))
+        {
+            string json1 = PlayerPrefs.GetString("Deck1");
+            deckList1 = JsonUtility.FromJson<Serialization<int>>(json1).ToList();
+        }
+        
+        if (PlayerPrefs.HasKey("Deck2"))
+        {
+            string json2 = PlayerPrefs.GetString("Deck2");
+            deckList2 = JsonUtility.FromJson<Serialization<int>>(json2).ToList();
+        }
+
+        if (PlayerPrefs.HasKey("Deck3"))
+        {
+            string json3 = PlayerPrefs.GetString("Deck3");
+            deckList3 = JsonUtility.FromJson<Serialization<int>>(json3).ToList();
+        }
+        
+        Debug.Log("Deck Data Loaded.");
+    }
+}
+
+// List<T> を JsonUtility でシリアライズ可能にするためのラッパークラス
+[System.Serializable]
+public class Serialization<T>
+{
+    [SerializeField]
+    List<T> target;
+    public List<T> ToList() { return target; }
+
+    public Serialization(List<T> target)
+    {
+        this.target = target;
     }
 }

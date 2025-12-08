@@ -18,7 +18,7 @@
 | [CardMovement.cs](../files/CardMovement_cs.md) | 102 | 56 | 29 | [`C:CardMovement`](../files/CardMovement_cs.md#CardMovement)  |
 | [CardView.cs](../files/CardView_cs.md) | 123 | 81 | 28 | [`C:CardView`](../files/CardView_cs.md#CardView)  |
 | [DeckEditManager.cs](../files/DeckEditManager_cs.md) | 450 | 306 | 84 | [`C:DeckEditManager`](../files/DeckEditManager_cs.md#DeckEditManager)  |
-| [DeckListManager.cs](../files/DeckListManager_cs.md) | 64 | 35 | 13 | [`C:DeckListManager`](../files/DeckListManager_cs.md#DeckListManager)  |
+| [DeckListManager.cs](../files/DeckListManager_cs.md) | 133 | 80 | 25 | [`C:DeckListManager`](../files/DeckListManager_cs.md#DeckListManager)  |
 | [DeckSelectManager.cs](../files/DeckSelectManager_cs.md) | 90 | 60 | 14 | [`C:DeckSelectManager`](../files/DeckSelectManager_cs.md#DeckSelectManager)  |
 | [DropDeckCardPlace.cs](../files/DropDeckCardPlace_cs.md) | 51 | 39 | 7 | [`C:DropDeckCardPlace`](../files/DropDeckCardPlace_cs.md#DropDeckCardPlace)  |
 | [DropMulliganPlace.cs](../files/DropMulliganPlace_cs.md) | 27 | 19 | 5 | [`C:DropMulliganPlace`](../files/DropMulliganPlace_cs.md#DropMulliganPlace)  |
