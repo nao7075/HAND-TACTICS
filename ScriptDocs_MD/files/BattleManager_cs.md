@@ -72,7 +72,7 @@
 | `public` | ReduceManaPoint | Int32 cost | `Void` | コストの分、マナポイントを減らす |
 | `public` | Mulligan |  | `Void` | マリガン処理。選択されたカードをデッキに戻し、同数引き直す |
 | `public` | SetCanMulliganPanelHand | Boolean isAttachPanel | `Void` | マリガン時に手札を選択可能状態にすることでコスト関係なく動かせるようにする,trueなら動かせるように、falseなら動かせなくする |
-| `public` | SetCanUsePanelHand | Boolean isAttachPanel | `Void` | 手札のカードを使用不可にする<br>自分のターン中、コスト条件を満たす手札を使用可能表示にする |
+| `public` | SetCanUsePanelHand | Boolean isAttachPanel | `Void` | 手札のカードを使用不可にする<br>自分のターン中、コスト条件を満たす手札を使用可能表示にする<br>攻撃中は手札を使用不可能にする<br>制限解除 |
 | `public` | CostBackOrigin |  | `Void` | コストダウン効果をリセットし、元のコストに戻す<br>コストリセット |
 | `public` | PlayerCardCostBackOrigin |  | `Void` | プレイヤー側のカードのみコストを元に戻す<br>じゃんけん効果の際に使用 |
 | `public` | CountHandJanken |  | `Void` | 手札のカードの属性（グー・チョキ・パー）を集計し、相手に通知する<br>じゃんけんカウント更新 |

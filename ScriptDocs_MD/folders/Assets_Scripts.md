@@ -9,9 +9,9 @@
 | [AttackedLeader.cs](../files/AttackedLeader_cs.md) | 25 | 12 | 10 | [`C:AttackedLeader`](../files/AttackedLeader_cs.md#AttackedLeader)  |
 | [BattleBgmManager.cs](../files/BattleBgmManager_cs.md) | 45 | 25 | 14 | [`C:BattleBgmManager`](../files/BattleBgmManager_cs.md#BattleBgmManager)  |
 | [BattleCardMovement.cs](../files/BattleCardMovement_cs.md) | 242 | 133 | 61 | [`C:BattleCardMovement`](../files/BattleCardMovement_cs.md#BattleCardMovement)  |
-| [BattleManager.cs](../files/BattleManager_cs.md) | 1613 | 1025 | 325 | [`C:BattleManager`](../files/BattleManager_cs.md#BattleManager)  |
+| [BattleManager.cs](../files/BattleManager_cs.md) | 1624 | 1034 | 326 | [`C:BattleManager`](../files/BattleManager_cs.md#BattleManager)  |
 | [BGMManager.cs](../files/BGMManager_cs.md) | 56 | 32 | 17 | [`C:BGMManager`](../files/BGMManager_cs.md#BGMManager)  |
-| [CardController.cs](../files/CardController_cs.md) | 1478 | 1142 | 127 | [`C:CardController`](../files/CardController_cs.md#CardController)  |
+| [CardController.cs](../files/CardController_cs.md) | 1500 | 1160 | 127 | [`C:CardController`](../files/CardController_cs.md#CardController)  |
 | [CardDetailPanel.cs](../files/CardDetailPanel_cs.md) | 38 | 22 | 11 | [`C:CardDetailPanel`](../files/CardDetailPanel_cs.md#CardDetailPanel)  |
 | [CardEntity.cs](../files/CardEntity_cs.md) | 84 | 69 | 7 | [`C:CardEntity`](../files/CardEntity_cs.md#CardEntity)  |
 | [CardModel.cs](../files/CardModel_cs.md) | 246 | 105 | 70 | [`C:CardModel`](../files/CardModel_cs.md#CardModel)  |
@@ -22,7 +22,7 @@
 | [DeckSelectManager.cs](../files/DeckSelectManager_cs.md) | 90 | 60 | 14 | [`C:DeckSelectManager`](../files/DeckSelectManager_cs.md#DeckSelectManager)  |
 | [DropDeckCardPlace.cs](../files/DropDeckCardPlace_cs.md) | 51 | 39 | 7 | [`C:DropDeckCardPlace`](../files/DropDeckCardPlace_cs.md#DropDeckCardPlace)  |
 | [DropMulliganPlace.cs](../files/DropMulliganPlace_cs.md) | 27 | 19 | 5 | [`C:DropMulliganPlace`](../files/DropMulliganPlace_cs.md#DropMulliganPlace)  |
-| [DropPlace.cs](../files/DropPlace_cs.md) | 28 | 19 | 6 | [`C:DropPlace`](../files/DropPlace_cs.md#DropPlace)  |
+| [DropPlace.cs](../files/DropPlace_cs.md) | 35 | 23 | 7 | [`C:DropPlace`](../files/DropPlace_cs.md#DropPlace)  |
 | [DropStockCardPlace.cs](../files/DropStockCardPlace_cs.md) | 42 | 27 | 7 | [`C:DropStockCardPlace`](../files/DropStockCardPlace_cs.md#DropStockCardPlace)  |
 | [GameManager.cs](../files/GameManager_cs.md) | 74 | 42 | 18 | [`C:GameManager`](../files/GameManager_cs.md#GameManager)  |
 | [HomeManager.cs](../files/HomeManager_cs.md) | 45 | 36 | 4 | [`C:HomeManager`](../files/HomeManager_cs.md#HomeManager)  |
