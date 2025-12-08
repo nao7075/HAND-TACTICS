@@ -102,6 +102,10 @@ public class DeckEditManager : MonoBehaviour
     public void SaveButton()
     {
         SoundManager.instance.PlaySE(0);
+
+        //編集したデータを保存する処理を実行
+        DeckListManager.SaveDeckData();
+        
         StartCoroutine(SaveBackButtom());
     }
 
