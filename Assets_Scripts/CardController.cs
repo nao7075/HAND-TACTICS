@@ -111,7 +111,7 @@ public class CardController : MonoBehaviourPunCallbacks
     /// カードがフィールドにドロップされた時の処理
     /// </summary>
     public void DropField()
-    {   
+    {    
         BattleManager.instance.ReduceManaPoint(model.cost);// マナ消費
         model.FieldCard = true; // フィールドのカードのフラグを立てる
         model.canUse = false;
@@ -222,10 +222,13 @@ public class CardController : MonoBehaviourPunCallbacks
                 {
                 
                 Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
-                SoundManager.instance.PlaySE(7);
-                BattleManager.instance.CreateCard(model.addCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
-                yield return new WaitForSeconds(0.25f);
 
+                if (playerHand.GetComponentsInChildren<CardController>().Length < 6)//手札が六枚未満なら
+                {
+                    SoundManager.instance.PlaySE(7);
+                    BattleManager.instance.CreateCard(model.addCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
+                    yield return new WaitForSeconds(0.25f);
+                }
 
                 } 
             }
@@ -472,9 +475,13 @@ public class CardController : MonoBehaviourPunCallbacks
                             if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
                             {
                                 Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
-                                SoundManager.instance.PlaySE(7);
-                                BattleManager.instance.CreateCard(model.janwinaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
-                                yield return new WaitForSeconds(0.25f);
+
+                                if (playerHand.GetComponentsInChildren<CardController>().Length < 6)//手札が六枚未満なら
+                                {
+                                    SoundManager.instance.PlaySE(7);
+                                    BattleManager.instance.CreateCard(model.janwinaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
+                                    yield return new WaitForSeconds(0.25f);
+                                }
                             }
 
                         }
@@ -670,9 +677,13 @@ public class CardController : MonoBehaviourPunCallbacks
                                 if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
                                 {
                                     Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
-                                    SoundManager.instance.PlaySE(7);
-                                    BattleManager.instance.CreateCard(model.janwinaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
-                                    yield return new WaitForSeconds(0.25f);
+
+                                    if (playerHand.GetComponentsInChildren<CardController>().Length < 6)//手札が六枚未満なら
+                                    {
+                                        SoundManager.instance.PlaySE(7);
+                                        BattleManager.instance.CreateCard(model.janwinaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
+                                        yield return new WaitForSeconds(0.25f);
+                                    }
                                 } 
 
                             }
@@ -870,9 +881,13 @@ public class CardController : MonoBehaviourPunCallbacks
                             for (int i = 0; i < model.janloseaddCardsList.Length; i++) // リストの個数分処理を繰り返す
                             {
                                 Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
-                                SoundManager.instance.PlaySE(7);
-                                BattleManager.instance.CreateCard(model.janloseaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
-                                yield return new WaitForSeconds(0.25f);
+
+                                if (playerHand.GetComponentsInChildren<CardController>().Length < 6)//手札が六枚未満なら
+                                {
+                                    SoundManager.instance.PlaySE(7);
+                                    BattleManager.instance.CreateCard(model.janloseaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
+                                    yield return new WaitForSeconds(0.25f);
+                                }
                             } 
 
                         }
@@ -1070,9 +1085,13 @@ public class CardController : MonoBehaviourPunCallbacks
                                 {
                                 
                                     Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
-                                    SoundManager.instance.PlaySE(7);
-                                    BattleManager.instance.CreateCard(model.janloseaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
-                                    yield return new WaitForSeconds(0.25f);
+
+                                    if (playerHand.GetComponentsInChildren<CardController>().Length < 6)//手札が六枚未満なら
+                                    {
+                                        SoundManager.instance.PlaySE(7);
+                                        BattleManager.instance.CreateCard(model.janloseaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
+                                        yield return new WaitForSeconds(0.25f);
+                                    }
                                 } 
 
                             }
@@ -1267,12 +1286,15 @@ public class CardController : MonoBehaviourPunCallbacks
                     if(BattleManager.EnemyJanken == model.janken)
                     {
                         for (int i = 0; i < model.janhandaddCardsList.Length; i++) // リストの個数分処理を繰り返す
-                        {
-                            
+                        {                            
                             Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
-                            SoundManager.instance.PlaySE(7);
-                            BattleManager.instance.CreateCard(model.janhandaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
-                            yield return new WaitForSeconds(0.25f);
+                            
+                            if (playerHand.GetComponentsInChildren<CardController>().Length < 6)//手札が六枚未満なら
+                            {
+                                SoundManager.instance.PlaySE(7);
+                                BattleManager.instance.CreateCard(model.janhandaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
+                                yield return new WaitForSeconds(0.25f);
+                            }
                         } 
 
                     }

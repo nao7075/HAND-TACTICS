@@ -470,6 +470,15 @@ public class BattleManager : MonoBehaviourPunCallbacks
     /// </summary>
     public IEnumerator SummonCard(int cardID, bool isPlayer)
     {
+
+        //フィールドのカードリストを取得
+        CardController[] playerFieldCardList = playerField.GetComponentsInChildren<CardController>();
+
+        if (playerFieldCardList.Length >= 6)//フィールドがが6枚以上なら
+        {
+            yield break;
+        }
+
         if (isPlayer == true)
         {
             CardController card = Instantiate(cardPrefab, playerField);
@@ -503,7 +512,7 @@ public class BattleManager : MonoBehaviourPunCallbacks
         //手札のカードリストを取得
         CardController[] playerHandCardList = playerHand.GetComponentsInChildren<CardController>();
 
-        if (playerHandCardList.Length < 9)//手札が９枚未満なら
+        if (playerHandCardList.Length < 6)//手札が6枚未満なら
         {
             // デッキからランダムなカードを引く
             int randomIndex = Random.Range(0, deck.Count);//デッキのリストからランダムに一つ選ぶ
@@ -729,7 +738,7 @@ public class BattleManager : MonoBehaviourPunCallbacks
         {
             yield break;;
         }
-        
+        SetCanUsePanelHand(false);//攻撃中は手札を使用不可能にする
         
 
         // --- 攻撃側勝利 (有利属性) ---
@@ -831,7 +840,8 @@ public class BattleManager : MonoBehaviourPunCallbacks
             //SoundManager.instance.PlaySE(1); // 攻撃時の音を鳴らす
         }
         attackCard.model.canAttack = false;     
-        attackCard.view.SetCanAttackPanel(false);   
+        attackCard.view.SetCanAttackPanel(false);  
+        SetCanUsePanelHand(true); //制限解除
     }
 
     /// <summary>
@@ -857,7 +867,7 @@ public class BattleManager : MonoBehaviourPunCallbacks
             yield break;;
         }
 
-       
+       SetCanUsePanelHand(false);//攻撃中は手札を使用不可能にする
        
 
         //enemyLeaderHP -= attackCard.model.power; // コメントアウトする
@@ -881,6 +891,7 @@ public class BattleManager : MonoBehaviourPunCallbacks
         } 
 
         ShowLeaderHP();
+        SetCanUsePanelHand(true);//制限解除
     }
 
     /// <summary>

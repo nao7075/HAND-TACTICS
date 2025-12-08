@@ -12,6 +12,13 @@ public class DropPlace : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData) // ドロップされた時に行う処理
     {
+
+        // フィールドのカードが6枚以上なら、これ以上置けないようにして処理を終了する
+        if (this.transform.childCount >= 6)
+        {
+            return;
+        }
+        
         //CardMovement card = eventData.pointerDrag.GetComponent<CardMovement>(); // ドラッグしてきた情報からCardMovementを取得
         CardController card = eventData.pointerDrag.GetComponent<CardController>(); // 今回の書き換え部分
 
