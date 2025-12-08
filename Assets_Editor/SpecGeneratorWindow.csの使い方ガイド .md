@@ -1,4 +1,4 @@
-# **SpecGeneratorWindow.cs 導入・使用ガイド**
+# **SpecGeneratorWindow.csの使い方ガイド**
 
 このガイドでは、Unityプロジェクト内のスクリプトからMarkdown形式の仕様書を自動生成するツール「SpecGeneratorWindow」の導入方法と使い方を説明します。
 
