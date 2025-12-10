@@ -32,6 +32,10 @@
 | `public` | StartCardMotion |  | `IEnumerator` | 召喚時とスペル使用時の演出 |
 | `public` | CostDown |  | `Void` | コスト計算<br>じゃんけん結果に基づいてコストダウン判定を行う |
 | `public` | activateAbility |  | `IEnumerator` | カードの効果発動処理。<br>非常に多岐にわたる効果（ドロー、召喚、バフ、ダメージなど）をフラグに応じて処理する。 |
+| `public` | S GetCostById | Int32 cardId | `Int32` | カードIDからコストを取得する静的ヘルパー |
+| `public` | S GetJankenById | Int32 cardId | `Int32` | カードIDからじゃんけん属性を取得する静的ヘルパー |
+| `public` | GetCost |  | `Int32` | インスタンスのモデルからコストを返す（モデルが無ければ0を返す） |
+| `public` | GetJanken |  | `Int32` | インスタンスのモデルからじゃんけん属性を返す（モデルが無ければ0を返す） |
 
 ---
 

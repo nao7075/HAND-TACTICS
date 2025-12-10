@@ -32,6 +32,7 @@
 | `private` | countPanel | `GameObject` | デッキ編成時の所持枚数表示パネル |  |
 | `private` | countText | `TextMeshProUGUI` | 所持枚数テキスト |  |
 | `private` | DestoroyPanel | `GameObject` | 破壊時のエフェクトパネル |  |
+| `private` | EnemyHandPanel | `GameObject` | CPUの手札用のパネル |  |
 
 ### メソッド (Methods)
 | アクセス | 名前 | 引数 | 戻り値 | 説明 |
@@ -41,6 +42,7 @@
 | `public` | SetCanAttackPanel | Boolean flag | `Void` | 攻撃可能エフェクト（枠）の表示切り替え |
 | `public` | SetCanUsePanel | Boolean flag | `Void` | 使用可能エフェクト（枠）の表示切り替え<br>フラグに合わせてCanUsePanelを付けるor消す |
 | `public` | SetDestoroyPanel |  | `Void` | 破壊時の演出パネルを表示する<br>フラグに合わせてCanUsePanelを付けるor消す |
+| `public` | SetEnemyHandPanel | Boolean flag | `Void` |  |
 
 ---
 

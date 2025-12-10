@@ -59,6 +59,8 @@
 | `private` | enemyRetryReady | `Boolean` | 相手が再戦準備完了したか |  |
 | `private` | Battledeck | `List`1` | デッキ選択あり　対戦に使用するデッキリスト |  |
 | `private` | deck | `List`1` | ゲーム中に使用するデッキ（変動する） |  |
+| `private` | enemyBattledeck | `List`1` | CPU用デッキ（デフォルトデッキ） |  |
+| `private` | enemyDeck | `List`1` | CPU用ゲーム中デッキ |  |
 | `public` | instance | `BattleManager` | シングルトン化 |  |
 
 ### メソッド (Methods)
@@ -70,22 +72,32 @@
 | `private` | Stopsec |  | `IEnumerator` |  |
 | `public` | ShowManaPoint |  | `Void` | マナポイントをUIに表示し、相手にも同期する |
 | `public` | ReduceManaPoint | Int32 cost | `Void` | コストの分、マナポイントを減らす |
+| `private` | CPUMulligan |  | `IEnumerator` | CPU マリガン処理（UI の選択を真似るなどを実装する余地あり）。<br>既に初期手札は `CPUDrawInitialHand` で配られているため、ここでは属性再計算のみ行う。 |
+| `public` | CPUDrawInitialHand | Int32 n | `IEnumerator` | CPU の初期手札をプレイヤーと同じタイミングで配るためのヘルパー |
+| `public` | UpdateCPUJankenCount |  | `Void` | CPU の手札からじゃんけん属性カウントを更新して敵側に表示 |
 | `public` | Mulligan |  | `Void` | マリガン処理。選択されたカードをデッキに戻し、同数引き直す |
 | `public` | SetCanMulliganPanelHand | Boolean isAttachPanel | `Void` | マリガン時に手札を選択可能状態にすることでコスト関係なく動かせるようにする,trueなら動かせるように、falseなら動かせなくする |
 | `public` | SetCanUsePanelHand | Boolean isAttachPanel | `Void` | 手札のカードを使用不可にする<br>自分のターン中、コスト条件を満たす手札を使用可能表示にする<br>攻撃中は手札を使用不可能にする<br>制限解除 |
 | `public` | CostBackOrigin |  | `Void` | コストダウン効果をリセットし、元のコストに戻す<br>コストリセット |
 | `public` | PlayerCardCostBackOrigin |  | `Void` | プレイヤー側のカードのみコストを元に戻す<br>じゃんけん効果の際に使用 |
+| `public` | EnemyCardCostBackOrigin |  | `Void` | 敵側のカードのみコストを元に戻す |
 | `public` | CountHandJanken |  | `Void` | 手札のカードの属性（グー・チョキ・パー）を集計し、相手に通知する<br>じゃんけんカウント更新 |
 | `public` | CreateCard | Int32 cardID, Transform trans | `Void` | カードオブジェクトを生成し、初期化する |
 | `public` | SummonCard | Int32 cardID, Boolean isPlayer | `IEnumerator` | カードをフィールドに召喚する（トークン生成などに使用） |
 | `public` | DrawCard | Transform hand | `Void` | デッキからカードを1枚引く<br>ドロー |
+| `public` | CreateCPUHandCard | Int32 cardID | `Void` | CPUの手札カードを生成する |
+| `public` | EnemyDrawCard |  | `Void` | CPUがデッキからカードを1枚引く |
 | `private` | SetStartHand | Int32 n | `IEnumerator` | 指定枚数(n)カードを配る |
 | `private` | TurnCalc |  | `IEnumerator` | ターンの進行管理（ターン開始演出、フェーズ移行） |
-| `public` | ChangeTurn |  | `Void` | ターン終了処理。攻守の切り替えを行う<br>ターンエンドボタンにつける処理<br>ターンエンドする |
+| `public` | ChangeTurn |  | `Void` | ターン終了処理。攻守の切り替えを行う<br>ターンエンドボタンにつける処理 |
 | `private` | PlayerTurn |  | `Void` | プレイヤーターンの開始処理 |
-| `private` | EnemyTurn |  | `Void` | 敵ターンの開始処理（ローカル側での処理）<br>CPU対戦ならIEnumeratorに変更 |
+| `private` | GetCardScore | CardController card | `Int32` | 敵ターンの開始処理（ローカル側での処理）<br>CPUがカードを評価するためのスコア計算メソッド (シミュレーション用) |
+| `private` | GetCardScore | CardController card, Int32 currentHand, Int32 currentResult | `Int32` | 敵ターンの開始処理（ローカル側での処理）<br>CPUがカードを評価するためのスコア計算メソッド (シミュレーション用) |
+| `private` | GetBestCPUJankenHand |  | `Int32` | CPUの最適なじゃんけん手を選択する |
+| `private` | PredictPlayerHand |  | `Int32` | プレイヤーが出す手を予測する |
+| `private` | EnemyTurn |  | `IEnumerator` |  |
 | `public` | CardBattle | CardController attackCard, CardController defenceCard | `IEnumerator` | カード同士のバトル処理。じゃんけん属性相性とパワーによる勝敗判定を行う |
-| `private` | SetAttackableFieldCard | CardController[] cardList, Boolean canAttack | `Void` | Playerの場のカードを攻撃不可にする<br>フィールドカードの攻撃可否フラグを一括設定する<br>エネミーの場のカードを攻撃不可にする |
+| `private` | SetAttackableFieldCard | CardController[] cardList, Boolean canAttack | `Void` | Playerの場のカードを攻撃不可にする<br>Enemyの場のカードを攻撃不可にする<br>フィールドカードの攻撃可否フラグを一括設定する<br>エネミーの場のカードを攻撃不可にする |
 | `public` | AttackToLeader | CardController attackCard, Boolean isPlayerCard | `IEnumerator` | リーダーへの攻撃処理 |
 | `public` | ShowLeaderHP |  | `Void` | リーダーHPを更新表示し、ゲーム終了判定を行う |
 | `public` | RestartGame |  | `Void` | 再戦処理。盤面をリセットして再開する |
@@ -114,7 +126,7 @@
 | `private` | SendRetryMessage |  | `Void` | 再戦希望を送信<br>リトライメッセージを送信:retryを押した方 |
 | `private` | OnRecieveRetryMessage |  | `Void` | リトライメッセージ受け取った時に実行 |
 | `private` | RPCRestart |  | `Void` |  |
-| `private` | ShowEnemyManaPoint | Int32 pManaPoint, Int32 pDefaultManaPoint | `Void` | マナポイントを表示するメソッド |
+| `public` | ShowEnemyManaPoint | Int32 pManaPoint, Int32 pDefaultManaPoint | `Void` | マナポイントを表示するメソッド |
 | `private` | RPCdestroyjan | Int32 ENumberth | `Void` | 条件に合うカードを破壊 |
 | `private` | RPCMulliganBool |  | `Void` | マリガン完了通知 |
 | `private` | RPCShowJankenCount | Int32 GCount, Int32 CCount, Int32 PCount | `Void` | 相手の手札のじゃんけん属性の数を反映 |

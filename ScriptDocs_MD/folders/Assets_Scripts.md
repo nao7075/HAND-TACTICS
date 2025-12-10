@@ -9,14 +9,14 @@
 | [AttackedLeader.cs](../files/AttackedLeader_cs.md) | 25 | 12 | 10 | [`C:AttackedLeader`](../files/AttackedLeader_cs.md#AttackedLeader)  |
 | [BattleBgmManager.cs](../files/BattleBgmManager_cs.md) | 45 | 25 | 14 | [`C:BattleBgmManager`](../files/BattleBgmManager_cs.md#BattleBgmManager)  |
 | [BattleCardMovement.cs](../files/BattleCardMovement_cs.md) | 242 | 133 | 61 | [`C:BattleCardMovement`](../files/BattleCardMovement_cs.md#BattleCardMovement)  |
-| [BattleManager.cs](../files/BattleManager_cs.md) | 1624 | 1034 | 326 | [`C:BattleManager`](../files/BattleManager_cs.md#BattleManager)  |
+| [BattleManager.cs](../files/BattleManager_cs.md) | 2288 | 1525 | 434 | [`C:BattleManager`](../files/BattleManager_cs.md#BattleManager)  |
 | [BGMManager.cs](../files/BGMManager_cs.md) | 56 | 32 | 17 | [`C:BGMManager`](../files/BGMManager_cs.md#BGMManager)  |
-| [CardController.cs](../files/CardController_cs.md) | 1500 | 1160 | 127 | [`C:CardController`](../files/CardController_cs.md#CardController)  |
+| [CardController.cs](../files/CardController_cs.md) | 1796 | 1420 | 140 | [`C:CardController`](../files/CardController_cs.md#CardController)  |
 | [CardDetailPanel.cs](../files/CardDetailPanel_cs.md) | 38 | 22 | 11 | [`C:CardDetailPanel`](../files/CardDetailPanel_cs.md#CardDetailPanel)  |
 | [CardEntity.cs](../files/CardEntity_cs.md) | 84 | 69 | 7 | [`C:CardEntity`](../files/CardEntity_cs.md#CardEntity)  |
 | [CardModel.cs](../files/CardModel_cs.md) | 246 | 105 | 70 | [`C:CardModel`](../files/CardModel_cs.md#CardModel)  |
-| [CardMovement.cs](../files/CardMovement_cs.md) | 102 | 56 | 29 | [`C:CardMovement`](../files/CardMovement_cs.md#CardMovement)  |
-| [CardView.cs](../files/CardView_cs.md) | 123 | 81 | 28 | [`C:CardView`](../files/CardView_cs.md#CardView)  |
+| [CardMovement.cs](../files/CardMovement_cs.md) | 108 | 60 | 30 | [`C:CardMovement`](../files/CardMovement_cs.md#CardMovement)  |
+| [CardView.cs](../files/CardView_cs.md) | 130 | 86 | 28 | [`C:CardView`](../files/CardView_cs.md#CardView)  |
 | [DeckEditManager.cs](../files/DeckEditManager_cs.md) | 454 | 307 | 85 | [`C:DeckEditManager`](../files/DeckEditManager_cs.md#DeckEditManager)  |
 | [DeckListManager.cs](../files/DeckListManager_cs.md) | 133 | 80 | 25 | [`C:DeckListManager`](../files/DeckListManager_cs.md#DeckListManager)  |
 | [DeckSelectManager.cs](../files/DeckSelectManager_cs.md) | 90 | 60 | 14 | [`C:DeckSelectManager`](../files/DeckSelectManager_cs.md#DeckSelectManager)  |
@@ -27,7 +27,7 @@
 | [GameManager.cs](../files/GameManager_cs.md) | 74 | 42 | 18 | [`C:GameManager`](../files/GameManager_cs.md#GameManager)  |
 | [HomeManager.cs](../files/HomeManager_cs.md) | 45 | 36 | 4 | [`C:HomeManager`](../files/HomeManager_cs.md#HomeManager)  |
 | [MenuCardSpawner.cs](../files/MenuCardSpawner_cs.md) | 157 | 104 | 28 | [`C:MenuCardSpawner`](../files/MenuCardSpawner_cs.md#MenuCardSpawner)  |
-| [OnlineMenuManager.cs](../files/OnlineMenuManager_cs.md) | 101 | 56 | 33 | [`C:OnlineMenuManager`](../files/OnlineMenuManager_cs.md#OnlineMenuManager)  |
+| [OnlineMenuManager.cs](../files/OnlineMenuManager_cs.md) | 115 | 65 | 36 | [`C:OnlineMenuManager`](../files/OnlineMenuManager_cs.md#OnlineMenuManager)  |
 | [OpenPackManager.cs](../files/OpenPackManager_cs.md) | 168 | 124 | 21 | [`C:OpenPackManager`](../files/OpenPackManager_cs.md#OpenPackManager)  |
 | [PackController.cs](../files/PackController_cs.md) | 36 | 21 | 9 | [`C:PackController`](../files/PackController_cs.md#PackController)  |
 | [PackEntity.cs](../files/PackEntity_cs.md) | 19 | 13 | 3 | [`C:PackEntity`](../files/PackEntity_cs.md#PackEntity)  |

@@ -15,12 +15,14 @@
 | アクセス | 名前 | 型 | 説明 | 属性・制約 |
 | :---: | :--- | :---: | :--- | :---: |
 | `private` | matchingButton | `GameObject` | マッチングボタン |  |
+| `private` | CpuBattleButton | `Button` | CPU対戦ボタン |  |
 | `private` | inRoom | `Boolean` | roomにいるかどうか |  |
 | `private` | isMatching | `Boolean` | マッチングしたかどうか |  |
 
 ### メソッド (Methods)
 | アクセス | 名前 | 引数 | 戻り値 | 説明 |
 | :---: | :--- | :--- | :---: | :--- |
+| `public` | OnCpuBattleButton |  | `Void` | CPU対戦開始ボタン処理 |
 | `public` | OnMatchingButton |  | `Void` | マッチング開始ボタン処理 |
 | `public` | OnConnectedToMaster |  | `Void` | マスターサーバーへの接続が成功した時に呼ばれるコールバック |
 | `public` | OnJoinedRoom |  | `Void` | ゲームサーバーへの接続が成功した時に呼ばれるコールバック |

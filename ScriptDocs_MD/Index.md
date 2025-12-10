@@ -1,5 +1,5 @@
 ﻿# C#Scripts仕様書
-**作成日:** 2025/12/09 06:17
+**作成日:** 2025/12/11 05:30
 
 ## フォルダ一覧
 | フォルダ名 | ファイル数 | 総行数 | クラス数 |
@@ -9,7 +9,7 @@
 | [Assets/Photon/PhotonChat/Code](folders/Assets_Photon_PhotonChat_Code.md) | 13 | 3102 | 10 |
 | [Assets/Photon/PhotonChat/Demos/Common](folders/Assets_Photon_PhotonChat_Demos_Common.md) | 4 | 220 | 4 |
 | [Assets/Photon/PhotonChat/Demos/DemoChat](folders/Assets_Photon_PhotonChat_Demos_DemoChat.md) | 7 | 949 | 7 |
-| [Assets/Photon/PhotonLibs/WebSocket](folders/Assets_Photon_PhotonLibs_WebSocket.md) | 2 | 687 | 2 |
+| [Assets/Photon/PhotonLibs/WebSocket](folders/Assets_Photon_PhotonLibs_WebSocket.md) | 2 | 687 | 0 |
 | [Assets/Photon/PhotonRealtime/Code](folders/Assets_Photon_PhotonRealtime_Code.md) | 17 | 11497 | 14 |
 | [Assets/Photon/PhotonRealtime/Code/Unity](folders/Assets_Photon_PhotonRealtime_Code_Unity.md) | 1 | 116 | 0 |
 | [Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing](folders/Assets_Photon_PhotonRealtime_Demos_DemoLoadBalancing.md) | 1 | 145 | 1 |
@@ -48,5 +48,5 @@
 | [Assets/Photon/PhotonUnityNetworking/UtilityScripts/UI](folders/Assets_Photon_PhotonUnityNetworking_UtilityScripts_UI.md) | 7 | 481 | 7 |
 | [Assets/Plugins/Demigiant/DOTween/Modules](folders/Assets_Plugins_Demigiant_DOTween_Modules.md) | 8 | 2072 | 7 |
 | [Assets/Plugins/Demigiant/DOTweenPro](folders/Assets_Plugins_Demigiant_DOTweenPro.md) | 6 | 2315 | 2 |
-| [Assets/Scripts](folders/Assets_Scripts.md) | 41 | 6604 | 41 |
+| [Assets/Scripts](folders/Assets_Scripts.md) | 41 | 7591 | 41 |
 | [Assets/TextMesh Pro/Examples & Extras/Scripts](folders/Assets_TextMesh_Pro_Examples_&_Extras_Scripts.md) | 34 | 4964 | 34 |
