@@ -368,6 +368,8 @@ graph TD
 | **49** | チョキトークン | ✌️ | Monster | 0/1 | janken_choki.png | 速攻 (トークン) |
 | **50** | パートークン | ✋ | Monster | 0/1 | janken_pa.png | 速攻 (トークン) |
 
+* ※CCはCosmic Combatの略
+
 ### **4.3. グラフィック・UI素材**
 * **[CollectedImages_Scene_Start](CollectedImages_Scene_Start)** Startシーンの画像素材フォルダ。
 * **[CollectedImages_Scene_Home](CollectedImages_Scene_Home)** Homeシーンの画像素材フォルダ。
