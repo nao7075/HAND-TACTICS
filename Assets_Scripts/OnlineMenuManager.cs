@@ -4,6 +4,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// オンラインマッチング画面の制御クラス。
@@ -17,10 +18,22 @@ public class OnlineMenuManager : MonoBehaviourPunCallbacks
     // 部屋が2名になればシーンを遷移
     //[SerializeField] GameObject loadingAnim;
     [SerializeField] GameObject matchingButton; //マッチングボタン
+    [SerializeField] Button CpuBattleButton; //CPU対戦ボタン
     //[SerializeField] GameObject matchingMessage;
     bool inRoom; //roomにいるかどうか
     bool isMatching; //マッチングしたかどうか
     
+
+    /// <summary>
+    /// CPU対戦開始ボタン処理
+    /// </summary>
+    public void OnCpuBattleButton()
+    {
+        SoundManager.instance.PlaySE(0);
+        GameManager.instance.IsOnlineBattle = false;
+        SceneTransitionManager.instance.Load("Battle");
+    }
+
     /// <summary>
     /// マッチング開始ボタン処理
     /// </summary>
@@ -30,6 +43,7 @@ public class OnlineMenuManager : MonoBehaviourPunCallbacks
         GameManager.instance.IsOnlineBattle = true;
         //loadingAnim.SetActive(true);
         matchingButton.SetActive(false);
+        CpuBattleButton.interactable = false;
         //matchingMessage.SetActive(true);
         // PhotonServerSettingsの設定内容を使ってマスターサーバーへ接続する
         PhotonNetwork.ConnectUsingSettings();

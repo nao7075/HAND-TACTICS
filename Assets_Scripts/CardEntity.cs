@@ -55,7 +55,7 @@ public class CardEntity : ScriptableObject
     public int[] janloseaddCardsList;//じゃんけん負けででサーチ
     public int[] janlosesummonCardsList;//じゃんけんの負けてれば召喚
     //public int janlosehandlife;//特定の手で且つ負けてれば
-    [Header("■ じゃんけんの手とカードの手が一致している時の効果")]
+    [Header("■ じゃんけんとカードの手が一致している時の効果")]
     public bool janhandspeed;//じゃんけんの手とカードの手が一致していればスピードアタッカー
     public int janhandpower;//じゃんけんの手とカードの手が一致していればパワーが増減する効果
     public int janhanddraw;//じゃんけんの手とカードの手が一致していればドロー

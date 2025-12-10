@@ -46,7 +46,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card4 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "じゃんけんに勝っていればスピードアタッカー"
+  > abilityText: "じゃんけんに勝っていればスピードアタッカー
+"
   > janwinspeed: True
 
 [Card] Card5
@@ -134,7 +135,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card12.1 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復"
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
   > chgMyLeaderHpNum: 2
   > janwinPHp: 2
 
@@ -146,7 +148,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card13 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復"
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
   > chgMyLeaderHpNum: 2
   > janwinPHp: 2
 
@@ -158,7 +161,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card14 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復"
+  > abilityText: "ライフを2回復、じゃんけん勝っていれば4回復
+"
   > chgMyLeaderHpNum: 2
   > janwinPHp: 2
 
@@ -170,7 +174,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card15 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "ManaPoint＋１"
+  > abilityText: "ManaPoint＋１
+"
   > manaBoostNum: 1
 
 [Card] Card16
@@ -181,7 +186,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card16 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "相手に3ダメージ"
+  > abilityText: "相手に3ダメージ
+"
   > chgEnemyLeaderHpNum: -3
 
 [Card] Card17
@@ -192,7 +198,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card17 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "出した手がパーなら１ドロー"
+  > abilityText: "出した手がパーなら１ドロー
+"
   > janhanddraw: 1
 
 [Card] Card18
@@ -203,7 +210,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card18 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "相手のパーを一体ランダムで破壊"
+  > abilityText: "相手のパーを一体ランダムで破壊
+"
   > destroyjan: 3
 
 [Card] Card19
@@ -214,7 +222,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card19 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "相手のグーを一体破壊"
+  > abilityText: "相手のグーを一体破壊
+"
   > destroyjan: 1
 
 [Card] Card20
@@ -225,7 +234,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card20 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "相手のチョキを一体破壊"
+  > abilityText: "相手のチョキを一体破壊
+"
   > destroyjan: 2
 
 [Card] Card21
@@ -236,7 +246,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card21 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "じゃんけん負けていれば、チョキを召喚"
+  > abilityText: "じゃんけん負けていれば、チョキを召喚
+"
   > janlosesummonCardsList: [1]
 
 [Card] Card22
@@ -247,7 +258,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card22 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "じゃんけん負けていれば、パーを召喚"
+  > abilityText: "じゃんけん負けていれば、パーを召喚
+"
   > janlosesummonCardsList: [2]
 
 [Card] Card23
@@ -258,7 +270,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card23 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "じゃんけん負けていれば、グーを召喚"
+  > abilityText: "じゃんけん負けていれば、グーを召喚
+"
   > janlosesummonCardsList: [0]
 
 [Card] Card24
@@ -269,7 +282,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card24 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "スピードアタッカー"
+  > abilityText: "スピードアタッカー
+"
   > isSpeedAttacker: True
 
 [Card] Card25
@@ -280,7 +294,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card25.1 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "スピードアタッカー"
+  > abilityText: "スピードアタッカー
+"
   > isSpeedAttacker: True
 
 [Card] Card26
@@ -302,7 +317,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card27 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "スピードチョキとスピードパーを手札に加える"
+  > abilityText: "スピードチョキとスピードパーを手札に加える
+"
   > addCardsList: [4, 5]
 
 [Card] Card28
@@ -313,7 +329,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card28 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "スピードグーとスピードパーを手札に加える"
+  > abilityText: "スピードグーとスピードパーを手札に加える
+"
   > addCardsList: [3, 5]
 
 [Card] Card29
@@ -324,7 +341,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card29 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "スピードチョキとスピードグーを手札に加える"
+  > abilityText: "スピードチョキとスピードグーを手札に加える
+"
   > addCardsList: [3, 4]
 
 [Card] Card30
@@ -335,7 +353,9 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card30 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "自分がグーならパワーを＋2、スピードアッタッカーを得る"
+  > abilityText: "自分がグーならパワーを＋2、
+スピードアッタッカーを得る
+"
   > janhandspeed: True
   > janhandpower: 2
 
@@ -347,7 +367,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card31 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "自分がチョキならパワーを＋2、スピードアッタッカーを得る"
+  > abilityText: "自分がチョキならパワーを＋2、スピードアッタッカーを得る
+"
   > janhandspeed: True
   > janhandpower: 2
 
@@ -359,7 +380,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card32 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "自分がパーならパワーを＋2、スピードアッタッカーを得る"
+  > abilityText: "自分がパーならパワーを＋2、スピードアッタッカーを得る
+"
   > janhandspeed: True
   > janhandpower: 2
 
@@ -371,7 +393,7 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card33 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "ライフを4回復、自分がグーで勝利していれば、さらに２回復"
+  > abilityText: "ライフを4回復、自分がグーで勝利していれば、さらに２回復"
   > chgMyLeaderHpNum: 4
   > specificHand: True
   > janwinPHp: 2
@@ -384,7 +406,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card34 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "ライフを4回復、自分がチョキで勝利していれば、さらに２回復"
+  > abilityText: "ライフを4回復、自分がチョキで勝利していれば、さらに２回復
+"
   > chgMyLeaderHpNum: 4
   > specificHand: True
   > janwinPHp: 2
@@ -397,7 +420,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card35 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "ライフを4回復、自分がぱーで勝利していれば、さらに２回復"
+  > abilityText: "ライフを4回復、自分がぱーで勝利していれば、さらに２回復
+"
   > chgMyLeaderHpNum: 4
   > specificHand: True
   > janwinPHp: 2
@@ -410,7 +434,9 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card36.1 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "自分がグーで勝利していれば、チョキトークン、パートークンを召喚"
+  > abilityText: "自分がグーで勝利していれば、
+チョキトークン、パートークンを召喚
+"
   > specificHand: True
   > janwinsummonCardsList: [49, 50]
 
@@ -422,7 +448,9 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card37.1 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "自分がチョキで勝利していれば、速攻。負けてればパワー＋２"
+  > abilityText: "自分がチョキで勝利していれば、速攻。
+負けてればパワー＋２
+"
   > specificHand: True
   > janwinspeed: True
   > janlosepower: 2
@@ -435,7 +463,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card38.1 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "自分がパーなら、自分を４回復して２ドロー"
+  > abilityText: "自分がパーなら、自分を４回復して２ドロー
+"
   > janhanddraw: 2
   > janhandPHp: 4
 
@@ -447,7 +476,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card39 (Sprite)
   > janicon: janken_gu (Sprite)
-  > abilityText: "相手のグー、パーを全て破壊"
+  > abilityText: "相手のグー、パーを全て破壊
+"
   > destroyjan2: 1
 
 [Card] Card40
@@ -458,7 +488,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card40 (Sprite)
   > janicon: janken_choki (Sprite)
-  > abilityText: "相手のグー、チョキを全て破壊"
+  > abilityText: "相手のグー、チョキを全て破壊
+"
   > destroyjan2: 2
 
 [Card] Card41
@@ -469,7 +500,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 3
   > cardImage: card41.1 (Sprite)
   > janicon: janken_pa (Sprite)
-  > abilityText: "相手のチョキ、パーを全て破壊"
+  > abilityText: "相手のチョキ、パーを全て破壊
+"
   > destroyjan2: 3
 
 [Card] Card42
@@ -509,7 +541,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card45 (Sprite)
   > cardType: Spell
-  > abilityText: "自分を２回復、相手に２ダメージ"
+  > abilityText: "自分を２回復、相手に２ダメージ
+"
   > chgMyLeaderHpNum: 2
   > chgEnemyLeaderHpNum: -2
 
@@ -520,7 +553,9 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 1
   > cardImage: card46 (Sprite)
   > cardType: Spell
-  > abilityText: "グーチョキパーを召喚."
+  > abilityText: "グーチョキパーを召喚.
+
+"
   > summonCardsList: [48, 49, 50]
 
 [Card] Card47
@@ -530,7 +565,8 @@ All CardEntities Dump [Diff Only (Based on 'default')]
   > janken: 2
   > cardImage: card47 (Sprite)
   > cardType: Spell
-  > abilityText: "全破壊"
+  > abilityText: "全破壊
+"
   > alldestroy: True
 
 [Card] Card48

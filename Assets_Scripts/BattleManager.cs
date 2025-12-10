@@ -83,8 +83,11 @@ public class BattleManager : MonoBehaviourPunCallbacks
     List<int> Battledeck = DeckSelectManager.deckList;//デッキ選択あり　対戦に使用するデッキリスト
     //List<int> Battledeck = new List<int>() {3,4,5,9,9,10,11,10,11,12,13,14,15,15,15,18,19,20,21,22,23,27,28,29,30,31,32,39,40,41,42,47};//デフォルトデッキ
 
-
     List<int> deck = new List<int>() {};// ゲーム中に使用するデッキ（変動する）
+    
+    // CPU用デッキ・手札管理
+    List<int> enemyBattledeck = DeckSelectManager.deckList; // CPU用デッキ（デフォルトデッキ）
+    List<int> enemyDeck = new List<int>() {}; // CPU用ゲーム中デッキ
     public static BattleManager instance;// シングルトン化
     private void Awake()
     {
@@ -126,6 +129,17 @@ public class BattleManager : MonoBehaviourPunCallbacks
         {
             deck.Add(card); // ディープコピー        
         }
+        
+        // CPU用デッキ初期化（オフライン時のみ）
+        if (GameManager.instance.IsOnlineBattle == false)
+        {
+            enemyDeck.Clear();
+            foreach (int card in enemyBattledeck)
+            {
+                enemyDeck.Add(card); // CPU用デッキディープコピー
+            }
+        }
+        
         // HP初期化
         enemyLeaderHP = 20;
         playerLeaderHP = 20;
@@ -143,6 +157,12 @@ public class BattleManager : MonoBehaviourPunCallbacks
         yield return StartCoroutine (SetStartHand(3));
         Debug.Log("Deck contents: " + string.Join(", ", deck));
 
+        // オフライン(CPU戦)の場合、プレイヤーと同じタイミングでCPUにも初期手札を配る
+        if (GameManager.instance.IsOnlineBattle == false)
+        {
+            yield return StartCoroutine(CPUDrawInitialHand(3));
+        }
+
         // マリガン（手札引き直し）フェーズ開始
         SetCanMulliganPanelHand(true);
         uIManager.OpenMulliganPanel();//マリガンパネルを開く
@@ -154,32 +174,59 @@ public class BattleManager : MonoBehaviourPunCallbacks
         Debug.Log("Deck contents: " + string.Join(", ", deck));
 
         // 敵にマリガン完了を通知し、敵の完了を待つ
-        photonView.RPC(nameof(RPCMulliganBool), RpcTarget.Others);//敵にマリガンが完了したことを伝える
-        yield return new WaitUntil(() => EnemyMulliganFinished);
-
-        Debug.Log("マスタークライアントか:"+PhotonNetwork.LocalPlayer.IsMasterClient);
-        // 先攻後攻の決定（マスタークライアントがランダムに決定）
-        if(PhotonNetwork.LocalPlayer.IsMasterClient)//自分がマスタークライアントなら
+        if(GameManager.instance.IsOnlineBattle == true)
         {
-                    
+            photonView.RPC(nameof(RPCMulliganBool), RpcTarget.Others);//敵にマリガンが完了したことを伝える
+            yield return new WaitUntil(() => EnemyMulliganFinished);
+        }
+        else
+        {
+            // オフライン(CPU戦)ではCPUもマリガン実行（既に初期手札は配布済み）
+            yield return StartCoroutine(CPUMulligan());
+            EnemyMulliganFinished = true;
+        }
+
+        // 先攻後攻の決定
+        if (GameManager.instance.IsOnlineBattle == true)
+        {
+            Debug.Log("マスタークライアントか:"+PhotonNetwork.LocalPlayer.IsMasterClient);
+            // オンライン時はマスタークライアントが決定する
+            if(PhotonNetwork.LocalPlayer.IsMasterClient)//自分がマスタークライアントなら
+            {
+                int randomValue2 = Random.Range(0, 2);
+                // 0なら自分が先攻、1なら後攻
+                if(randomValue2 == 0)
+                {
+                    SoundManager.instance.PlaySE(0);
+                    isPlayerTurn = true;
+                    turnEndButton.interactable = true;
+                    photonView.RPC(nameof(RPCTurnDecision), RpcTarget.Others, true);// 相手に通知
+                }
+                else
+                {
+                    isPlayerTurn = false;
+                    turnEndButton.interactable = false;
+                    SetCanUsePanelHand(false); // 手札のカードを使用不可にする
+                    photonView.RPC(nameof(RPCTurnDecision), RpcTarget.Others, false);// 相手に通知
+                }
+                GameStart = true;
+            }
+        }
+        else
+        {
+            // オフライン(CPU戦)時はローカルで先攻/後攻を決定
             int randomValue2 = Random.Range(0, 2);
-            // 0なら自分が先攻、1なら後攻
-            //int randomValue2 = 0;
             if(randomValue2 == 0)
             {
                 SoundManager.instance.PlaySE(0);
                 isPlayerTurn = true;
                 turnEndButton.interactable = true;
-                photonView.RPC(nameof(RPCTurnDecision), RpcTarget.Others,true);// 相手に通知
             }
             else
-            {   
+            {
                 isPlayerTurn = false;
                 turnEndButton.interactable = false;
-                SetCanUsePanelHand(false); // 手札のカードを使用不可にする
-                
-                photonView.RPC(nameof(RPCTurnDecision), RpcTarget.Others,false);// 相手に通知
-                
+                SetCanUsePanelHand(false);
             }
             GameStart = true;
         }
@@ -209,7 +256,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
     {
         playerManaPointText.text = playerManaPoint.ToString();
         playerDefaultManaPointText.text = playerDefaultManaPoint.ToString();
-        photonView.RPC(nameof(ShowEnemyManaPoint), RpcTarget.Others,playerManaPoint,playerDefaultManaPoint);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(ShowEnemyManaPoint), RpcTarget.Others,playerManaPoint,playerDefaultManaPoint);
+        }
     }
 
     /// <summary>
@@ -225,6 +275,85 @@ public class BattleManager : MonoBehaviourPunCallbacks
         {
             SetCanUsePanelHand(true);
         }
+    }
+
+    /// <summary>
+    /// CPU マリガン処理（UI の選択を真似るなどを実装する余地あり）。
+    /// 既に初期手札は `CPUDrawInitialHand` で配られているため、ここでは属性再計算のみ行う。
+    /// </summary>
+    IEnumerator CPUMulligan()
+    {
+        // CPUのマリガンロジック
+        // 手札を確認し、コストが4以上のカードはデッキに戻して引き直す
+        
+        CardController[] currentHand = enemyHand.GetComponentsInChildren<CardController>();
+        List<CardController> cardsToSwap = new List<CardController>();
+
+        foreach (CardController card in currentHand)
+        {
+            // コスト4以上なら交換対象
+            if (card.model.cost >= 4)
+            {
+                cardsToSwap.Add(card);
+            }
+        }
+
+        int swapCount = cardsToSwap.Count;
+
+        if (swapCount > 0)
+        {
+            // 交換するカードをデッキに戻して破壊
+            foreach (CardController card in cardsToSwap)
+            {
+                enemyDeck.Add(card.model.cardId);
+                Destroy(card.gameObject);
+            }
+
+            // 少し待つ（演出用）
+            yield return new WaitForSeconds(0.5f);
+
+            // 同数引き直す
+            yield return StartCoroutine(CPUDrawInitialHand(swapCount));
+        }
+
+        UpdateCPUJankenCount();
+    }
+
+    /// <summary>
+    /// CPU の初期手札をプレイヤーと同じタイミングで配るためのヘルパー
+    /// </summary>
+    public IEnumerator CPUDrawInitialHand(int n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            EnemyDrawCard();
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
+    /// <summary>
+    /// CPU の手札からじゃんけん属性カウントを更新して敵側に表示
+    /// </summary>
+    public void UpdateCPUJankenCount()
+    {
+        enemyGCount = 0;
+        enemyCCount = 0;
+        enemyPCount = 0;
+        
+        // CPU の手札オブジェクトから属性をカウント
+        CardController[] cards = enemyHand.GetComponentsInChildren<CardController>();
+        foreach (CardController card in cards)
+        {
+            int janken = card.model.janken;
+            if (janken == 1) enemyGCount++;
+            else if (janken == 2) enemyCCount++;
+            else if (janken == 3) enemyPCount++;
+        }
+        
+        // 敵側 UI に表示
+        enemyGText.text = enemyGCount.ToString();
+        enemyCText.text = enemyCCount.ToString();
+        enemyPText.text = enemyPCount.ToString();
     }
 
     /// <summary>
@@ -406,6 +535,25 @@ public class BattleManager : MonoBehaviourPunCallbacks
     }
 
     /// <summary>
+    /// 敵側のカードのみコストを元に戻す
+    /// </summary>
+    public void EnemyCardCostBackOrigin()
+    {   
+        //手札のカードのリスト取得
+        CardController[] enemyHandCardList = enemyHand.GetComponentsInChildren<CardController>();
+
+        foreach (CardController card in enemyHandCardList)
+        {
+            if (card.model.isCostDown == true)
+            {
+                card.model.cost++;
+                card.model.isCostDown = false;
+                card.view.Show(card.model);
+            }
+        }
+    }
+
+    /// <summary>
     /// 手札のカードの属性（グー・チョキ・パー）を集計し、相手に通知する
     /// </summary>
     public void CountHandJanken()
@@ -434,7 +582,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
         }
 
         //同期
-        photonView.RPC(nameof(RPCShowJankenCount), RpcTarget.Others, playerGCount, playerCCount, playerPCount);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCShowJankenCount), RpcTarget.Others, playerGCount, playerCCount, playerPCount);
+        }
     }
     
     /// <summary>
@@ -450,7 +601,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
         if (trans == playerHand)
         {   
             card.PlayerInit(cardID, true);// Playerの手札に生成されたカードはPlayerのカードとする
-            CreateEnemyCard();// 相手画面に手札枚数同期用カードを生成
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                CreateEnemyCard();// 相手画面に手札枚数同期用カードを生成
+            }
             CountHandJanken();//じゃんけんカウント更新
             Debug.Log("手札生成:");
         }
@@ -470,33 +624,45 @@ public class BattleManager : MonoBehaviourPunCallbacks
     /// </summary>
     public IEnumerator SummonCard(int cardID, bool isPlayer)
     {
-
-        //フィールドのカードリストを取得
-        CardController[] playerFieldCardList = playerField.GetComponentsInChildren<CardController>();
-
-        if (playerFieldCardList.Length >= 6)//フィールドがが6枚以上なら
-        {
-            yield break;
-        }
-
         if (isPlayer == true)
         {
+            //フィールドのカードリストを取得
+            CardController[] playerFieldCardList = playerField.GetComponentsInChildren<CardController>();
+
+            if (playerFieldCardList.Length >= 6)//フィールドがが6枚以上なら
+            {
+                yield break;
+            }
+
             CardController card = Instantiate(cardPrefab, playerField);
             card.PlayerInit(cardID, true);
             
             card.model.FieldCard = true;
             //card.CostDown();
-            SendPlayerCard(cardID, card.model.playerNumberth);// 相手に召喚を通知
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                SendPlayerCard(cardID, card.model.playerNumberth);// 相手に召喚を通知
+            }
             yield return StartCoroutine(card.activateAbility());// 出た時効果発動
-            
         }
-        /*else
+        else
         {
-            CardController card = Instantiate(cardPrefab, enemyField);
-            card.EnemyInit(cardID, false,card.model.playerNumberth);
-            card.model.FieldCard = true;
-            yield return StartCoroutine(card.activateAbility());
-        }*/
+            if(GameManager.instance.IsOnlineBattle == false)
+            {
+                //敵フィールドのカードリストを取得
+                CardController[] enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
+
+                if (enemyFieldCardList.Length >= 6)//フィールドが6枚以上なら
+                {
+                    yield break;
+                }
+
+                CardController card = Instantiate(cardPrefab, enemyField);
+                card.EnemyInit(cardID, false, 0);
+                card.model.FieldCard = true;
+                yield return StartCoroutine(card.activateAbility());// 出た時効果発動
+            }
+        }
     }
 
     /// <summary>
@@ -523,6 +689,43 @@ public class BattleManager : MonoBehaviourPunCallbacks
         }
         CountHandJanken();
         SetCanUsePanelHand(true);
+    }
+
+    /// <summary>
+    /// CPUの手札カードを生成する
+    /// </summary>
+    public void CreateCPUHandCard(int cardID)
+    {
+        if (GameManager.instance.IsOnlineBattle == false) // CPU対戦時
+        {
+            // 実カードプレハブを生成
+            CardController card = Instantiate(cardPrefab, enemyHand);
+            card.Init(cardID, false); // 敵カードとして初期化
+        }
+    }
+
+    /// <summary>
+    /// CPUがデッキからカードを1枚引く
+    /// </summary>
+    public void EnemyDrawCard()
+    {
+        // デッキが０枚なら引かない
+        if (enemyDeck.Count == 0)
+        {
+            return;
+        }
+
+        // 手札が6枚未満なら
+        if (enemyHand.childCount < 6)
+        {
+            int randomIndex = Random.Range(0, enemyDeck.Count);
+            int cardID = enemyDeck[randomIndex];
+            enemyDeck.RemoveAt(randomIndex);
+
+            CreateCPUHandCard(cardID);
+            SoundManager.instance.PlaySE(7);
+        }
+        UpdateCPUJankenCount();
     }
 
     /// <summary>
@@ -558,14 +761,11 @@ public class BattleManager : MonoBehaviourPunCallbacks
 
         if (isPlayerTurn)//BattleManager.isPlayerTurnフラグがtrueなら
         {
-            
             PlayerTurn();
         }
         else
         {
-            
-            
-            EnemyTurn(); 
+            StartCoroutine(EnemyTurn());
         }
     }
 
@@ -582,12 +782,21 @@ public class BattleManager : MonoBehaviourPunCallbacks
             CostBackOrigin();   // コストリセット
             SoundManager.instance.PlaySE(0);
         }
+        else if (!isPlayerTurn && GameManager.instance.IsOnlineBattle == false)
+        {
+            CardController[] enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
+            SetAttackableFieldCard(enemyFieldCardList, false); // Enemyの場のカードを攻撃不可にする
+            SoundManager.instance.PlaySE(0);
+        }
         // ターンエンドボタンを押下可能/不可能にする
         turnEndButton.interactable = !turnEndButton.interactable;
 
         isPlayerTurn = !isPlayerTurn; // ターンフラグ反転
         StartCoroutine(TurnCalc()); // 次のターンへ
-        photonView.RPC(nameof(RPCChangeTurn), RpcTarget.Others);// 相手にターン変更を通知
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCChangeTurn), RpcTarget.Others);// 相手にターン変更を通知
+        }
     }
 
     /// <summary>
@@ -618,96 +827,477 @@ public class BattleManager : MonoBehaviourPunCallbacks
     /// <summary>
     /// 敵ターンの開始処理（ローカル側での処理）
     /// </summary>
-    void EnemyTurn() // CPU対戦ならIEnumeratorに変更
-    {   //yield return null; 
-        StartCoroutine(JankenProcess());// じゃんけんフェイズ開始
+    /// <summary>
+    /// CPUがカードを評価するためのスコア計算メソッド (ラッパー)
+    /// </summary>
+    int GetCardScore(CardController card)
+    {
+        return GetCardScore(card, EnemyJanken, EnemyResult);
+    }
+
+    /// <summary>
+    /// CPUがカードを評価するためのスコア計算メソッド (シミュレーション用)
+    /// </summary>
+    int GetCardScore(CardController card, int currentHand, int currentResult)
+    {
+        CardModel m = card.model;
+        int score = 0;
+
+        // 基本スコア: パワーとコスト
+        score += m.power * 100;
+        score += m.cost * 300;
+
+        // --- 常時発動効果 ---
         
-        Debug.Log("Enemyのターン");
-        Debug.Log("どっちのターンか:"+isPlayerTurn);
+        // スピードアタッカー (即戦力)
+        if (m.isSpeedAttacker) score += 500;
+        
+        // ドロー効果 (手札補充)
+        if (m.drawCardNum > 0) score += m.drawCardNum * 200;
+        
+        // マナブースト (次ターン以降有利)
+        if (m.manaBoostNum > 0) score += m.manaBoostNum * 300;
 
-        //敵のフィールドのカードリストを取得
-        CardController[] enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
-
-        // 敵カードの表示上の攻撃権リセット（実際の攻撃ロジックは相手側で行われる）
-        foreach (CardController card in enemyFieldCardList)
+        // 破壊効果 (相手の場にターゲットがいるか確認)
+        if (m.destroyjan != 0)
         {
-            card.model.canAttack = true;
-            card.view.SetCanAttackPanel(card.model.canAttack);
+            bool targetExists = false;
+            foreach (CardController enemyCard in playerField.GetComponentsInChildren<CardController>())
+            {
+                if (enemyCard.model.janken == m.destroyjan)
+                {
+                    targetExists = true;
+                    break;
+                }
+            }
+            if (targetExists) score += 1000; // ターゲットがいれば高評価
+        }
+        
+        // 全破壊 (自分の被害が少なく、相手の被害が大きいなら高評価)
+        if (m.alldestroy)
+        {
+            int myCount = enemyField.childCount;
+            int enemyCount = playerField.childCount;
+            if (enemyCount > myCount) score += 1500;
+            else score -= 500; // 自爆になるなら避ける
         }
 
-        /*CPU対戦の処理
-        
-        if(GameManager.instance.IsOnlineBattle == false)
+        // --- 条件付き効果 (現在のじゃんけん結果に基づく) ---
+
+        // じゃんけん勝利時
+        if (currentResult == 1) // Win
         {
-            CardController[] enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
+            if (m.janwinspeed) score += 500;
+            if (m.janwinpower > 0) score += m.janwinpower * 100;
+            if (m.janwindraw > 0) score += m.janwindraw * 200;
+            if (m.janwinPHp > 0) score += m.janwinPHp * 50; // 回復
+            if (m.janwinEHp < 0) score += Math.Abs(m.janwinEHp) * 100; // ダメージ
             
-            yield return new WaitForSeconds(1f);
-
-            /// 敵のフィールドのカードを攻撃可能にして、緑の枠を付ける ///
-            SetAttackableFieldCard(enemyFieldCardList,true);
-
-            yield return new WaitForSeconds(1f);
-
-            foreach (CardController card in enemyFieldCardList)
+            // 召喚効果
+            if (m.janwinsummonCardsList != null && m.janwinsummonCardsList.Length > 0)
             {
-                card.model.canAttack = true;
-                card.view.SetCanAttackPanel(card.model.canAttack);
+                score += m.janwinsummonCardsList.Length * 300;
             }
-    
-            if (enemyFieldCardList.Length < 5)
+        }
+        // じゃんけん敗北時
+        else if (currentResult == 2) // Lose
+        {
+            if (m.janlosespeed) score += 500;
+            if (m.janlosepower > 0) score += m.janlosepower * 100;
+            if (m.janlosedraw > 0) score += m.janlosedraw * 200;
+            // ... 他の負け効果も同様に加点
+        }
+
+        // 手札一致時 (自分が出した手とカードの属性が一致)
+        if (currentHand == m.janken)
+        {
+            if (m.janhandspeed) score += 500;
+            if (m.janhandpower > 0) score += m.janhandpower * 100;
+            if (m.janhanddraw > 0) score += m.janhanddraw * 200;
+            if (m.janhandPHp > 0) score += m.janhandPHp * 50;
+            if (m.janhandEHp < 0) score += Math.Abs(m.janhandEHp) * 100;
+            
+            if (m.janhandsummonCardsList != null && m.janhandsummonCardsList.Length > 0)
             {
-                if (enemyFieldCardList.Length < 2)
+                score += m.janhandsummonCardsList.Length * 300;
+            }
+        }
+
+        return score;
+    }
+
+    /// <summary>
+    /// CPUの最適なじゃんけん手を選択する
+    /// </summary>
+    int GetBestCPUJankenHand()
+    {
+        // プレイヤーのターン（防御時）は、相手の手札予測に基づいて勝てる手を選ぶ
+        if (isPlayerTurn)
+        {
+            int predictedPlayerHand = PredictPlayerHand();
+            
+            // 予測した手に勝つ手を選ぶ
+            // 1(グー) -> 3(パー)
+            // 2(チョキ) -> 1(グー)
+            // 3(パー) -> 2(チョキ)
+            int bestHand = 0;
+            if (predictedPlayerHand == 1) bestHand = 3;
+            else if (predictedPlayerHand == 2) bestHand = 1;
+            else if (predictedPlayerHand == 3) bestHand = 2;
+
+            // ランダム性を持たせる (30%の確率でランダムな手にする)
+            if (UnityEngine.Random.Range(0, 100) < 30)
+            {
+                return UnityEngine.Random.Range(1, 4);
+            }
+            
+            return bestHand;
+        }
+
+        // --- 以下、CPUターン（攻撃時）のロジック ---
+
+        int[] scores = new int[4]; // 1:グー, 2:チョキ, 3:パー
+        CardController[] myHand = enemyHand.GetComponentsInChildren<CardController>();
+        int playerLikelyHand = PredictPlayerHand();
+        Debug.Log($"CPU Prediction: Player will play {playerLikelyHand}");
+
+        int initialMana = enemyManaPoint; // 現在のマナ
+
+        // 各手(1,2,3)を出した場合のシミュレーション
+        for (int hand = 1; hand <= 3; hand++)
+        {
+            // 対プレイヤー予想
+            int diff = hand - playerLikelyHand;
+            bool cpuWins = (diff == -1 || diff == 2);
+            bool cpuLoses = (diff == 1 || diff == -2);
+            
+            int predictedResult = 0; // 0:Draw
+            if (cpuWins) predictedResult = 1; // Win
+            else if (cpuLoses) predictedResult = 2; // Lose
+
+            // 基本勝敗スコアは加算しない（カードの効果とコストダウンのみで判断する）
+
+            // この手を出したときの手札の状態をシミュレート
+            // (コスト, スコア) のリストを作成
+            List<KeyValuePair<int, int>> simulCards = new List<KeyValuePair<int, int>>();
+
+            foreach (var card in myHand)
+            {
+                CardModel m = card.model;
+                int tempCost = m.cost;
+                bool isMatch = (m.janken == hand);
+
+                // コストダウンのシミュレーション (属性一致かつ勝利ならコスト-1)
+                if (isMatch && cpuWins)
                 {
-                    yield return StartCoroutine(SummonCard(1, false));
-                    yield return StartCoroutine(SummonCard(2, false));
+                    tempCost--;
+                }
+                if (tempCost < 0) tempCost = 0;
+
+                // シミュレーション条件下でのカードスコアを計算
+                int cardScore = GetCardScore(card, hand, predictedResult);
+                
+                simulCards.Add(new KeyValuePair<int, int>(tempCost, cardScore));
+            }
+
+            // 召喚シミュレーション: スコアが高い順にマナが尽きるまで採用
+            // これにより「このターンに実際に召喚できるカード」の価値を合計する
+            simulCards.Sort((a, b) => b.Value.CompareTo(a.Value)); // スコア降順
+
+            int currentMana = initialMana;
+            int fieldSpace = 5 - enemyField.childCount; // 空きスペース
+
+            foreach (var sc in simulCards)
+            {
+                if (fieldSpace <= 0) break;
+                
+                int cost = sc.Key;
+                int score = sc.Value;
+
+                if (cost <= currentMana)
+                {
+                    // 採用
+                    scores[hand] += score;
+                    currentMana -= cost;
+                    fieldSpace--;
+                }
+            }
+            Debug.Log($"Hand {hand} Score: {scores[hand]}");
+        }
+
+        // スコア最大のカードを選択
+        int maxScore = -99999;
+        List<int> candidates = new List<int>();
+
+        for(int h=1; h<=3; h++)
+        {
+            if(scores[h] > maxScore)
+            {
+                maxScore = scores[h];
+                candidates.Clear();
+                candidates.Add(h);
+            }
+            else if(scores[h] == maxScore)
+            {
+                candidates.Add(h);
+            }
+        }
+
+        // 同点ならランダム
+        return candidates[UnityEngine.Random.Range(0, candidates.Count)];
+    }
+
+    /// <summary>
+    /// プレイヤーが出す手を予測する
+    /// </summary>
+    int PredictPlayerHand()
+    {
+        // プレイヤーの手札で最も多い属性を出すと予測（シナジー狙い）
+        CardController[] pHand = playerHand.GetComponentsInChildren<CardController>();
+        
+        // 手札がない場合はランダム予測
+        if(pHand.Length == 0) return UnityEngine.Random.Range(1, 4);
+
+        int[] counts = new int[4];
+        foreach(var c in pHand) counts[c.model.janken]++;
+        
+        int maxCount = -1;
+        List<int> candidates = new List<int>();
+
+        for(int i=1; i<=3; i++)
+        {
+            if(counts[i] > maxCount)
+            {
+                maxCount = counts[i];
+                candidates.Clear();
+                candidates.Add(i);
+            }
+            else if(counts[i] == maxCount)
+            {
+                candidates.Add(i);
+            }
+        }
+        
+        return candidates[UnityEngine.Random.Range(0, candidates.Count)];
+    }
+
+    IEnumerator EnemyTurn()
+    {
+        Debug.Log("Enemyのターン");
+        Debug.Log("どっちのターンか:" + isPlayerTurn);
+
+        // オフライン(CPU戦)時のターンドローとマナ回復処理
+        if (GameManager.instance.IsOnlineBattle == false)
+        {
+            // デフォルトマナを1増やしてさらに回復
+            if (enemyDefaultManaPoint <= 9)
+            {
+                enemyDefaultManaPoint++;
+            }
+            enemyManaPoint = enemyDefaultManaPoint;
+            // 敵のマナ表示を更新
+            ShowEnemyManaPoint(enemyManaPoint, enemyDefaultManaPoint);
+
+            // 敵のドロー
+            EnemyDrawCard();
+            yield return new WaitForSeconds(0.25f);
+        }
+
+        EnemyCardCostBackOrigin();
+        // マナ回復とドローを終えたらじゃんけんフェイズを開始
+        yield return StartCoroutine(JankenProcess());
+
+        // オンライン時は相手側で行動が発生するためローカルでのCPU行動は行わない
+        if (GameManager.instance.IsOnlineBattle == true)
+        {
+            yield break;
+        }
+
+        // 簡易CPUの挙動: 少し待ってから場を整え、召喚→攻撃→ターン終了
+        yield return new WaitForSeconds(1f);
+        CardController[] enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
+        SetAttackableFieldCard(enemyFieldCardList, true);
+        yield return new WaitForSeconds(1f);
+
+        // --- 召喚ロジック（状況に合わせて最適なカードを選択） ---
+        
+        // 召喚ループ
+        while (true)
+        {
+            // フィールド上限チェック
+            if (enemyField.GetComponentsInChildren<CardController>().Length >= 5) break;
+
+            // 手札を取得
+            CardController[] enemyHandCards = enemyHand.GetComponentsInChildren<CardController>();
+            
+            // マナが足りるカードを抽出
+            List<CardController> affordableCards = new List<CardController>();
+            foreach (CardController card in enemyHandCards)
+            {
+                if (card.model.cost <= enemyManaPoint)
+                {
+                    affordableCards.Add(card);
+                }
+            }
+
+            // 出せるカードがなければ終了
+            if (affordableCards.Count == 0) break;
+
+            // 各カードを評価してスコア付け
+            CardController bestCard = null;
+            int bestScore = -9999;
+
+            foreach (CardController card in affordableCards)
+            {
+                int score = GetCardScore(card);
+                if (score > bestScore)
+                {
+                    bestScore = score;
+                    bestCard = card;
+                }
+            }
+
+            // 最もスコアの高いカードを召喚
+            if (bestCard != null)
+            {
+                int cardID = bestCard.model.cardId;
+                int cardCost = bestCard.model.cost;
+
+                // マナ消費
+                enemyManaPoint -= cardCost;
+                if (enemyManaPoint < 0) enemyManaPoint = 0;
+                ShowEnemyManaPoint(enemyManaPoint, enemyDefaultManaPoint);
+
+                // 選択したカードオブジェクトを破壊
+                Destroy(bestCard.gameObject);
+
+                // 召喚実行
+                yield return StartCoroutine(SummonCard(cardID, false));
+
+                // 属性カウント更新
+                UpdateCPUJankenCount();
+
+                yield return new WaitForSeconds(0.25f);
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        // --- 攻撃フェーズ（有利な相手を選んで攻撃） ---
+        
+        // リーサルチェック：攻撃可能な全ユニットの攻撃力合計がプレイヤーHP以上なら、全てリーダーへ攻撃
+        CardController[] allAttackers = Array.FindAll(enemyField.GetComponentsInChildren<CardController>(), c => c.model.canAttack);
+        int totalAttackPower = 0;
+        foreach (var card in allAttackers) totalAttackPower += card.model.power;
+
+        if (totalAttackPower >= playerLeaderHP)
+        {
+            foreach (var attacker in allAttackers)
+            {
+                yield return StartCoroutine(attacker.Battlemovement.AttackMotion(playerLeaderTransform));
+                
+                attacker.model.canAttack = false;
+                attacker.view.SetCanAttackPanel(false);
+                playerLeaderHP -= attacker.model.power;
+                ShowLeaderHP();
+                yield return new WaitForSeconds(0.5f);
+
+                if (playerLeaderHP <= 0) break;
+            }
+        }
+        else
+        {
+            while (true)
+            {
+                // 攻撃可能なカードと防御側のカードを再取得
+                CardController[] attackers = Array.FindAll(enemyField.GetComponentsInChildren<CardController>(), c => c.model.canAttack);
+                CardController[] defenders = playerField.GetComponentsInChildren<CardController>();
+
+                // 攻撃できるカードがいなければ終了
+                if (attackers.Length == 0) break;
+
+                // 最適な攻撃対象を探す
+                CardController bestAttacker = null;
+                CardController bestTarget = null;
+                int bestScore = -999;
+
+                // 防御側がいる場合のみ、ユニット攻撃の可能性を探る
+                if (defenders.Length > 0)
+                {
+                    foreach (var attacker in attackers)
+                    {
+                        foreach (var defender in defenders)
+                        {
+                            int score = -9999;
+                            int jan = attacker.model.janken - defender.model.janken;
+                            
+                            // じゃんけん勝利 (-1 or 2)
+                            if (jan == -1 || jan == 2) 
+                            {
+                                score = 1000; 
+                                score += defender.model.power * 10; // 強い敵を倒すほど高評価
+                            }
+                            // あいこ (0) かつ パワー勝ち
+                            else if (jan == 0 && attacker.model.power > defender.model.power)
+                            {
+                                score = 500; 
+                                score += defender.model.power * 10;
+                            }
+                            
+                            // 勝てる場合、攻撃者のパワーが低いほど評価を上げる（強いカードをリーダー攻撃用に温存するため）
+                            if (score > 0)
+                            {
+                                score -= attacker.model.power;
+                            }
+
+                            // 勝てる場合のみ更新
+                            if (score > bestScore)
+                            {
+                                bestScore = score;
+                                bestAttacker = attacker;
+                                bestTarget = defender;
+                            }
+                        }
+                    }
+                }
+
+                // 勝てる相手がいる場合 (スコアが更新されている)
+                if (bestAttacker != null && bestScore >= 100)
+                {
+                    // 攻撃実行
+                    yield return StartCoroutine(bestAttacker.Battlemovement.AttackMotion(bestTarget.transform));
+                    
+                    // 攻撃側勝利（ロジック上、勝てる相手しか選んでいないため、相手を破壊）
+                    bestAttacker.model.canAttack = false;
+                    bestAttacker.view.SetCanAttackPanel(false);
+                    StartCoroutine(bestTarget.DestroyCard(bestTarget));
+                    
+                    yield return new WaitForSeconds(1f);
                 }
                 else
                 {
-                    yield return StartCoroutine(SummonCard(3, false));
+                    // 勝てる相手がいない、または相手がいない場合はリーダーを攻撃
+                    foreach (var attacker in attackers)
+                    {
+                        yield return StartCoroutine(attacker.Battlemovement.AttackMotion(playerLeaderTransform));
+                        
+                        attacker.model.canAttack = false;
+                        attacker.view.SetCanAttackPanel(false);
+                        playerLeaderHP -= attacker.model.power;
+                        ShowLeaderHP();
+                        yield return new WaitForSeconds(0.5f);
+                    }
+                    break; // 全員攻撃したので終了
                 }
             }
-    
-            CardController[] enemyFieldCardListSecond = enemyField.GetComponentsInChildren<CardController>();
+        }
 
-            yield return new WaitForSeconds(1f);
-
-            while (Array.Exists(enemyFieldCardListSecond, card => card.model.canAttack))
-            {
-    
-                // 攻撃可能カードを取得
-                CardController[] enemyCanAttackCardList = Array.FindAll(enemyFieldCardListSecond, card => card.model.canAttack);
-                CardController[] playerFieldCardList = playerField.GetComponentsInChildren<CardController>();
-    
-                CardController attackCard = enemyCanAttackCardList[0];
-    
-                //AttackToLeader(attackCard, false);
-    
-                if (playerFieldCardList.Length > 0) // プレイヤーの場にカードがある場合
-                {
-                    int defenceCardNumber = Random.Range(0, playerFieldCardList.Length);
-                    CardController defenceCard = playerFieldCardList[defenceCardNumber];
-                    yield return StartCoroutine (attackCard.Battlemovement.AttackMotion(defenceCard.transform));
-                    CardBattle(attackCard, defenceCard);
-                    Debug.Log("プレイヤー側にカードがある");
-                }
-                else
-                {
-                    yield return StartCoroutine(attackCard.Battlemovement.AttackMotion(playerLeaderTransform));
-                    AttackToLeader(attackCard, false);
-                    Debug.Log("攻撃対象がいないのでリターン");
-                }
-    
-                yield return new WaitForSeconds(1f);
-    
-                enemyFieldCardList = enemyField.GetComponentsInChildren<CardController>();
-    
-            }
-            
-            
-            
-            yield return new WaitForSeconds(3f);
-            ChangeTurn(); // ターンエンドする
-        }*/
+        yield return new WaitForSeconds(1f);
+        ChangeTurn(); // ターンエンド
     }
 
     /// <summary>
@@ -746,11 +1336,17 @@ public class BattleManager : MonoBehaviourPunCallbacks
         {
             //自画面でのアタックモーションはDragを終えた地点がtransformParentになってしまい元の位置に戻らない
             StartCoroutine (attackCard.Battlemovement.PlayerAttackMotion(defenceCard.transform));//自画面でのアタックモーション　1S
-            photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション1S
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション1S
+            }
             yield return new WaitForSeconds(1.1f);
 
             // 相手側の破壊処理同期
-            photonView.RPC(nameof(RPCattackwinBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                photonView.RPC(nameof(RPCattackwinBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+            }
             
             // 攻撃済み状態へ
             attackCard.model.canAttack = false;     
@@ -767,11 +1363,17 @@ public class BattleManager : MonoBehaviourPunCallbacks
         {
             //自画面でのアタックモーションはDragを終えた地点がtransformParentになってしまい元の位置に戻らない
             StartCoroutine (attackCard.Battlemovement.PlayerAttackMotion(defenceCard.transform));//自画面のアタックモーション
-            photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション
+            }
             yield return new WaitForSeconds(1.1f);
 
             // 相手側の破壊処理同期
-            photonView.RPC(nameof(RPCattackloseBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                photonView.RPC(nameof(RPCattackloseBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+            }
             
             // 攻撃済み状態へ
             attackCard.model.canAttack = false;     
@@ -790,10 +1392,16 @@ public class BattleManager : MonoBehaviourPunCallbacks
             {
                 //自画面でのアタックモーションはDragを終えた地点がtransformParentになってしまい元の位置に戻らない
                 StartCoroutine (attackCard.Battlemovement.PlayerAttackMotion(defenceCard.transform));//自画面でのアタックモーション　1S
-                photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション1S
+                if(GameManager.instance.IsOnlineBattle == true)
+                {
+                    photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション1S
+                }
                 yield return new WaitForSeconds(1.1f);
 
-                photonView.RPC(nameof(RPCattackwinBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+                if(GameManager.instance.IsOnlineBattle == true)
+                {
+                    photonView.RPC(nameof(RPCattackwinBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+                }
                 
                 attackCard.model.canAttack = false;     
                 attackCard.view.SetCanAttackPanel(false); 
@@ -805,10 +1413,16 @@ public class BattleManager : MonoBehaviourPunCallbacks
             else if (attackCard.model.power < defenceCard.model.power)
             {
                 StartCoroutine (attackCard.Battlemovement.PlayerAttackMotion(defenceCard.transform));//自画面のアタックモーション
-                photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション
+                if(GameManager.instance.IsOnlineBattle == true)
+                {
+                    photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション
+                }
                 yield return new WaitForSeconds(1.1f);
                 
-                photonView.RPC(nameof(RPCattackloseBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+                if(GameManager.instance.IsOnlineBattle == true)
+                {
+                    photonView.RPC(nameof(RPCattackloseBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+                }
                 
                 attackCard.model.canAttack = false;     
                 attackCard.view.SetCanAttackPanel(false); 
@@ -821,10 +1435,16 @@ public class BattleManager : MonoBehaviourPunCallbacks
             {
                 //自画面でのアタックモーションはDragを終えた地点がtransformParentになってしまい元の位置に戻らない
                 StartCoroutine (attackCard.Battlemovement.PlayerAttackMotion(defenceCard.transform));//自画面でのアタックモーション
-                photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション
+                if(GameManager.instance.IsOnlineBattle == true)
+                {
+                    photonView.RPC(nameof(RPCAttackMotion), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面のアタックモーション
+                }
                 yield return new WaitForSeconds(1.1f);
                 
-                photonView.RPC(nameof(RPCdrawBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+                if(GameManager.instance.IsOnlineBattle == true)
+                {
+                    photonView.RPC(nameof(RPCdrawBattle), RpcTarget.Others, attackCard.model.playerNumberth, defenceCard.model.enemyNumberth);//敵画面での破壊
+                }
                 
                 attackCard.model.canAttack = false;     
                 attackCard.view.SetCanAttackPanel(false); 
@@ -876,7 +1496,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
         attackCard.view.SetCanAttackPanel(false);
 
         StartCoroutine(attackCard.Battlemovement.PlayerAttackMotion(enemyLeaderTransform));//RPCとモーション
-        photonView.RPC(nameof(RPCAttackLeaderMotion), RpcTarget.Others, attackCard.model.playerNumberth);//敵画面のアタックモーション
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCAttackLeaderMotion), RpcTarget.Others, attackCard.model.playerNumberth);//敵画面のアタックモーション
+        }
         yield return new WaitForSeconds(1.1f);
         Debug.Log("敵のHPは、" + enemyLeaderHP);
 
@@ -889,7 +1512,7 @@ public class BattleManager : MonoBehaviourPunCallbacks
         {
             playerLeaderHP -= attackCard.model.power; // プレイヤーのリーダーのHPを減らす
         } 
-
+        Debug.Log("敵のHPは、" + enemyLeaderHP);
         ShowLeaderHP();
         SetCanUsePanelHand(true);//制限解除
     }
@@ -919,7 +1542,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
         playerLeaderHPText.text = playerLeaderHP.ToString();
         enemyLeaderHPText.text = enemyLeaderHP.ToString();
         // HP同期
-        photonView.RPC(nameof(RPCSendHP), RpcTarget.Others, playerLeaderHP, enemyLeaderHP);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCSendHP), RpcTarget.Others, playerLeaderHP, enemyLeaderHP);
+        }
     }
 
     /// <summary>
@@ -946,15 +1572,6 @@ public class BattleManager : MonoBehaviourPunCallbacks
             GameObject.Destroy(n.gameObject);
         }    
         
-        /**isPlayerTurn = true; // 敵ターンだった場合に、リスタート後に敵ターンから始まってしまう為
-        if(turnEndButton.interactable == false)
-        {
-            turnEndButton.interactable = !turnEndButton.interactable;
-        }*/
-       
-
-        //deck = new List<int>() { 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ,14};
-
         //UIリセットとフラグの初期化
         RestartButton.interactable = false;
         GameStart = false;
@@ -965,24 +1582,26 @@ public class BattleManager : MonoBehaviourPunCallbacks
 
         if (GameManager.instance.IsOnlineBattle)
         {
-            //uIManager.HideRetryButton();
-            SendRetryMessage();// 再戦希望を送信
+            // オンライン対戦の再戦処理
+            if(GameManager.instance.IsOnlineBattle == true)
+            {
+                SendRetryMessage();// 再戦希望を送信
+            }
 
             // 双方が準備完了ならリスタート
             if (playerRetryReady && enemyRetryReady)
             {   
                 RestartButton.interactable = true;
                 uIManager.HideGameEndPanel();
-                //StartCoroutine (Stopsec());
-                //photonView.RPC(nameof(RPCRestart), RpcTarget.Others);
                 StartCoroutine(StartGame());
-                
-                
             }
         }
-        
-        //deck = new List<int>(DeckSelectManager.deckList); // デッキリストの設定
-        
+        else
+        {
+            // CPU対戦（オフライン）の再戦処理
+            uIManager.HideGameEndPanel();
+            StartCoroutine(StartGame());
+        }
         //SceneTransitionManager.instance.Load("Battle");
         
     }
@@ -1043,7 +1662,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
         SoundManager.instance.PlaySE(17);
         PlayerJanken=PlayerjHand;
         uIManager.HideP2JankenPanel(PlayerjHand);// 選んだ手以外を非表示
-        photonView.RPC(nameof(RPCSendJanken), RpcTarget.Others,PlayerjHand);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCSendJanken), RpcTarget.Others,PlayerjHand);
+        }
     }
     public void EnemyHandButton(int EnemyjHand)//敵のじゃんけんボタンを押したとき
     {
@@ -1096,6 +1718,13 @@ public class BattleManager : MonoBehaviourPunCallbacks
         EnemyJanken=0;//敵プレイヤーのじゃんけんの手の初期化
         uIManager.ShowJankenPanel();
 
+        // オフライン時は敵のじゃんけん手を自動選択
+        if (GameManager.instance.IsOnlineBattle == false)
+        {
+            EnemyJanken = GetBestCPUJankenHand();
+            uIManager.HideE2JankenPanel(EnemyJanken);
+        }
+
         //両者ともにじゃんけんボタンが押されるまで待機
         yield return new WaitUntil(() => PlayerJanken!=0 & EnemyJanken!=0);
         yield return null;
@@ -1127,6 +1756,17 @@ public class BattleManager : MonoBehaviourPunCallbacks
 
             SetCanUsePanelHand(true);
         }
+        else if (isPlayerTurn == false && GameManager.instance.IsOnlineBattle == false)
+        {
+            // じゃんけん結果に応じたコストダウン処理
+            //手札のカードリストを取得
+            CardController[] enemyHandCardList = enemyHand.GetComponentsInChildren<CardController>();
+
+            foreach (CardController card in enemyHandCardList)
+            {
+                card.CostDown();
+            }
+        }
     }
 
     // --- 通信同期用RPCメソッド群 ---
@@ -1136,28 +1776,49 @@ public class BattleManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void SendPlayerCard(int cardID,int playerNumberth)
     {
-        photonView.RPC(nameof(RPCOnRecievedCard), RpcTarget.Others, cardID, playerNumberth);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCOnRecievedCard), RpcTarget.Others, cardID, playerNumberth);
+        }
     }
     /// <summary>
     /// 手札生成通知
     /// </summary>
     public void CreateEnemyCard()
     {
-        photonView.RPC(nameof(RPCCreateEnemyHand), RpcTarget.Others);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCCreateEnemyHand), RpcTarget.Others);
+        }
     }
     /// <summary>
     /// 手札使用通知
     /// </summary>
     public void RemoveEnemyHand()//手札
     {
-        photonView.RPC(nameof(RPCRemoveEnemyHand), RpcTarget.Others);
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCRemoveEnemyHand), RpcTarget.Others);
+        }
+        else
+        {
+            Debug.Log("エネミー手札破壊:");
+            if (enemyHand.transform.childCount > 0) 
+            {
+                Transform firstChild = enemyHand.transform.GetChild(0);
+                GameObject.Destroy(firstChild.gameObject);
+            }
+        }
     }
     /// <summary>
     /// ランダム破壊同期
     /// </summary>
     public void DestroyRamdomJan(int ENumberth)
     {
-        photonView.RPC(nameof(RPCdestroyjan), RpcTarget.Others, ENumberth);//選択したカードの敵画面での破壊
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(RPCdestroyjan), RpcTarget.Others, ENumberth);//選択したカードの敵画面での破壊
+        }
     }
 
 
@@ -1524,7 +2185,10 @@ public class BattleManager : MonoBehaviourPunCallbacks
     /// </summary>
     void SendRetryMessage()
     {
-        photonView.RPC(nameof(OnRecieveRetryMessage), RpcTarget.Others);
+        if (GameManager.instance.IsOnlineBattle == true)
+        {
+            photonView.RPC(nameof(OnRecieveRetryMessage), RpcTarget.Others);
+        }
     }
 
     /// <summary>
@@ -1562,7 +2226,7 @@ public class BattleManager : MonoBehaviourPunCallbacks
     /// マナポイントを表示するメソッド
     /// </summary>
     [PunRPC]
-    void ShowEnemyManaPoint(int pManaPoint,int pDefaultManaPoint) 
+    public void ShowEnemyManaPoint(int pManaPoint,int pDefaultManaPoint) 
     {
         enemyManaPointText.text = pManaPoint.ToString();
         enemyDefaultManaPointText.text = pDefaultManaPoint.ToString();

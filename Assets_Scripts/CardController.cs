@@ -8,6 +8,7 @@ using Photon.Realtime;
 
 /// <summary>
 /// カード個別の制御クラス。
+ 
 /// カードデータの保持、移動処理、効果発動ロジックなどを管理する。
 /// </summary>
 public class CardController : MonoBehaviourPunCallbacks
@@ -45,6 +46,13 @@ public class CardController : MonoBehaviourPunCallbacks
     {
         model = new CardModel(cardId, playerCard); // カードデータを生成
         view.Show(model);// 表示
+        
+        // CPUの手札なら隠すパネルを表示
+        if (playerCard == false)
+        {
+            view.SetEnemyHandPanel(true);
+        }
+
         Debug.Log("生成:");
 
     }
@@ -80,6 +88,10 @@ public class CardController : MonoBehaviourPunCallbacks
     {
         model = new CardModel(cardId, playerCard);
         view.Show(model);
+        
+        // フィールドに出るカードなので隠すパネルは非表示
+        view.SetEnemyHandPanel(false);
+
         model.enemyNumberth=PNumberth;// 相手側のIDを保持
         Debug.Log("どっち:" + model.PlayerCard +"/名前:"+model.name+"/固有id:"+model.enemyNumberth);
     }
@@ -118,7 +130,10 @@ public class CardController : MonoBehaviourPunCallbacks
 
         // 相手にカード生成を通知
         BattleManager.instance.SendPlayerCard(model.cardId,model.playerNumberth);
-        BattleManager.instance.RemoveEnemyHand();// 相手の手札枚数表示を減らす
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            BattleManager.instance.RemoveEnemyHand();// 相手の手札枚数表示を減らす
+        }
         BattleManager.instance.CountHandJanken();// じゃんけんカウント更新
 
         view.SetCanUsePanel(model.canUse); // 出した時にCanUsePanelを消す
@@ -130,7 +145,10 @@ public class CardController : MonoBehaviourPunCallbacks
     /// </summary>
     public void DropMulliganField()  
     {
-        BattleManager.instance.RemoveEnemyHand();
+        if(GameManager.instance.IsOnlineBattle == true)
+        {
+            BattleManager.instance.RemoveEnemyHand();
+        }
         model.canUse = false;
         view.SetCanUsePanel(model.canUse); // 出した時にCanUsePanelを消す
     }
@@ -210,6 +228,14 @@ public class CardController : MonoBehaviourPunCallbacks
                     
                     BattleManager.instance.DrawCard(playerHand);
                 }
+                else
+                {
+                    if (GameManager.instance.IsOnlineBattle == false)
+                    {
+                        BattleManager.instance.EnemyDrawCard();
+                    }
+                    
+                }
             }
         }
 
@@ -232,6 +258,18 @@ public class CardController : MonoBehaviourPunCallbacks
 
                 } 
             }
+            else if (GameManager.instance.IsOnlineBattle == false)
+            {
+                for (int i = 0; i < model.addCardsList.Length; i++)
+                {
+                    if (BattleManager.instance.enemyHand.childCount < 6)
+                    {
+                        SoundManager.instance.PlaySE(7);
+                        BattleManager.instance.CreateCPUHandCard(model.addCardsList[i]);
+                        yield return new WaitForSeconds(0.25f);
+                    }
+                }
+            }
         }
 
         // 召喚するトークンカードのリストが1つ以上なら、そのリストの1番目から順番にフィールドに生成する
@@ -244,13 +282,13 @@ public class CardController : MonoBehaviourPunCallbacks
                         yield return StartCoroutine(BattleManager.instance.SummonCard(model.summonCardsList[i], true));
                     }
                 }
-                /*else
+                else if (GameManager.instance.IsOnlineBattle == false)
                 {
                     for (int i = 0; i < model.summonCardsList.Length; i++)
                     {
                         yield return StartCoroutine(BattleManager.instance.SummonCard(model.summonCardsList[i], false));
                     }
-                }*/
+                }
         }
 
         // 自分リーダーのライフを変化
@@ -268,13 +306,13 @@ public class CardController : MonoBehaviourPunCallbacks
             if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
             {
                 BattleManager.instance.playerLeaderHP += model.chgMyLeaderHpNum;
-                BattleManager.instance.ShowLeaderHP();
+                BattleManager.instance.ShowLeaderHP();//同期できている
             }
-            /*else//ライフの同期はshowHP側でやっている
+            else if (GameManager.instance.IsOnlineBattle == false)
             {
                 BattleManager.instance.enemyLeaderHP += model.chgMyLeaderHpNum;
                 BattleManager.instance.ShowLeaderHP();
-            }*/
+            }
         }
 
         // 相手リーダーのライフを変化
@@ -294,11 +332,11 @@ public class CardController : MonoBehaviourPunCallbacks
                 BattleManager.instance.enemyLeaderHP += model.chgEnemyLeaderHpNum;
                 BattleManager.instance.ShowLeaderHP();
             }
-            /*else//ライフの同期はshowHP側でやっている
+            else if (GameManager.instance.IsOnlineBattle == false)
             {
                 BattleManager.instance.playerLeaderHP += model.chgEnemyLeaderHpNum;
                 BattleManager.instance.ShowLeaderHP();
-            }*/
+            }
         }
 
         // マナポイントを増加
@@ -311,6 +349,14 @@ public class CardController : MonoBehaviourPunCallbacks
                     BattleManager.instance.playerDefaultManaPoint += model.manaBoostNum;
                 }
                 BattleManager.instance.ShowManaPoint();
+            }
+            else if (GameManager.instance.IsOnlineBattle == false)
+            {
+                if( BattleManager.instance.enemyDefaultManaPoint <= 9)
+                {
+                    BattleManager.instance.enemyDefaultManaPoint += model.manaBoostNum;
+                }
+                BattleManager.instance.ShowEnemyManaPoint(BattleManager.instance.enemyManaPoint, BattleManager.instance.enemyDefaultManaPoint);
             }
             SoundManager.instance.PlaySE(11);
         }
@@ -416,6 +462,13 @@ public class CardController : MonoBehaviourPunCallbacks
                         {
                             SoundManager.instance.PlaySE(5);
                         }
+                        
+                        if (GameManager.instance.IsOnlineBattle == false)//CPU戦なら
+                        {
+                            BattleManager.instance.playerLeaderHP += model.chgEnemyLeaderHpNum;
+                            BattleManager.instance.ShowLeaderHP();
+                        }
+                        
                     }
                     
                 }
@@ -515,15 +568,28 @@ public class CardController : MonoBehaviourPunCallbacks
             //じゃんけん勝ってれば、ドロー
             if (model.janwindraw >= 1)
             {
-                if(BattleManager.PlayerResult == 1)//勝ってれば
+                if (BattleManager.instance.isPlayerTurn == true) // プレイヤーターン
                 {
-                    for (int i = 0; i < model.janwindraw; i++)
+                    if(BattleManager.PlayerResult == 1)//勝ってれば
                     {
-                        if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
+                        for (int i = 0; i < model.janwindraw; i++)
                         {
                             Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
                             
                             BattleManager.instance.DrawCard(playerHand);//同期取れる
+                        }
+                    }
+                }
+                else // 敵ターン
+                {
+                    if (GameManager.instance.IsOnlineBattle == false) // オフラインなら
+                    {
+                        if(BattleManager.EnemyResult == 1)//敵が勝ってれば
+                        {
+                            for (int i = 0; i < model.janwindraw; i++)
+                            {
+                                BattleManager.instance.EnemyDrawCard();
+                            }
                         }
                     }
                 }
@@ -618,6 +684,12 @@ public class CardController : MonoBehaviourPunCallbacks
                             {
                                 SoundManager.instance.PlaySE(5);
                             }
+
+                            if (GameManager.instance.IsOnlineBattle == false)
+                            {
+                                BattleManager.instance.enemyLeaderHP += model.janwinPHp;
+                                BattleManager.instance.ShowLeaderHP();
+                            }
                         }
                         
                     }
@@ -660,6 +732,12 @@ public class CardController : MonoBehaviourPunCallbacks
                             {
                                 SoundManager.instance.PlaySE(5);
                             }
+
+                            if (GameManager.instance.IsOnlineBattle == false)
+                            {
+                                BattleManager.instance.playerLeaderHP += model.janwinEHp;
+                                BattleManager.instance.ShowLeaderHP();
+                            }
                         }
                         
                     }
@@ -670,11 +748,11 @@ public class CardController : MonoBehaviourPunCallbacks
                 {
                     if (model.janwinaddCardsList.Length >= 1) // リストの存在チェック
                     {
-                        if(BattleManager.PlayerResult == 1)//勝ってれば
+                        if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
                         {
-                            for (int i = 0; i < model.janwinaddCardsList.Length; i++) // リストの個数分処理を繰り返す
+                            if(BattleManager.PlayerResult == 1)//勝ってれば
                             {
-                                if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
+                                for (int i = 0; i < model.janwinaddCardsList.Length; i++) // リストの個数分処理を繰り返す
                                 {
                                     Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
 
@@ -684,8 +762,22 @@ public class CardController : MonoBehaviourPunCallbacks
                                         BattleManager.instance.CreateCard(model.janwinaddCardsList[i], playerHand); // リストの[i]番目のカードを手札に作る
                                         yield return new WaitForSeconds(0.25f);
                                     }
-                                } 
-
+                                }
+                            }
+                        }
+                        else if (GameManager.instance.IsOnlineBattle == false)
+                        {
+                            if(BattleManager.EnemyResult == 1)//敵が勝ってれば
+                            {
+                                for (int i = 0; i < model.janwinaddCardsList.Length; i++)
+                                {
+                                    if (BattleManager.instance.enemyHand.childCount < 6)
+                                    {
+                                        SoundManager.instance.PlaySE(7);
+                                        BattleManager.instance.CreateCPUHandCard(model.janwinaddCardsList[i]);
+                                        yield return new WaitForSeconds(0.25f);
+                                    }
+                                }
                             }
                         }
                     }
@@ -704,28 +796,44 @@ public class CardController : MonoBehaviourPunCallbacks
                                     yield return StartCoroutine(BattleManager.instance.SummonCard(model.janwinsummonCardsList[i], true));
                                 }
                             }
-                        /*else//ライフの同期はsummon側でやっている
+                        }
+                        else if (GameManager.instance.IsOnlineBattle == false)
                         {
-                            for (int i = 0; i < model.summonCardsList.Length; i++)
+                            if(BattleManager.EnemyResult == 1)//敵が勝ってれば
                             {
-                                yield return StartCoroutine(BattleManager.instance.SummonCard(model.summonCardsList[i], false));
+                                for (int i = 0; i < model.janwinsummonCardsList.Length; i++)
+                                {
+                                    yield return StartCoroutine(BattleManager.instance.SummonCard(model.janwinsummonCardsList[i], false));
+                                }
                             }
-                        }*/
                         }
                     }
                 }
                 //じゃんけん勝ってれば、ドロー
                 if (model.janwindraw >= 1)
                 {
-                    if(BattleManager.PlayerResult == 1)//勝ってれば
+                    if (BattleManager.instance.isPlayerTurn == true) // プレイヤーターン
                     {
-                        for (int i = 0; i < model.janwindraw; i++)
+                        if(BattleManager.PlayerResult == 1)//勝ってれば
                         {
-                            if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
+                            for (int i = 0; i < model.janwindraw; i++)
                             {
                                 Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
                                 
                                 BattleManager.instance.DrawCard(playerHand);//同期取れる
+                            }
+                        }
+                    }
+                    else // 敵ターン
+                    {
+                        if (GameManager.instance.IsOnlineBattle == false) // オフラインなら
+                        {
+                            if(BattleManager.EnemyResult == 1)//敵が勝ってれば
+                            {
+                                for (int i = 0; i < model.janwindraw; i++)
+                                {
+                                    BattleManager.instance.CPUDrawInitialHand(1);
+                                }
                             }
                         }
                     }
@@ -822,6 +930,12 @@ public class CardController : MonoBehaviourPunCallbacks
                         {
                             SoundManager.instance.PlaySE(5);
                         }
+
+                        if (GameManager.instance.IsOnlineBattle == false)
+                        {
+                            BattleManager.instance.enemyLeaderHP += model.janlosePHp;
+                            BattleManager.instance.ShowLeaderHP();
+                        }
                     }
                     
                 }
@@ -864,6 +978,12 @@ public class CardController : MonoBehaviourPunCallbacks
                         {
                             SoundManager.instance.PlaySE(5);
                         }
+
+                        if (GameManager.instance.IsOnlineBattle == false)
+                        {
+                            BattleManager.instance.playerLeaderHP += model.janloseEHp;
+                            BattleManager.instance.ShowLeaderHP();
+                        }
                     }
                     
                 }
@@ -892,6 +1012,21 @@ public class CardController : MonoBehaviourPunCallbacks
 
                         }
                     }
+                    else if (GameManager.instance.IsOnlineBattle == false)
+                    {
+                        if(BattleManager.EnemyResult == 2)//負けてれば
+                        {
+                            for (int i = 0; i < model.janloseaddCardsList.Length; i++)
+                            {
+                                if (BattleManager.instance.enemyHand.childCount < 6)
+                                {
+                                    SoundManager.instance.PlaySE(7);
+                                    BattleManager.instance.CreateCPUHandCard(model.janloseaddCardsList[i]);
+                                    yield return new WaitForSeconds(0.25f);
+                                }
+                            }
+                        }
+                    }
                 }
             }
             //じゃんけん負けてれば召喚
@@ -908,13 +1043,16 @@ public class CardController : MonoBehaviourPunCallbacks
                                 yield return StartCoroutine(BattleManager.instance.SummonCard(model.janlosesummonCardsList[i], true));
                             }
                         }
-                    /*else//ライフの同期はsummon側でやっている
+                    }
+                    else if (GameManager.instance.IsOnlineBattle == false)
                     {
-                        for (int i = 0; i < model.summonCardsList.Length; i++)
+                        if(BattleManager.EnemyResult == 2)//負けてれば
                         {
-                            yield return StartCoroutine(BattleManager.instance.SummonCard(model.summonCardsList[i], false));
+                            for (int i = 0; i < model.janlosesummonCardsList.Length; i++)
+                            {
+                                yield return StartCoroutine(BattleManager.instance.SummonCard(model.janlosesummonCardsList[i], false));
+                            }
                         }
-                    }*/
                     }
                 }
             }
@@ -931,6 +1069,19 @@ public class CardController : MonoBehaviourPunCallbacks
                             Transform playerHand = GameObject.Find("PlayerHands").GetComponent<Transform>();
                             
                             BattleManager.instance.DrawCard(playerHand);//同期取れる
+                        }
+                    }
+                }
+                else
+                {
+                    if (GameManager.instance.IsOnlineBattle == false)
+                    {
+                        if(BattleManager.EnemyResult == 2)//負けてれば
+                        {
+                            for (int i = 0; i < model.janlosedraw; i++)
+                            {
+                                BattleManager.instance.EnemyDrawCard();
+                            }
                         }
                     }
                 }
@@ -1138,6 +1289,19 @@ public class CardController : MonoBehaviourPunCallbacks
                             }
                         }
                     }
+                    else
+                    {
+                        if (GameManager.instance.IsOnlineBattle == false)
+                        {
+                            if(BattleManager.EnemyResult == 2)//負けてれば
+                            {
+                                for (int i = 0; i < model.janlosedraw; i++)
+                                {
+                                    BattleManager.instance.CPUDrawInitialHand(1);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1229,6 +1393,12 @@ public class CardController : MonoBehaviourPunCallbacks
                     {
                         SoundManager.instance.PlaySE(5);
                     }
+
+                    if (GameManager.instance.IsOnlineBattle == false)
+                    {
+                        BattleManager.instance.enemyLeaderHP += model.janhandPHp;
+                        BattleManager.instance.ShowLeaderHP();
+                    }
                 }
                 
             }
@@ -1271,6 +1441,12 @@ public class CardController : MonoBehaviourPunCallbacks
                     {
                         SoundManager.instance.PlaySE(5);
                     }
+
+                    if (GameManager.instance.IsOnlineBattle == false)
+                    {
+                        BattleManager.instance.playerLeaderHP += model.janhandEHp;
+                        BattleManager.instance.ShowLeaderHP();
+                    }
                 }
                 
             }
@@ -1283,7 +1459,7 @@ public class CardController : MonoBehaviourPunCallbacks
             {
                 if (BattleManager.instance.isPlayerTurn == true) // 分岐を追加
                 {
-                    if(BattleManager.EnemyJanken == model.janken)
+                    if(BattleManager.PlayerJanken == model.janken)
                     {
                         for (int i = 0; i < model.janhandaddCardsList.Length; i++) // リストの個数分処理を繰り返す
                         {                            
@@ -1297,6 +1473,21 @@ public class CardController : MonoBehaviourPunCallbacks
                             }
                         } 
 
+                    }
+                }
+                else if (GameManager.instance.IsOnlineBattle == false)
+                {
+                    if(BattleManager.EnemyJanken == model.janken)
+                    {
+                        for (int i = 0; i < model.janhandaddCardsList.Length; i++)
+                        {
+                            if (BattleManager.instance.enemyHand.childCount < 6)
+                            {
+                                SoundManager.instance.PlaySE(7);
+                                BattleManager.instance.CreateCPUHandCard(model.janhandaddCardsList[i]);
+                                yield return new WaitForSeconds(0.25f);
+                            }
+                        }
                     }
                 }
             }
@@ -1315,13 +1506,16 @@ public class CardController : MonoBehaviourPunCallbacks
                             yield return StartCoroutine(BattleManager.instance.SummonCard(model.janhandsummonCardsList[i], true));
                         }
                     }
-                /*else//ライフの同期はsummon側でやっている
+                }
+                else if (GameManager.instance.IsOnlineBattle == false)
                 {
-                    for (int i = 0; i < model.summonCardsList.Length; i++)
+                    if(BattleManager.EnemyJanken == model.janken)//じゃんけんの手とカードの手が一致していれば
                     {
-                        yield return StartCoroutine(BattleManager.instance.SummonCard(model.summonCardsList[i], false));
+                        for (int i = 0; i < model.janhandsummonCardsList.Length; i++)
+                        {
+                            yield return StartCoroutine(BattleManager.instance.SummonCard(model.janhandsummonCardsList[i], false));
+                        }
                     }
-                }*/
                 }
             }
         }
@@ -1341,6 +1535,19 @@ public class CardController : MonoBehaviourPunCallbacks
                     }
                 }
             }
+            else
+            {
+                if (GameManager.instance.IsOnlineBattle == false)
+                {
+                    if(BattleManager.EnemyJanken == model.janken)//じゃんけんの手とカードの手が一致していれば
+                    {
+                        for (int i = 0; i < model.janhanddraw; i++)
+                        {
+                            BattleManager.instance.EnemyDrawCard();
+                        }
+                    }
+                }
+            }
         }
         
 //破壊効果
@@ -1357,7 +1564,7 @@ public class CardController : MonoBehaviourPunCallbacks
                 foreach (GameObject card in cards)
                 {
                     CardController cardController = card.GetComponent<CardController>();
-                    if (cardController.model.PlayerCard == false && cardController.model.janken == model.destroyjan)
+                    if (cardController.model.PlayerCard == false && cardController.model.FieldCard == true && cardController.model.janken == model.destroyjan)
                     {
                         matchingCards.Add(card);
                     }
@@ -1370,8 +1577,41 @@ public class CardController : MonoBehaviourPunCallbacks
                     int randomIndex = Random.Range(0, matchingCards.Count);
 
                     //破壊同期
-                    BattleManager.instance.DestroyRamdomJan(matchingCards[randomIndex].GetComponent<CardController>().model.enemyNumberth);
+                    if(GameManager.instance.IsOnlineBattle == true)
+                    {
+                        BattleManager.instance.DestroyRamdomJan(matchingCards[randomIndex].GetComponent<CardController>().model.enemyNumberth);
+                    }
                     
+                    
+                    SoundManager.instance.PlaySE(12);
+                    // 選択したカードを破壊
+                   StartCoroutine(DestroyCard(matchingCards[randomIndex].GetComponent<CardController>()));
+                    
+                }
+            }
+            else if (GameManager.instance.IsOnlineBattle == false) // CPUターン且つオフライン
+            {
+                GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
+
+                // 条件を満たすカードを格納するリスト
+                List<GameObject> matchingCards = new List<GameObject>();
+
+                // 条件を満たすカードを探してリストに追加する
+                foreach (GameObject card in cards)
+                {
+                    CardController cardController = card.GetComponent<CardController>();
+                    if (cardController.model.PlayerCard == true && cardController.model.FieldCard == true && cardController.model.janken == model.destroyjan)
+                    {
+                        matchingCards.Add(card);
+                    }
+                }
+
+                // 条件を満たすカードが一つ以上あればランダムに一枚選んで破壊する
+                if (matchingCards.Count > 0)
+                {
+                    // ランダムにインデックスを選択
+                    int randomIndex = Random.Range(0, matchingCards.Count);
+
                     SoundManager.instance.PlaySE(12);
                     // 選択したカードを破壊
                    StartCoroutine(DestroyCard(matchingCards[randomIndex].GetComponent<CardController>()));
@@ -1496,4 +1736,60 @@ public class CardController : MonoBehaviourPunCallbacks
 
     
     
+
+        /// <summary>
+        /// カードIDからコストを取得する静的ヘルパー
+        /// </summary>
+        public static int GetCostById(int cardId)
+        {
+            try
+            {
+                CardModel m = new CardModel(cardId, false);
+                return m.cost;
+            }
+            catch (System.Exception)
+            {
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// カードIDからじゃんけん属性を取得する静的ヘルパー
+        /// </summary>
+        public static int GetJankenById(int cardId)
+        {
+            try
+            {
+                CardModel m = new CardModel(cardId, false);
+                return m.janken;
+            }
+            catch (System.Exception)
+            {
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// インスタンスのモデルからコストを返す（モデルが無ければ0を返す）
+        /// </summary>
+        public int GetCost()
+        {
+            if (model != null)
+            {
+                return model.cost;
+            }
+            return 0;
+        }
+
+        /// <summary>
+        /// インスタンスのモデルからじゃんけん属性を返す（モデルが無ければ0を返す）
+        /// </summary>
+        public int GetJanken()
+        {
+            if (model != null)
+            {
+                return model.janken;
+            }
+            return 0;
+        }
 }

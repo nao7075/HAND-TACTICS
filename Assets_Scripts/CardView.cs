@@ -33,6 +33,7 @@ public class CardView : MonoBehaviour
     [SerializeField] TextMeshProUGUI countText; // 所持枚数テキスト
 
     [SerializeField] GameObject DestoroyPanel;//破壊時のエフェクトパネル
+    [SerializeField] GameObject EnemyHandPanel;//CPUの手札用のパネル
 
 //g 68,21,9,255(赤系)
 //c 58,106,38,255(緑系)
@@ -119,4 +120,10 @@ public class CardView : MonoBehaviour
     {
         DestoroyPanel.SetActive(true);
     }
+
+    public void SetEnemyHandPanel(bool flag)
+    {
+        EnemyHandPanel.SetActive(flag);
+    }
+
 }

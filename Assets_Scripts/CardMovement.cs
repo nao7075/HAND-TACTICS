@@ -95,6 +95,12 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     {
         CardController thisCard = this.GetComponent<CardController>();
  
+        // 相手の手札の場合は詳細パネルを表示しない
+        if (thisCard.model.PlayerCard == false && thisCard.model.FieldCard == false)
+        {
+            return;
+        }
+
         // カード詳細パネルを生成する
         GameManager.instance.CreateCardDetailsPanel(thisCard);
     }
