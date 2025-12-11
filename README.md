@@ -1,9 +1,13 @@
 # **フォルダ、ファイル概要**
-## [Assets_Editor](Assets_Editor)
-* Unityエディタ用の拡張ツール（デバッグ・分析用ユーティリティ）のフォルダ
+
 ## [Assets_Scripts](Assets_Scripts)
 ### **$\color{red}{重要}$** 
 * **PhotonやDOTweenを除いた、ゲームシステムの主要スクリプト**
+## [HAND_TACTICS.md](HAND_TACTICS.md)
+### **$\color{red}{重要}$** 
+* **HAND TACTICSの仕様書**
+## [Assets_Editor](Assets_Editor)
+* Unityエディタ用の拡張ツール（デバッグ・分析用ユーティリティ）のフォルダ
 ## [CollectedImages_Battle](CollectedImages_Battle)
 * Unityエディタ用の拡張ツールImageCollector.csで集めたBattleシーンで使用している画像フォルダ
 ## [CollectedImages_Card](CollectedImages_Card)
@@ -32,7 +36,5 @@
 * c#スクリプトの仕様書(.md)、 [Index.md](ScriptDocs_MD/Index.md) からアクセスする。Assets/Scriptsがメインスクリプト。
 ## [Structure_text](Structure_text)
 * Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。[HAND_TACTICS.md](HAND_TACTICS.md)からアクセス可能
-## [HAND_TACTICS.md](HAND_TACTICS.md)
-### **$\color{red}{重要}$** 
-* HAND TACTICSの仕様書
+
 
