@@ -305,7 +305,7 @@ graph TD
 * **イラスト:** 中央（大きく配置）。  
 * **パワー:** 右下（白の丸枠に黒字）。  
 * **属性:** 左下（✊✌️✋のアイコン）。  
-* **テキスト:** 下部（効果説明文）。  
+* **テキスト:** なし、CardDetailPanelに記述。
 * **枠色:** 属性に応じて赤・緑・青に変化 (CardPanel1/2/3)。  
 * **詳細なオブジェクト構造・パラメータ:**  [PrefabStructure_Card.txt](Structure_text/PrefabStructure_Card.txt)を参照。
 
