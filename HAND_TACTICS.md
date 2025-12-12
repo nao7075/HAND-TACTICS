@@ -16,6 +16,7 @@
     * 2.3.2 バトル時の属性相性
   * 2.4. デッキ構築  
   * 2.5. オンライン機能  
+  * 2.6. CPU対戦
 *   
   **3\. 画面仕様詳細・オブジェクト構造**  
   * 3.1. 画面遷移図  
@@ -25,7 +26,7 @@
     * 3.2.3 デッキ一覧(Scene: DeckList)
     * 3.2.4 デッキ構築 (Scene: Deck)
     * 3.2.5 対戦デッキ選択 (Scene: DeckSelect)
-    * 3.2.6 マッチング待機 (Scene: Matching)
+    * 3.2.6 マッチ選択 (Scene: Matching)
     * 3.2.7 バトル (Scene: Battle)
 *   
   **4\. アセット・データリスト**  
@@ -133,26 +134,25 @@
   * デッキ一覧 **(DeckList)**
   * デッキ構築 **(Deck)**
   * 対戦デッキ選択 **(DeckSelect)**
-  * マッチング待機 **(Matching)**
+  * マッチ選択 **(Matching)**
   * バトル **(Battle)**
 
 ### **3.1. 画面遷移図**
 ```mermaid
 graph TD  
-    Start[タイトル] --> Home[ホーム];  
+    Start([タイトル]) -->|TAP SCREEN| Home[ホーム];  
       
-    Home -->|DeckButton| DeckList[デッキ一覧];  
-    DeckList -->|DeckListButton| Deck[デッキ構築];  
+    Home -->|デッキ| DeckList[デッキ一覧];  
+    DeckList -->|デッキ編集| Deck[デッキ構築];  
     Deck -->|Save  Back| DeckList;  
     DeckList -->|Back| Home;  
       
-    Home -->|BattleButton| DeckSelect[対戦対戦デッキ選択];  
-    DeckSelect -->|Start| Matching[マッチング待機];  
-    Matching -->|Matched| Battle[バトル];  
-      
-    Battle --> GameEnd[リザルト];  
-    GameEnd -->|Retry| Battle;  
-    GameEnd -->|Home| Home;
+    Home -->|バトル| DeckSelect[対戦対戦デッキ選択];  
+    DeckSelect --> Matching[マッチ選択];  
+    Matching -->|オンライン対戦| Battle{{バトル}};
+    Matching -->|CPU対戦| Battle{{バトル}};  
+    Battle --retry--> Battle  
+    Battle --> |Home| Home;
 ```
 ### **3.2. 各画面の詳細レイアウト**
 
@@ -171,8 +171,8 @@ graph TD
 
 * **背景:** ダークブルーの背景 (bg_menu) に、カードが上から降り注ぐ演出 (MenuCardSpawner)。  
 * **UI構成:** 画面下部に大きなボタンを配置。  
-  * [バトル] ボタン : クリックでDeckSelectへシーン遷移。
-  * [デッキ編集] ボタン : クリックでDeckListへシーン遷移。
+  * **[バトル] ボタン** : クリックでDeckSelectへシーン遷移。
+  * **[デッキ編集] ボタン** : クリックでDeckListへシーン遷移。
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Home_Detailed.txt](Structure_text/SceneStructure_Home_Detailed.txt) を参照。
   
 ![alt text](DCG_game_images/home.png)
@@ -181,10 +181,10 @@ graph TD
 #### **3.2.3. デッキ一覧(Scene: DeckList)**
 
 * **レイアウト:** 中央に縦並びのボタンリスト。  
-  * [Defaultを編集]  ボタン : Defaultの情報をもってDeckへシーン遷移。
-  * [Deck1を編集]  ボタン : Deck1の情報をもってDeckへシーン遷移。
-  * [Deck2を編集]  ボタン : Deck2の情報をもってDeckへシーン遷移。
-* **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移    
+  * **[Defaultを編集] ボタン** : Defaultの情報をもってDeckへシーン遷移。
+  * **[Deck1を編集]  ボタン** : Deck1の情報をもってDeckへシーン遷移。
+  * **[Deck2を編集]  ボタン** : Deck2の情報をもってDeckへシーン遷移。
+* **ヘッダー:** 左上に **[Back]ボタン** : Homeへシーン遷移    
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_DeckList_Detailed.txt](Structure_text/SceneStructure_DeckList_Detailed.txt), 
   
 ![alt text](DCG_game_images/DeckList.png)
@@ -192,11 +192,11 @@ graph TD
 #### **3.2.4. デッキ構築 (Scene: Deck)**
 
 * **レイアウト:**  
-  * **上段 (Deck):** 編集中のデッキ内容。2列×8枚＝16枚が表示される（左右の矢印でページ切り替え）。  
-  * **下段 (Stock):** 所持カード一覧。1列×6枚が表示される（左右矢印でスクロール）。  
+  * **上段 (Deck):** 編集中のデッキ内容。2列×8枚＝16枚が表示される（**[左右の矢印] ボタン**でページ切り替え）。  
+  * **下段 (Stock):** 所持カード一覧。1列×6枚が表示される（**[左右矢印]ボタン**でスクロール）。  
   * **ヘッダー:** 
-    * 「Reset」ボタン : デッキをクリア。
-    * 「Save/Back」ボタン :　保存してDeckListにシーン遷移。  
+    * **[Reset] ボタン** : デッキをクリア。
+    * **[Save/Back] ボタン** :　保存してDeckListにシーン遷移。  
 * **操作:** 下段から上段へ（またはその逆へ）カードをドラッグ＆ドロップして入れ替え。  
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Deck_Detailed.txt](Structure_text/SceneStructure_Deck_Detailed.txt) を参照。
 
@@ -206,21 +206,22 @@ graph TD
 #### **3.2.5. 対戦デッキ選択 (Scene: DeckSelect)**
 
 * **レイアウト:** 中央に縦並びのボタンリスト。  
-  * [Defaultでバトル]  ボタン : Defaultの情報をもってBattleへシーン遷移。
-  * [Deck1でバトル]  ボタン : Deck1の情報をもってBattleへシーン遷移。
-  * [Deck2でバトル]  ボタン : Deck2の情報をもってBattleへシーン遷移。
-* **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移。  
+  * **[Defaultでバトル] ボタン** : Defaultの情報をもってBattleへシーン遷移。
+  * **[Deck1でバトル] ボタン** : Deck1の情報をもってBattleへシーン遷移。
+  * **[Deck2でバトル] ボタン** : Deck2の情報をもってBattleへシーン遷移。
+* **ヘッダー:** 左上に **[Back]** ボタン : Homeへシーン遷移。  
 * **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
 * **詳細なオブジェクト構造・パラメータ:** [SceneStructure_DeckSelect_Detailed.txt](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/DeckSelect.png)
 ![alt text](DCG_game_images/DeckSelect2.png)
 
-#### **3.2.6. マッチング待機 (Scene: Matching)**
+#### **3.2.6. マッチ選択 (Scene: Matching)**
 
-* **レイアウト:** 中央に「マッチングする（またはマッチング中）」のウィンドウ表示。  
-  * [マッチングする] ボタン : サーバーに接続し、マッチング開始。
-* **ヘッダー:** 左上に「Back」ボタン : Homeへシーン遷移。
+* **レイアウト:** 
+  *  **[オンライン対戦する] ボタン** : サーバーに接続し、マッチング開始、マッチング中の表記に変更。マッチングしたら、Battleシーンへ遷移。 
+  * **[CPU対戦する] ボタン** : サーバーに接続せず、そのままBattleシーンへ遷移。
+* **ヘッダー:** 左上に **[Back]ボタン** : Homeへシーン遷移。
 * **詳細なオブジェクト構造・パラメータ:** [SceneStructure_Matching_Detailed.txt](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
 
 ![alt text](DCG_game_images/Matching.png)
@@ -229,19 +230,24 @@ graph TD
 #### **3.2.7. バトル (Scene: Battle)**
 
 * **全体レイアウト:**  
-  * **フィールド:** 画面中央。カードを配置するプレイエリア。  
+  * **フィールド:** 画面中央。カードを配置するプレイエリア。
+    *  PlayerField : プレイヤーがカードを出すエリア。
+    *  EnemyField : 敵プレイヤーがカードを出すエリア。
   * **リーダー:**  
-    * **Player:** 左下 (blue_box枠)。HPはハートアイコンで表示。  
+    * **Player:** 左下 (blue_box枠)。HPはハートアイコン上にテキストで表示。  
     * **Enemy:** 右上 (red_box枠)。対角線上に配置される。  
   * **サイドバー (右側):**  
-    * **じゃんけんカウント:** 上部。手札内の✊✌️✋の枚数を表示。  
-    * **マナ表示:** 中部。赤（敵）と青（自分）のダイヤ型アイコンで数値 (10/10など) を表示。  
-    * **TurnEndボタン:** 下部。青い円形ボタン。  
+    * **じゃんけんカウント:** 上部。相手手札内の✊✌️✋の枚数を表示。  
+    * **TurnEndボタン:** 中央。青い円形ボタン。
+    * * **マナ表示:** TurnEndボタンを挟んで配置。赤（敵）と青（自分）のダイヤ型アイコンで数値 (10/10など) を表示。  
   * **サイドバー (左側):**  
-    * 設定（歯車）ボタン : Home遷移ボタンのUIが出る。
-    * サウンド（スピーカー）ボタン : 音量調節のUIが出る。 
+    * **設定（歯車）ボタン** : 押すと退出するかどうか聞く **GearPanel**が出る。
+      * **GearPanel** に **[Home]ボタン**と **[close]ボタン**を作る
+    * **サウンド（スピーカー）ボタン** : 音量調節のUIが出る。 
   * **手札:** 画面下部中央。  
-* **演出:** ターン開始時、画面中央にカットインパネルが表示される。  
+* **演出:** 
+  * ターン開始時、画面中央にターンの変更を知らせるカットインパネルが表示される。 
+  * 画面中央にJankenProcessで使用する **JankenPanel**を作る。
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Battle_Detailed.txt](Structure_text/SceneStructure_Battle_Detailed.txt)を参照。
   
 * **背景UIのみ**
