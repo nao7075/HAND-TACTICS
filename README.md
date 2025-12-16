@@ -12,13 +12,13 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 
 ## 確認いただきたいポイント
 
-### 1. ゲームの主要スクリプト ([Assets_Scripts](Assets_Scripts))
-Photon, DOTweenなどの外部アセットを除いた、ゲームシステムのC#スクリプトファイル群です。
-
-### 2. 仕様書ドキュメント ([Documents](Documents))
+### 1. 仕様書ドキュメント ([Documents](Documents))
 
 *   **[HAND_TACTICS.md](Documents/HAND_TACTICS.md)**: 詳細なゲームルール、画面遷移図、データ構造などをまとめた仕様書。
 *   **[ScriptDocs](Documents/ScriptDocs)**: 主要スクリプトに関しては [Documents/ScriptDocs/folders/Assets_Scripts.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務やフィールド、メソッドなどがまとめられています。
+
+### 2. ゲームの主要スクリプト ([Assets_Scripts](Assets_Scripts))
+Photon, DOTweenなどの外部アセットを除いた、ゲームシステムのC#スクリプトファイル群です。
 
 
 ---
