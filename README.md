@@ -13,11 +13,7 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 ## 確認いただきたいポイント
 
 ### 1. ゲームロジックと設計 ([Assets_Scripts](Assets_Scripts))
-Photon(PUN2)を用いたオンライン対戦ゲームの主要ロジックです。
-*   **BattleManager.cs**: ゲームの進行管理、ターン制御。
-*   **CardController.cs / CardModel.cs**: カードの挙動とデータ管理。
-  
-  など（スクリプトごとの詳細な責務や呼び出し順、補足メモは [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/Index.md) からご確認ください）
+Photon(PUN2) を用いたオンライン対戦ゲームの主要ロジックで、詳細は [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/Index.md) を参照してください。各スクリプトの責務や呼び出し順、補足メモがまとめられています。
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
