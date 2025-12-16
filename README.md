@@ -13,12 +13,12 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 ## 確認いただきたいポイント
 
 ### 1. ゲームロジックと設計 ([Assets_Scripts](Assets_Scripts))
-Photon(PUN2) を用いたオンライン対戦ゲームの主要ロジックで、詳細は [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/Index.md) を参照してください。各スクリプトの責務や呼び出し順、補足メモがまとめられています。
+Photon(PUN2) を用いたオンライン対戦ゲームの主要ロジックで、詳細は [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務や呼び出し順、補足メモがまとめられています。
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
 *   **[HAND_TACTICS.md](Documents/HAND_TACTICS.md)**: 詳細なゲームルール、画面遷移図、データ構造などをまとめた仕様書。
-*   **[ScriptDocs](Documents/ScriptDocs/Index.md)**: クラス図やシーケンス図を含む技術ドキュメント。
+*   **[ScriptDocs](Documents/ScriptDocs)**: クラス図やシーケンス図を含む技術ドキュメント。
 
 ### 3. 開発効率化ツール ([Assets_Editor](Assets_Editor))
 プロジェクト情報を抜粋するためにAIを使用して自作したUnityエディタ拡張です。
