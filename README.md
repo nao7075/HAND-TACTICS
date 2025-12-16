@@ -1,4 +1,4 @@
-﻿# HAND TACTICS (Portfolio Excerpt)
+﻿# HAND TACTICS
 
 ## 本リポジトリについて
 本リポジトリは、自作ゲーム「HAND TACTICS」のUnityプロジェクトから、**主要なソースコードと仕様書を抜粋したもの**です。
