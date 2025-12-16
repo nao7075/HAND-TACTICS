@@ -17,7 +17,7 @@ Photon(PUN2)を用いたオンライン対戦ゲームの主要ロジックで�
 *   **BattleManager.cs**: ゲームの進行管理、ターン制御。
 *   **CardController.cs / CardModel.cs**: カードの挙動とデータ管理。
   
-  など
+  など（スクリプトごとの詳細な責務や呼び出し順、補足メモは [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/Index.md) からご確認ください）
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
@@ -36,6 +36,7 @@ Photon(PUN2)を用いたオンライン対戦ゲームの主要ロジックで�
 ### [Assets_Scripts](Assets_Scripts)
 ゲームシステムのC#スクリプトファイル群。
 (Photon, DOTweenなどの外部アセットは除外しています)
+詳細な各ファイルの説明は [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/Index.md) から参照できます。
 
 ### [Documents](Documents)
 仕様書、設計資料、およびそれに関連する画像素材。
