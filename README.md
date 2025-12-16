@@ -3,38 +3,33 @@
 ## [Assets_Scripts](Assets_Scripts)
 ### **$\color{red}{重要}$** 
 * **PhotonやDOTweenを除いた、ゲームシステムの主要スクリプト**
-## [HAND_TACTICS.md](HAND_TACTICS.md)
+
+## [Documents/HAND_TACTICS.md](Documents/HAND_TACTICS.md)
 ### **$\color{red}{重要}$** 
 * **HAND TACTICSの仕様書**
+
 ## [Assets_Editor](Assets_Editor)
 * Unityエディタ用の拡張ツール（デバッグ・分析用ユーティリティ）のフォルダ
-## [CollectedImages_Battle](CollectedImages_Battle)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたBattleシーンで使用している画像フォルダ
-## [CollectedImages_Card](CollectedImages_Card)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたCardPrefabで使用している画像フォルダ
-## [CollectedImages_CardDetailPanel](CollectedImages_CardDetailPanel)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたCardDetailPanelPrefabで使用している画像フォルダ
-## [CollectedImages_Deck](CollectedImages_Deck)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたDeckシーンで使用している画像フォルダ
-## [CollectedImages_EnemyHandCard](CollectedImages_EnemyHandCard)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたEnemyHandCardPrefabで使用している画像フォルダ
-## [CollectedImages_Scene_DeckList](CollectedImages_Scene_DeckList)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたDeckListシーンで使用している画像フォルダ
-## [CollectedImages_Scene_DeckSelect](CollectedImages_Scene_DeckSelect)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたDeckSelectシーンで使用している画像フォルダ
-## [CollectedImages_Scene_Home](CollectedImages_Scene_Home)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたHomeシーンで使用している画像フォルダ
-## [CollectedImages_Scene_Matching](CollectedImages_Scene_Matching)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたMatchingシーンで使用している画像フォルダ
-## [CollectedImages_Scene_Start](CollectedImages_Scene_Start)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたStartシーンで使用している画像フォルダ
-## [CollectedImages_Selection](CollectedImages_Selection)
-* Unityエディタ用の拡張ツールImageCollector.csで集めたCardEntityで使用している画像フォルダ
-## [DCG_game_images](DCG_game_images)
+
+## [CollectedImages](CollectedImages)
+* Unityエディタ用の拡張ツールImageCollector.csで集めた画像フォルダ群
+  * [CollectedImages_Battle](CollectedImages/CollectedImages_Battle)
+  * [CollectedImages_Card](CollectedImages/CollectedImages_Card)
+  * [CollectedImages_CardDetailPanel](CollectedImages/CollectedImages_CardDetailPanel)
+  * [CollectedImages_Deck](CollectedImages/CollectedImages_Deck)
+  * [CollectedImages_EnemyHandCard](CollectedImages/CollectedImages_EnemyHandCard)
+  * [CollectedImages_Scene_DeckList](CollectedImages/CollectedImages_Scene_DeckList)
+  * [CollectedImages_Scene_DeckSelect](CollectedImages/CollectedImages_Scene_DeckSelect)
+  * [CollectedImages_Scene_Home](CollectedImages/CollectedImages_Scene_Home)
+  * [CollectedImages_Scene_Matching](CollectedImages/CollectedImages_Scene_Matching)
+  * [CollectedImages_Scene_Start](CollectedImages/CollectedImages_Scene_Start)
+  * [CollectedImages_Selection](CollectedImages/CollectedImages_Selection)
+
+## [Documents/Images](Documents/Images)
 * HAND_TACTICS.mdで使用している画像のリンク先
-## [ScriptDocs_MD](ScriptDocs_MD)
-* c#スクリプトの仕様書(.md)、 [Index.md](ScriptDocs_MD/Index.md) からアクセスする。Assets/Scriptsがメインスクリプト。
-## [Structure_text](Structure_text)
-* Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。[HAND_TACTICS.md](HAND_TACTICS.md)からアクセス可能
 
+## [Documents/ScriptDocs](Documents/ScriptDocs)
+* c#スクリプトの仕様書(.md)、 [Index.md](Documents/ScriptDocs/Index.md) からアクセスする。Assets/Scriptsがメインスクリプト。
 
+## [Documents/Structure_text](Documents/Structure_text)
+* Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。[HAND_TACTICS.md](Documents/HAND_TACTICS.md)からアクセス可能

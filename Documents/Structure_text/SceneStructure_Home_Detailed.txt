@@ -1,0 +1,963 @@
+Scene Name: Home (Detailed Mode)
+========================================
+[GameObject] Main Camera (Active: True, Tag: MainCamera, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (0.00, 0.00, -10.00)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) Camera
+    > Clear Flags: Skybox
+    > Back Ground Color: RGBA(0.192, 0.302, 0.475, 0.000)
+    > Projection Matrix Mode: 1
+    > Gate Fit Mode: 2
+    > FOV Axis Mode: 0
+    > Sensor Size: (36.00, 24.00)
+    > Lens Shift: (0.00, 0.00)
+    > Focal Length: 50
+    > Normalized View Port Rect: (x:0.00, y:0.00, width:1.00, height:1.00)
+    > Near clip plane: 0.3
+    > Far clip plane: 1000
+    > Field of view: 60
+    > Orthographic: True
+    > Orthographic size: 5
+    > Depth: -1
+    > Rendering Path: Use Graphics Settings
+    > Target Texture: null
+    > Target Display: 0
+    > Target Eye: 3
+    > HDR: True
+    > Allow MSAA: True
+    > Allow Dynamic Resolution: False
+    > Force Into RT: False
+    > Occlusion Culling: True
+    > Stereo Convergence: 10
+    > Stereo Separation: 0.022
+  - (Component) AudioListener
+[GameObject] Canvas (Active: True, Tag: Untagged, Layer: UI)
+  - (Component) RectTransform
+    [Inspector Preview]
+      Anchor Preset: Bottom Left
+      Pos X: 960
+      Width: 1920
+      Pos Y: 540
+      Height: 1080
+      Pivot: (0.50, 0.50)
+      Rotation: (0.00, 0.00, 0.00)
+      Scale: (1.00, 1.00, 1.00)
+    -------------------------
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (960.00, 540.00, 0.00)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+    > Anchor Min: (0.00, 0.00)
+    > Anchor Max: (0.00, 0.00)
+    > Anchored Position: (960.00, 540.00)
+    > Size Delta: (1920.00, 1080.00)
+    > Pivot: (0.50, 0.50)
+  - (Component) Canvas
+    > Render Mode: Screen Space - Overlay
+    > Camera: null
+    > Plane Distance: 100
+    > Pixel Perfect: False
+    > Receives Events: True
+    > Override Sorting: False
+    > Override Pixel Perfect: False
+    > Sorting Bucket Normalized Size: 0
+    > Additional Shader Channels Flag: -1
+  - (Component) CanvasScaler
+    > Ui Scale Mode: Scale With Screen Size
+    > Reference Pixels Per Unit: 100
+    > Scale Factor: 1
+    > Reference Resolution: (1920.00, 1080.00)
+    > Screen Match Mode: Match Width Or Height
+    > Match Width Or Height: 0
+    > Physical Unit: Points
+    > Fallback Screen DPI: 96
+    > Default Sprite DPI: 96
+    > Dynamic Pixels Per Unit: 1
+    > Preset Info Is World: False
+  - (Component) GraphicRaycaster
+    > Ignore Reversed Graphics: True
+    > Blocking Objects: None
+  [GameObject] Panel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Middle Center
+        Pos X: 0
+        Width: 1920
+        Pos Y: 0
+        Height: 1080
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (0.00, 0.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.50, 0.50)
+      > Anchor Max: (0.50, 0.50)
+      > Anchored Position: (0.00, 0.00)
+      > Size Delta: (1920.00, 1080.00)
+      > Pivot: (0.50, 0.50)
+    - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
+    - (Component) Image
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Sprite: box3 (Sprite)
+      > Type: Simple
+      > Preserve Aspect: False
+      > Fill Center: True
+      > Fill Method: Radial 360
+      > Fill Amount: 1
+      > Fill Clockwise: True
+      > Fill Origin: 0
+      > Use Sprite Mesh: False
+      > Pixels Per Unit Multiplier: 1
+    - (Component) MenuCardSpawner
+      > Card Prefab: Card (CardController)
+      > Panel: Panel (RectTransform)
+      > Spawn Interval: 0.2
+      > Min X: -880
+      > Max X: 880
+      > Spawn Y: 700
+      > Fall Speed: 200
+  [GameObject] MenuButtonPanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+      [Inspector Preview]
+        Anchor Preset: Middle Center
+        Pos X: 0
+        Width: 1920
+        Pos Y: -450
+        Height: 180
+        Pivot: (0.50, 0.50)
+        Rotation: (0.00, 0.00, 0.00)
+        Scale: (1.00, 1.00, 1.00)
+      -------------------------
+      > Local Rotation: (0.00, 0.00, 0.00)
+      > Local Position: (0.00, -450.00, 0.00)
+      > Local Scale: (1.00, 1.00, 1.00)
+      > Constrain Proportions Scale: False
+      > Anchor Min: (0.50, 0.50)
+      > Anchor Max: (0.50, 0.50)
+      > Anchored Position: (0.00, -450.00)
+      > Size Delta: (1920.00, 180.00)
+      > Pivot: (0.50, 0.50)
+    - (Component) CanvasRenderer
+      > Cull Transparent Mesh: True
+    - (Component) Image
+      > Material: null
+      > Color: RGBA(1.000, 1.000, 1.000, 0.392)
+      > Raycast Target: True
+      > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+      > Maskable: True
+      > Sprite: Background (Sprite)
+      > Type: Sliced
+      > Preserve Aspect: False
+      > Fill Center: True
+      > Fill Method: Radial 360
+      > Fill Amount: 1
+      > Fill Clockwise: True
+      > Fill Origin: 0
+      > Use Sprite Mesh: False
+      > Pixels Per Unit Multiplier: 1
+    - (Component) HorizontalLayoutGroup
+      > Child Alignment: Upper Left
+      > Spacing: 0
+      > Child Force Expand Width: True
+      > Child Force Expand Height: True
+      > Child Control Width: False
+      > Child Control Height: False
+      > Child Scale Width: False
+      > Child Scale Height: False
+      > Reverse Arrangement: False
+    [GameObject] BattleButton (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+        [Inspector Preview]
+          Anchor Preset: Top Left
+          Pos X: 480
+          Width: 960
+          Pos Y: -90
+          Height: 180
+          Pivot: (0.50, 0.50)
+          Rotation: (0.00, 0.00, 0.00)
+          Scale: (1.00, 1.00, 1.00)
+        -------------------------
+        > Local Rotation: (0.00, 0.00, 0.00)
+        > Local Position: (-480.00, 0.00, 0.00)
+        > Local Scale: (1.00, 1.00, 1.00)
+        > Constrain Proportions Scale: False
+        > Anchor Min: (0.00, 1.00)
+        > Anchor Max: (0.00, 1.00)
+        > Anchored Position: (480.00, -90.00)
+        > Size Delta: (960.00, 180.00)
+        > Pivot: (0.50, 0.50)
+      - (Component) CanvasRenderer
+        > Cull Transparent Mesh: True
+      - (Component) Image
+        > Material: null
+        > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+        > Raycast Target: True
+        > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+        > Maskable: True
+        > Sprite: bg_menu (Sprite)
+        > Type: Simple
+        > Preserve Aspect: False
+        > Fill Center: True
+        > Fill Method: Radial 360
+        > Fill Amount: 1
+        > Fill Clockwise: True
+        > Fill Origin: 0
+        > Use Sprite Mesh: False
+        > Pixels Per Unit Multiplier: 1
+      - (Component) Button
+        > Transition: Color Tint
+        > Interactable: True
+        > Target Graphic: BattleButton (Image)
+      [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) Image
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Sprite: button_thin (Sprite)
+          > Type: Simple
+          > Preserve Aspect: False
+          > Fill Center: True
+          > Fill Method: Radial 360
+          > Fill Amount: 1
+          > Fill Clockwise: True
+          > Fill Origin: 0
+          > Use Sprite Mesh: False
+          > Pixels Per Unit Multiplier: 1
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) TextMeshProUGUI
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Text: "バトル"
+          > Is Right To Left: False
+          > Font Asset: mplus-1p-black SDF (TMP_FontAsset)
+          > Shared Material: mplus-1p-black SDF Material (Material)
+          > Font Shared Materials: []
+          > Font Material: null
+          > Font Materials: []
+          > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Enable Vertex Gradient: False
+          > Color Mode: Four Corners Gradient
+          > Font Color Gradient Preset: null
+          > Sprite Asset: null
+          > Tint All Sprites: False
+          > Style Sheet: null
+          > Text Style Hash Code: -1183493901
+          > Override Html Colors: False
+          > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Size: 70
+          > Font Size Base: 70
+          > Font Weight: Regular
+          > Enable Auto Sizing: False
+          > Font Size Min: 18
+          > Font Size Max: 72
+          > Font Style: Bold
+          > Horizontal Alignment: Center
+          > Vertical Alignment: Middle
+          > Text Alignment: Converted
+          > Character Spacing: 0
+          > Word Spacing: 0
+          > Line Spacing: 0
+          > Line Spacing Max: 0
+          > Paragraph Spacing: 0
+          > Char Width Max Adj: 0
+          > Enable Word Wrapping: True
+          > Word Wrapping Ratios: 0.4
+          > Overflow Mode: Overflow
+          > Linked Text Component: null
+          > Parent Linked Component: null
+          > Enable Kerning: True
+          > Enable Extra Padding: False
+          > Check Padding Required: False
+          > Is Rich Text: True
+          > Parse Ctrl Characters: True
+          > Is Orthographic: True
+          > Is Culling Enabled: False
+          > Horizontal Mapping: Character
+          > Vertical Mapping: Character
+          > Uv Line Offset: 0
+          > Geometry Sorting Order: Normal
+          > Is Text Object Scale Static: False
+          > Vertex Buffer Auto Size Reduction: False
+          > Use Max Visible Descender: True
+          > Page To Display: 1
+          > Margin: (0.00, 0.00, 0.00, 0.00)
+          > Is Using Legacy Animation Component: False
+          > Is Volumetric Text: False
+          > Has Font Asset Changed: False
+          > Base Material: null
+          > Mask Offset: (0.00, 0.00, 0.00, 0.00)
+    [GameObject] DeckButton (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+        [Inspector Preview]
+          Anchor Preset: Top Left
+          Pos X: 1440
+          Width: 960
+          Pos Y: -90
+          Height: 180
+          Pivot: (0.50, 0.50)
+          Rotation: (0.00, 0.00, 0.00)
+          Scale: (1.00, 1.00, 1.00)
+        -------------------------
+        > Local Rotation: (0.00, 0.00, 0.00)
+        > Local Position: (480.00, 0.00, 0.00)
+        > Local Scale: (1.00, 1.00, 1.00)
+        > Constrain Proportions Scale: False
+        > Anchor Min: (0.00, 1.00)
+        > Anchor Max: (0.00, 1.00)
+        > Anchored Position: (1440.00, -90.00)
+        > Size Delta: (960.00, 180.00)
+        > Pivot: (0.50, 0.50)
+      - (Component) CanvasRenderer
+        > Cull Transparent Mesh: True
+      - (Component) Image
+        > Material: null
+        > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+        > Raycast Target: True
+        > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+        > Maskable: True
+        > Sprite: bg_menu (Sprite)
+        > Type: Simple
+        > Preserve Aspect: False
+        > Fill Center: True
+        > Fill Method: Radial 360
+        > Fill Amount: 1
+        > Fill Clockwise: True
+        > Fill Origin: 0
+        > Use Sprite Mesh: False
+        > Pixels Per Unit Multiplier: 1
+      - (Component) Button
+        > Transition: Color Tint
+        > Interactable: True
+        > Target Graphic: DeckButton (Image)
+      [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) Image
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Sprite: button_thin (Sprite)
+          > Type: Simple
+          > Preserve Aspect: False
+          > Fill Center: True
+          > Fill Method: Radial 360
+          > Fill Amount: 1
+          > Fill Clockwise: True
+          > Fill Origin: 0
+          > Use Sprite Mesh: False
+          > Pixels Per Unit Multiplier: 1
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) TextMeshProUGUI
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Text: "デッキ編集"
+          > Is Right To Left: False
+          > Font Asset: mplus-1p-black SDF (TMP_FontAsset)
+          > Shared Material: mplus-1p-black SDF Material (Material)
+          > Font Shared Materials: []
+          > Font Material: null
+          > Font Materials: []
+          > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Enable Vertex Gradient: False
+          > Color Mode: Four Corners Gradient
+          > Font Color Gradient Preset: null
+          > Sprite Asset: null
+          > Tint All Sprites: False
+          > Style Sheet: null
+          > Text Style Hash Code: -1183493901
+          > Override Html Colors: False
+          > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Size: 70
+          > Font Size Base: 70
+          > Font Weight: Regular
+          > Enable Auto Sizing: False
+          > Font Size Min: 18
+          > Font Size Max: 72
+          > Font Style: Bold
+          > Horizontal Alignment: Center
+          > Vertical Alignment: Middle
+          > Text Alignment: Converted
+          > Character Spacing: 0
+          > Word Spacing: 0
+          > Line Spacing: 0
+          > Line Spacing Max: 0
+          > Paragraph Spacing: 0
+          > Char Width Max Adj: 0
+          > Enable Word Wrapping: True
+          > Word Wrapping Ratios: 0.4
+          > Overflow Mode: Overflow
+          > Linked Text Component: null
+          > Parent Linked Component: null
+          > Enable Kerning: True
+          > Enable Extra Padding: False
+          > Check Padding Required: False
+          > Is Rich Text: True
+          > Parse Ctrl Characters: True
+          > Is Orthographic: True
+          > Is Culling Enabled: False
+          > Horizontal Mapping: Character
+          > Vertical Mapping: Character
+          > Uv Line Offset: 0
+          > Geometry Sorting Order: Normal
+          > Is Text Object Scale Static: False
+          > Vertex Buffer Auto Size Reduction: False
+          > Use Max Visible Descender: True
+          > Page To Display: 1
+          > Margin: (0.00, 0.00, 0.00, 0.00)
+          > Is Using Legacy Animation Component: False
+          > Is Volumetric Text: False
+          > Has Font Asset Changed: False
+          > Base Material: null
+          > Mask Offset: (0.00, 0.00, 0.00, 0.00)
+    [GameObject] ShopButton (Active: False, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+        [Inspector Preview]
+          Anchor Preset: Top Left
+          Pos X: 1200
+          Width: 480
+          Pos Y: -90
+          Height: 180
+          Pivot: (0.50, 0.50)
+          Rotation: (0.00, 0.00, 0.00)
+          Scale: (1.00, 1.00, 1.00)
+        -------------------------
+        > Local Rotation: (0.00, 0.00, 0.00)
+        > Local Position: (240.00, 0.00, 0.00)
+        > Local Scale: (1.00, 1.00, 1.00)
+        > Constrain Proportions Scale: False
+        > Anchor Min: (0.00, 1.00)
+        > Anchor Max: (0.00, 1.00)
+        > Anchored Position: (1200.00, -90.00)
+        > Size Delta: (480.00, 180.00)
+        > Pivot: (0.50, 0.50)
+      - (Component) CanvasRenderer
+        > Cull Transparent Mesh: True
+      - (Component) Image
+        > Material: null
+        > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+        > Raycast Target: True
+        > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+        > Maskable: True
+        > Sprite: bg_menu (Sprite)
+        > Type: Simple
+        > Preserve Aspect: False
+        > Fill Center: True
+        > Fill Method: Radial 360
+        > Fill Amount: 1
+        > Fill Clockwise: True
+        > Fill Origin: 0
+        > Use Sprite Mesh: False
+        > Pixels Per Unit Multiplier: 1
+      - (Component) Button
+        > Transition: Color Tint
+        > Interactable: True
+        > Target Graphic: ShopButton (Image)
+      [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) Image
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Sprite: button_thin (Sprite)
+          > Type: Simple
+          > Preserve Aspect: False
+          > Fill Center: True
+          > Fill Method: Radial 360
+          > Fill Amount: 1
+          > Fill Clockwise: True
+          > Fill Origin: 0
+          > Use Sprite Mesh: False
+          > Pixels Per Unit Multiplier: 1
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) TextMeshProUGUI
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Text: "Shop"
+          > Is Right To Left: False
+          > Font Asset: mplus-1mn-medium SDF (TMP_FontAsset)
+          > Shared Material: mplus-1mn-medium SDF Material (Material)
+          > Font Shared Materials: []
+          > Font Material: null
+          > Font Materials: []
+          > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Enable Vertex Gradient: False
+          > Color Mode: Four Corners Gradient
+          > Font Color Gradient Preset: null
+          > Sprite Asset: null
+          > Tint All Sprites: False
+          > Style Sheet: null
+          > Text Style Hash Code: -1183493901
+          > Override Html Colors: False
+          > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Size: 50
+          > Font Size Base: 50
+          > Font Weight: Regular
+          > Enable Auto Sizing: False
+          > Font Size Min: 18
+          > Font Size Max: 72
+          > Font Style: Bold
+          > Horizontal Alignment: Center
+          > Vertical Alignment: Middle
+          > Text Alignment: Converted
+          > Character Spacing: 0
+          > Word Spacing: 0
+          > Line Spacing: 0
+          > Line Spacing Max: 0
+          > Paragraph Spacing: 0
+          > Char Width Max Adj: 0
+          > Enable Word Wrapping: True
+          > Word Wrapping Ratios: 0.4
+          > Overflow Mode: Overflow
+          > Linked Text Component: null
+          > Parent Linked Component: null
+          > Enable Kerning: True
+          > Enable Extra Padding: False
+          > Check Padding Required: False
+          > Is Rich Text: True
+          > Parse Ctrl Characters: True
+          > Is Orthographic: True
+          > Is Culling Enabled: False
+          > Horizontal Mapping: Character
+          > Vertical Mapping: Character
+          > Uv Line Offset: 0
+          > Geometry Sorting Order: Normal
+          > Is Text Object Scale Static: False
+          > Vertex Buffer Auto Size Reduction: False
+          > Use Max Visible Descender: True
+          > Page To Display: 1
+          > Margin: (0.00, 0.00, 0.00, 0.00)
+          > Is Using Legacy Animation Component: False
+          > Is Volumetric Text: False
+          > Has Font Asset Changed: False
+          > Base Material: null
+          > Mask Offset: (0.00, 0.00, 0.00, 0.00)
+    [GameObject] SetupButton (Active: False, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+        [Inspector Preview]
+          Anchor Preset: Top Left
+          Pos X: 1520
+          Width: 480
+          Pos Y: -90
+          Height: 180
+          Pivot: (0.50, 0.50)
+          Rotation: (0.00, 0.00, 0.00)
+          Scale: (1.00, 1.00, 1.00)
+        -------------------------
+        > Local Rotation: (0.00, 0.00, 0.00)
+        > Local Position: (560.00, 0.00, 0.00)
+        > Local Scale: (1.00, 1.00, 1.00)
+        > Constrain Proportions Scale: False
+        > Anchor Min: (0.00, 1.00)
+        > Anchor Max: (0.00, 1.00)
+        > Anchored Position: (1520.00, -90.00)
+        > Size Delta: (480.00, 180.00)
+        > Pivot: (0.50, 0.50)
+      - (Component) CanvasRenderer
+        > Cull Transparent Mesh: True
+      - (Component) Image
+        > Material: null
+        > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+        > Raycast Target: True
+        > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+        > Maskable: True
+        > Sprite: bg_menu (Sprite)
+        > Type: Simple
+        > Preserve Aspect: False
+        > Fill Center: True
+        > Fill Method: Radial 360
+        > Fill Amount: 1
+        > Fill Clockwise: True
+        > Fill Origin: 0
+        > Use Sprite Mesh: False
+        > Pixels Per Unit Multiplier: 1
+      - (Component) Button
+        > Transition: Color Tint
+        > Interactable: True
+        > Target Graphic: SetupButton (Image)
+      [GameObject] Image (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) Image
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Sprite: button_thin (Sprite)
+          > Type: Simple
+          > Preserve Aspect: False
+          > Fill Center: True
+          > Fill Method: Radial 360
+          > Fill Amount: 1
+          > Fill Clockwise: True
+          > Fill Origin: 0
+          > Use Sprite Mesh: False
+          > Pixels Per Unit Multiplier: 1
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+          [Inspector Preview]
+            Anchor Preset: Stretch All (Full Rect)
+            Left: 0
+            Right: 0
+            Top: 0
+            Bottom: 0
+            Pivot: (0.50, 0.50)
+            Rotation: (0.00, 0.00, 0.00)
+            Scale: (1.00, 1.00, 1.00)
+          -------------------------
+          > Local Rotation: (0.00, 0.00, 0.00)
+          > Local Position: (0.00, 0.00, 0.00)
+          > Local Scale: (1.00, 1.00, 1.00)
+          > Constrain Proportions Scale: False
+          > Anchor Min: (0.00, 0.00)
+          > Anchor Max: (1.00, 1.00)
+          > Anchored Position: (0.00, 0.00)
+          > Size Delta: (0.00, 0.00)
+          > Pivot: (0.50, 0.50)
+        - (Component) CanvasRenderer
+          > Cull Transparent Mesh: True
+        - (Component) TextMeshProUGUI
+          > Material: null
+          > Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Raycast Target: True
+          > Raycast Padding: (0.00, 0.00, 0.00, 0.00)
+          > Maskable: True
+          > Text: "Setup"
+          > Is Right To Left: False
+          > Font Asset: LiberationSans SDF (TMP_FontAsset)
+          > Shared Material: LiberationSans SDF Material (Material)
+          > Font Shared Materials: []
+          > Font Material: null
+          > Font Materials: []
+          > Font Color 32: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Enable Vertex Gradient: False
+          > Color Mode: Four Corners Gradient
+          > Font Color Gradient Preset: null
+          > Sprite Asset: null
+          > Tint All Sprites: False
+          > Style Sheet: null
+          > Text Style Hash Code: -1183493901
+          > Override Html Colors: False
+          > Face Color: RGBA(1.000, 1.000, 1.000, 1.000)
+          > Font Size: 50
+          > Font Size Base: 50
+          > Font Weight: Regular
+          > Enable Auto Sizing: False
+          > Font Size Min: 18
+          > Font Size Max: 72
+          > Font Style: Bold
+          > Horizontal Alignment: Center
+          > Vertical Alignment: Middle
+          > Text Alignment: Converted
+          > Character Spacing: 0
+          > Word Spacing: 0
+          > Line Spacing: 0
+          > Line Spacing Max: 0
+          > Paragraph Spacing: 0
+          > Char Width Max Adj: 0
+          > Enable Word Wrapping: True
+          > Word Wrapping Ratios: 0.4
+          > Overflow Mode: Overflow
+          > Linked Text Component: null
+          > Parent Linked Component: null
+          > Enable Kerning: True
+          > Enable Extra Padding: False
+          > Check Padding Required: False
+          > Is Rich Text: True
+          > Parse Ctrl Characters: True
+          > Is Orthographic: True
+          > Is Culling Enabled: False
+          > Horizontal Mapping: Character
+          > Vertical Mapping: Character
+          > Uv Line Offset: 0
+          > Geometry Sorting Order: Normal
+          > Is Text Object Scale Static: False
+          > Vertex Buffer Auto Size Reduction: False
+          > Use Max Visible Descender: True
+          > Page To Display: 1
+          > Margin: (0.00, 0.00, 0.00, 0.00)
+          > Is Using Legacy Animation Component: False
+          > Is Volumetric Text: False
+          > Has Font Asset Changed: False
+          > Base Material: null
+          > Mask Offset: (0.00, 0.00, 0.00, 0.00)
+[GameObject] EventSystem (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (0.00, 0.00, 0.00)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) EventSystem
+    > First Selected: null
+    > Send Navigation Events: True
+    > Drag Threshold: 10
+  - (Component) StandaloneInputModule
+    > Send Pointer Hover To Parent: True
+    > Horizontal Axis: "Horizontal"
+    > Vertical Axis: "Vertical"
+    > Submit Button: "Submit"
+    > Cancel Button: "Cancel"
+    > Input Actions Per Second: 10
+    > Repeat Delay: 0.5
+[GameObject] HomeManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (1001.75, 559.33, 14.15)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) HomeManager
+[GameObject] SceneTransitionManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (897.83, 565.96, 2.66)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) SceneTransitionManager
+[GameObject] GameManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (960.00, 540.00, 0.00)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) GameManager
+    > Card Prefab: Card (CardController)
+    > Card Details Panel Prefab: CardDetailPanel (CardDetailPanel)
+  - (Component) AspectRatioEnforcer
+    > Target Aspect: 1.777778
+[GameObject] SoundManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (875.75, 546.39, 18.72)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) AudioSource
+    > Output Audio Mixer Group: SE (AudioMixerGroupController)
+    > Audio Clip: null
+    > Play On Awake: True
+    > Volume: 0.179
+    > Pitch: 1
+    > Loop: False
+    > Mute: False
+    > Spatialize: False
+    > Spatialize Post Effects: False
+    > Priority: 122
+    > Doppler Level: 1
+    > Min Distance: 1
+    > Max Distance: 500
+    > Pan 2D: 0
+    > Rolloff Mode: Logarithmic Rolloff
+    > Bypass Effects: False
+    > Bypass Listener Effects: False
+    > Bypass Reverb Zones: False
+  - (Component) SoundManager
+    > Se Audio Source: null
+    > Audio Source SE: SoundManager (AudioSource)
+    > Audio Clips SE: [Size:1] 
+[GameObject] BgmMnager (Active: False, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+    > Local Rotation: (0.00, 0.00, 0.00)
+    > Local Position: (920.17, 508.42, -21.93)
+    > Local Scale: (1.00, 1.00, 1.00)
+    > Constrain Proportions Scale: False
+  - (Component) AudioSource
+    > Output Audio Mixer Group: BGM (AudioMixerGroupController)
+    > Audio Clip: menuBGM (AudioClip)
+    > Play On Awake: True
+    > Volume: 1
+    > Pitch: 1
+    > Loop: True
+    > Mute: False
+    > Spatialize: False
+    > Spatialize Post Effects: False
+    > Priority: 128
+    > Doppler Level: 1
+    > Min Distance: 1
+    > Max Distance: 500
+    > Pan 2D: 0
+    > Rolloff Mode: Logarithmic Rolloff
+    > Bypass Effects: False
+    > Bypass Listener Effects: False
+    > Bypass Reverb Zones: False
+  - (Component) BGMManager
+    > BGM Audio Source: null
+    > Audio Source SE: BgmMnager (AudioSource)
+    > Audio Clips SE: [Size:1] 

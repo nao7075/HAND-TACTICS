@@ -1,0 +1,130 @@
+Scene Name: DeckList
+========================================
+[GameObject] Main Camera (Active: True, Tag: MainCamera, Layer: Default)
+  - (Component) Transform
+  - (Component) Camera
+  - (Component) AudioListener
+[GameObject] Canvas (Active: True, Tag: Untagged, Layer: UI)
+  - (Component) RectTransform
+  - (Component) Canvas
+  - (Component) CanvasScaler
+    > m_Script: CanvasScaler (MonoScript)
+  - (Component) GraphicRaycaster
+    > m_Script: GraphicRaycaster (MonoScript)
+  [GameObject] Panel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Sprite: box3 (Sprite)
+  [GameObject] SelectDeckButtonPanel (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Sprite: Background (Sprite)
+    - (Component) GridLayoutGroup
+      > m_Script: GridLayoutGroup (MonoScript)
+    [GameObject] Button (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Sprite: button_thin (Sprite)
+      - (Component) Button
+        > m_Script: Button (MonoScript)
+        > m_TargetGraphic: Button (Image)
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) TextMeshProUGUI
+          > m_Script: TextMeshProUGUI (MonoScript)
+          > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+          > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+    [GameObject] Button (1) (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Sprite: button_thin (Sprite)
+      - (Component) Button
+        > m_Script: Button (MonoScript)
+        > m_TargetGraphic: Button (1) (Image)
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) TextMeshProUGUI
+          > m_Script: TextMeshProUGUI (MonoScript)
+          > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+          > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+    [GameObject] Button (2) (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Sprite: button_thin (Sprite)
+      - (Component) Button
+        > m_Script: Button (MonoScript)
+        > m_TargetGraphic: Button (2) (Image)
+      [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+        - (Component) RectTransform
+        - (Component) CanvasRenderer
+        - (Component) TextMeshProUGUI
+          > m_Script: TextMeshProUGUI (MonoScript)
+          > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+          > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+  [GameObject] BackButton (Active: True, Tag: Untagged, Layer: UI)
+    - (Component) RectTransform
+    - (Component) CanvasRenderer
+    - (Component) Image
+      > m_Script: Image (MonoScript)
+      > m_Sprite: level_box (Sprite)
+    - (Component) Button
+      > m_Script: Button (MonoScript)
+      > m_TargetGraphic: BackButton (Image)
+    [GameObject] Text (TMP) (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) TextMeshProUGUI
+        > m_Script: TextMeshProUGUI (MonoScript)
+        > m_fontAsset: mplus-1p-black SDF (TMP_FontAsset)
+        > m_sharedMaterial: mplus-1p-black SDF Material (Material)
+    [GameObject] frame (Active: True, Tag: Untagged, Layer: UI)
+      - (Component) RectTransform
+      - (Component) CanvasRenderer
+      - (Component) Image
+        > m_Script: Image (MonoScript)
+        > m_Sprite: avatar_frame2 (Sprite)
+[GameObject] EventSystem (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) EventSystem
+    > m_Script: EventSystem (MonoScript)
+  - (Component) StandaloneInputModule
+    > m_Script: StandaloneInputModule (MonoScript)
+[GameObject] DeckListManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) DeckListManager
+    > m_Script: DeckListManager (MonoScript)
+[GameObject] SceneTransitionManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) SceneTransitionManager
+    > m_Script: SceneTransitionManager (MonoScript)
+[GameObject] GameManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) GameManager
+    > m_Script: GameManager (MonoScript)
+    > cardPrefab: Card (CardController)
+  - (Component) AspectRatioEnforcer
+    > m_Script: AspectRatioEnforcer (MonoScript)
+[GameObject] SoundManager (Active: True, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) AudioSource
+  - (Component) SoundManager
+    > m_Script: SoundManager (MonoScript)
+    > audioSourceSE: SoundManager (AudioSource)
+[GameObject] BgmMnager (Active: False, Tag: Untagged, Layer: Default)
+  - (Component) Transform
+  - (Component) AudioSource
+  - (Component) BGMManager
+    > m_Script: BGMManager (MonoScript)
+    > audioSourceSE: BgmMnager (AudioSource)

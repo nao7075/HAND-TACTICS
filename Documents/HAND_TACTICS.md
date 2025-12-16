@@ -1,4 +1,4 @@
-# **HAND TACTICS 仕様書**
+﻿# **HAND TACTICS 仕様書**
 
 ## **目次**
 
@@ -80,7 +80,7 @@
 
 | カード構成 | 詳細 |
 | :--- | :--- |
-| ![alt text](DCG_game_images/card_explain.png) | **1:カード名**<br>このカードのカード名。<br><br>**2:コスト**<br>この数字分のマナポイント(MP)を消費してカードをプレイする。<br><br>**3:カードイラスト**<br>このカードのイラスト。<br><br>**4:じゃんけん属性**<br>このカードのじゃんけん属性。この属性によってカードの色が変わる。グーは赤、チョキは緑、パーは青。<br><br>**5:攻撃力 (Power)**<br>このカードの攻撃力 (Power)。 |
+| ![alt text](Images/card_explain.png) | **1:カード名**<br>このカードのカード名。<br><br>**2:コスト**<br>この数字分のマナポイント(MP)を消費してカードをプレイする。<br><br>**3:カードイラスト**<br>このカードのイラスト。<br><br>**4:じゃんけん属性**<br>このカードのじゃんけん属性。この属性によってカードの色が変わる。グーは赤、チョキは緑、パーは青。<br><br>**5:攻撃力 (Power)**<br>このカードの攻撃力 (Power)。 |
 
 ## **2. ゲームシステム**
 
@@ -184,7 +184,7 @@ graph TD
   * 画面をクリックするとホーム(Home)へシーン遷移、画面全体をボタンにする。  
 * **詳細なオブジェクト構造・パラメータ:** [SceneStructure_Start_Detailed.txt](Structure_text/SceneStructure_Start_Detailed.txt)を参照。
   
-![alt text](DCG_game_images/start.png)
+![alt text](Images/start.png)
 
 #### **4.3.2. ホーム (Scene: Home)**
 
@@ -194,8 +194,8 @@ graph TD
   * **[デッキ編集] ボタン** : クリックでDeckListへシーン遷移。
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Home_Detailed.txt](Structure_text/SceneStructure_Home_Detailed.txt) を参照。
   
-![alt text](DCG_game_images/home.png)
-![alt text](DCG_game_images/move_home.png)
+![alt text](Images/home.png)
+![alt text](Images/move_home.png)
 
 #### **4.3.3. デッキ一覧(Scene: DeckList)**
 
@@ -206,7 +206,7 @@ graph TD
 * **ヘッダー:** 左上に **[Back]ボタン** : Homeへシーン遷移    
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_DeckList_Detailed.txt](Structure_text/SceneStructure_DeckList_Detailed.txt), 
   
-![alt text](DCG_game_images/DeckList.png)
+![alt text](Images/DeckList.png)
 
 #### **4.3.4. デッキ構築 (Scene: Deck)**
 
@@ -219,8 +219,8 @@ graph TD
 * **操作:** 下段から上段へ（またはその逆へ）カードをドラッグ＆ドロップして入れ替え。  
 * **詳細なオブジェクト構造・パラメータ:**  [SceneStructure_Deck_Detailed.txt](Structure_text/SceneStructure_Deck_Detailed.txt) を参照。
 
-![alt text](DCG_game_images/Deck.png)
-![alt text](DCG_game_images/Deck2.png)
+![alt text](Images/Deck.png)
+![alt text](Images/Deck2.png)
 
 #### **4.3.5. 対戦デッキ選択 (Scene: DeckSelect)**
 
@@ -232,8 +232,8 @@ graph TD
 * **エラー表示:** デッキ枚数が32枚でない場合、ボタン上に警告メッセージを表示。  
 * **詳細なオブジェクト構造・パラメータ:** [SceneStructure_DeckSelect_Detailed.txt](Structure_text/SceneStructure_DeckSelect_Detailed.txt) を参照。
 
-![alt text](DCG_game_images/DeckSelect.png)
-![alt text](DCG_game_images/DeckSelect2.png)
+![alt text](Images/DeckSelect.png)
+![alt text](Images/DeckSelect2.png)
 
 #### **4.3.6. マッチ選択 (Scene: Matching)**
 
@@ -243,8 +243,8 @@ graph TD
 * **ヘッダー:** 左上に **[Back]ボタン** : Homeへシーン遷移。
 * **詳細なオブジェクト構造・パラメータ:** [SceneStructure_Matching_Detailed.txt](Structure_text/SceneStructure_Matching_Detailed.txt) を参照。
 
-![alt text](DCG_game_images/Matching.png)
-![alt text](DCG_game_images/in_matching.png)
+![alt text](Images/Matching.png)
+![alt text](Images/in_matching.png)
 
 #### **4.3.7. バトル (Scene: Battle)**
 
@@ -271,47 +271,47 @@ graph TD
   
 * **背景UIのみ**
 
-![alt text](DCG_game_images/Bttle.png)
+![alt text](Images/Bttle.png)
 
 * **マリガン時**
 
-![alt text](DCG_game_images/Mulligan.png)
+![alt text](Images/Mulligan.png)
 
 * **自分ターン開始時**
 
-![alt text](DCG_game_images/your_turn.png)
+![alt text](Images/your_turn.png)
 
 * **相手ターン開始時**
 
-![alt text](DCG_game_images/enemy_turn.png)
+![alt text](Images/enemy_turn.png)
 
 * **じゃんけん時**
 
-![alt text](DCG_game_images/janken.png)
+![alt text](Images/janken.png)
 
 * **ゲームプレイ時**
 
-![alt text](DCG_game_images/in_battle.png)
+![alt text](Images/in_battle.png)
 
 * **ゲーム勝利時**
 
-![alt text](DCG_game_images/you_win.png)
+![alt text](Images/you_win.png)
 
 * **ゲーム敗北時**
 
-![alt text](DCG_game_images/you_lose.png)
+![alt text](Images/you_lose.png)
 
 * **対戦相手が抜けた時**
 
-![alt text](DCG_game_images/left_enemy.png)
+![alt text](Images/left_enemy.png)
 
 * **歯車ボタンを押したとき**
 
-![alt text](DCG_game_images/settei.png)
+![alt text](Images/settei.png)
 
 * **スピーカーボタンを押したとき**
   
-![alt text](DCG_game_images/speaker.png)
+![alt text](Images/speaker.png)
 
 ## **5. アセット・データリスト**
 
@@ -328,12 +328,12 @@ graph TD
 * **枠色:** 属性に応じて赤・緑・青に変化 (CardPanel1/2/3)。  
 * **詳細なオブジェクト構造・パラメータ:**  [PrefabStructure_Card.txt](Structure_text/PrefabStructure_Card.txt)を参照。
 
-![alt text](DCG_game_images/cardprefab.png)
+![alt text](Images/cardprefab.png)
 
 **どのシーンでもカードをクリックするとCardDetailPanelが開かれる、もう一度画面をクリックすると閉じる。**
 
 * **詳細なオブジェクト構造・パラメータ:**  [PrefabStructure_CardDtailPanel.txt](Structure_text/PrefabStructure_CardDetailPanel.txt)を参照。
-![alt text](DCG_game_images/card_detail.png)
+![alt text](Images/card_detail.png)
 
 ### **5.2. カードリスト**
 
@@ -342,7 +342,7 @@ graph TD
 * **属性 (Attr):** ✊=グー(1), ✌️=チョキ(2), ✋=パー(3)
 * **Stat:**  Cost / Power  
 * **詳細パラメータ（効果値など）:**  [AllCardEntities.txt](Structure_text/AllCardEntities.txt)または  [CardEntities_Diff.txt](Structure_text/CardEntities_Diff.txt)を参照。
-* **使用画像 :**  [CollectedImages_Selection](CollectedImages_Selection)を参照
+* **使用画像 :**  [CollectedImages_Selection](../CollectedImages/CollectedImages_Selection)を参照
 
 | ID | Name | Attr | Type | Stat | Image File | Ability (効果概要) |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -401,16 +401,16 @@ graph TD
 * ※CCはCosmic Combatの略
 
 ### **5.3. グラフィック・UI素材**
-* **[CollectedImages_Scene_Start](CollectedImages_Scene_Start)** Startシーンの画像素材フォルダ。
-* **[CollectedImages_Scene_Home](CollectedImages_Scene_Home)** Homeシーンの画像素材フォルダ。
-* **[CollectedImages_Scene_DeckList](CollectedImages_Scene_DeckList)** DeckListシーンの画像素材フォルダ。
-* **[CollectedImages_Deck](CollectedImages_Deck)** Deckシーンの画像素材フォルダ。
-* **[CollectedImages_Scene_DeckSelect](CollectedImages_Scene_DeckSelect)** DeckSelectシーンの画像素材フォルダ。
-* **[CollectedImages_Scene_Matching](CollectedImages_Scene_Matching)** Matchingシーンの画像素材フォルダ。
-* **[CollectedImages_Battle](CollectedImages_Battle)** Battleシーンの画像素材フォルダ。
-* **[CollectedImages_Card](CollectedImages_Card)** CardPrefabの画像素材フォルダ。
-* **[CollectedImages_CardDetailPanel](CollectedImages_CardDetailPanel)** CardDetailPanelPrefabの画像素材フォルダ。
-* **[CollectedImages_EnemyHandCard](CollectedImages_EnemyHandCard)** EnemyHandCardPrefabの画像素材フォルダ。
+* **[CollectedImages_Scene_Start](../CollectedImages/CollectedImages_Scene_Start)** Startシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_Home](../CollectedImages/CollectedImages_Scene_Home)** Homeシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_DeckList](../CollectedImages/CollectedImages_Scene_DeckList)** DeckListシーンの画像素材フォルダ。
+* **[CollectedImages_Deck](../CollectedImages/CollectedImages_Deck)** Deckシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_DeckSelect](../CollectedImages/CollectedImages_Scene_DeckSelect)** DeckSelectシーンの画像素材フォルダ。
+* **[CollectedImages_Scene_Matching](../CollectedImages/CollectedImages_Scene_Matching)** Matchingシーンの画像素材フォルダ。
+* **[CollectedImages_Battle](../CollectedImages/CollectedImages_Battle)** Battleシーンの画像素材フォルダ。
+* **[CollectedImages_Card](../CollectedImages/CollectedImages_Card)** CardPrefabの画像素材フォルダ。
+* **[CollectedImages_CardDetailPanel](../CollectedImages/CollectedImages_CardDetailPanel)** CardDetailPanelPrefabの画像素材フォルダ。
+* **[CollectedImages_EnemyHandCard](../CollectedImages/CollectedImages_EnemyHandCard)** EnemyHandCardPrefabの画像素材フォルダ。
 
 
 
@@ -424,5 +424,6 @@ graph TD
   * **詳細なオブジェクト:**  [SceneStructure_Battle_Detailed.txt](Structure_text/SceneStructure_Battle_Detailed.txt) (SoundManagerの項目)を参照。
   
 * **音声ファイル:**
-  * [Assets_Sounds](Assets_Sounds)を参照。
+  * [Assets_Sounds](../Assets_Sounds)を参照。
+
 
