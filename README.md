@@ -12,33 +12,33 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 
 ## 確認いただきたいポイント
 
-### 1. ゲームロジックと設計 ([Assets_Scripts](Assets_Scripts))
-Photon(PUN2) を用いたオンライン対戦ゲームの主要ロジックで、詳細は [Documents/ScriptDocs/folders/Assets_Scripts.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務や呼び出し順、補足メモがまとめられています。
+### 1. ゲームの主要スクリプト ([Assets_Scripts](Assets_Scripts))
+Photon(PUN2) を用いたオンライン対戦ゲームの主要スクリプトで、詳細は [Documents/ScriptDocs/folders/Assets_Scripts.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務やフィールド、メソッドなどがまとめられています。
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
 *   **[HAND_TACTICS.md](Documents/HAND_TACTICS.md)**: 詳細なゲームルール、画面遷移図、データ構造などをまとめた仕様書。
-*   **[ScriptDocs](Documents/ScriptDocs)**: クラス図やシーケンス図を含む技術ドキュメント。
+*   **[ScriptDocs](Documents/ScriptDocs)**: クラスや処理の構成、スクリプト同士の呼び出し順などの補足ドキュメント。
 
-### 3. 開発効率化ツール ([Assets_Editor](Assets_Editor))
-プロジェクト情報を抜粋するためにAIを使用して自作したUnityエディタ拡張です。
-*   **ImageCollector.cs**: ゲーム内の画像を自動収集するツール。
-*   **SceneStructureDumper.cs**: シーン内のオブジェクト構造をテキスト出力し、構成把握を助けるツール。
 
 ---
 
 ## フォルダ構成
+
+### [Assets_Editor](Assets_Editor)
+Unityエディタ上で動作するAIを使用して自作した拡張スクリプトとその説明書。
 
 ### [Assets_Scripts](Assets_Scripts)
 ゲームシステムのC#スクリプトファイル群。
 (Photon, DOTweenなどの外部アセットは除外しています)
 詳細な各ファイルの説明は [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/Index.md) から参照できます。
 
-### [Documents](Documents)
-仕様書、設計資料、およびそれに関連する画像素材。
-
-### [Assets_Editor](Assets_Editor)
-Unityエディタ上で動作する自作の拡張スクリプト。
+### [Assets_Sounds](Assets_Sounds)
+プロジェクトで使用した音声ファイル。
 
 ### [CollectedImages](CollectedImages)
 エディタ拡張ツールによって収集された、ゲーム画面やカードのキャプチャ画像。
+
+### [Documents](Documents)
+仕様書、設計資料、およびそれに関連する画像素材。
+
