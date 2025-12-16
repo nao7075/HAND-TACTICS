@@ -13,7 +13,7 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 ## 確認いただきたいポイント
 
 ### 1. ゲームロジックと設計 ([Assets_Scripts](Assets_Scripts))
-Photon(PUN2) を用いたオンライン対戦ゲームの主要ロジックで、詳細は [Documents/ScriptDocs/Index.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務や呼び出し順、補足メモがまとめられています。
+Photon(PUN2) を用いたオンライン対戦ゲームの主要ロジックで、詳細は [Documents/ScriptDocs/folders/Assets_Scripts.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務や呼び出し順、補足メモがまとめられています。
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
