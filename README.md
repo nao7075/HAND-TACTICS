@@ -1,35 +1,46 @@
-# **フォルダ、ファイル概要**
+﻿# HAND TACTICS (Portfolio Excerpt)
 
-## [Assets_Scripts](Assets_Scripts)
-### **$\color{red}{重要}$** 
-* **PhotonやDOTweenを除いた、ゲームシステムの主要スクリプト**
+## 本リポジトリについて
+本リポジトリは、自作ゲーム「HAND TACTICS」のUnityプロジェクトから、**主要なソースコードと仕様書を抜粋したもの**です。
+ポートフォリオとして、コーディングスタイルや設計、ドキュメント作成能力をご確認いただくために公開しています。
+Unityプロジェクト全体を含んでいないため、このままでは実行できません。
 
-## [Documents/HAND_TACTICS.md](Documents/HAND_TACTICS.md)
-### **$\color{red}{重要}$** 
-* **HAND TACTICSの仕様書**
+## ゲーム概要
+**「運」と「読み合い」が融合した、1v1じゃんけんカードバトル**
+プレイヤーはデッキを構築し、毎ターンの「じゃんけん」とカードプレイを駆使して勝利を目指します。
 
-## [Assets_Editor](Assets_Editor)
-* Unityエディタ用の拡張ツール（デバッグ・分析用ユーティリティ）のフォルダ
+## 確認いただきたいポイント
 
-## [CollectedImages](CollectedImages)
-* Unityエディタ用の拡張ツールImageCollector.csで集めた画像フォルダ群
-  * [CollectedImages_Battle](CollectedImages/CollectedImages_Battle)
-  * [CollectedImages_Card](CollectedImages/CollectedImages_Card)
-  * [CollectedImages_CardDetailPanel](CollectedImages/CollectedImages_CardDetailPanel)
-  * [CollectedImages_Deck](CollectedImages/CollectedImages_Deck)
-  * [CollectedImages_EnemyHandCard](CollectedImages/CollectedImages_EnemyHandCard)
-  * [CollectedImages_Scene_DeckList](CollectedImages/CollectedImages_Scene_DeckList)
-  * [CollectedImages_Scene_DeckSelect](CollectedImages/CollectedImages_Scene_DeckSelect)
-  * [CollectedImages_Scene_Home](CollectedImages/CollectedImages_Scene_Home)
-  * [CollectedImages_Scene_Matching](CollectedImages/CollectedImages_Scene_Matching)
-  * [CollectedImages_Scene_Start](CollectedImages/CollectedImages_Scene_Start)
-  * [CollectedImages_Selection](CollectedImages/CollectedImages_Selection)
+### 1. ゲームロジックと設計 ([Assets_Scripts](Assets_Scripts))
+Photon(PUN2)を用いたオンライン対戦ゲームの主要ロジックです。
+*   **BattleManager.cs**: ゲームの進行管理、ターン制御。
+*   **CardController.cs / CardModel.cs**: カードの挙動とデータ管理。
+  
+  など
 
-## [Documents/Images](Documents/Images)
-* HAND_TACTICS.mdで使用している画像のリンク先
+### 2. 仕様書ドキュメント ([Documents](Documents))
 
-## [Documents/ScriptDocs](Documents/ScriptDocs)
-* c#スクリプトの仕様書(.md)、 [Index.md](Documents/ScriptDocs/Index.md) からアクセスする。Assets/Scriptsがメインスクリプト。
+*   **[HAND_TACTICS.md](Documents/HAND_TACTICS.md)**: 詳細なゲームルール、画面遷移図、データ構造などをまとめた仕様書。
+*   **[ScriptDocs](Documents/ScriptDocs/Index.md)**: クラス図やシーケンス図を含む技術ドキュメント。
 
-## [Documents/Structure_text](Documents/Structure_text)
-* Assets_EditorのSceneStructureDumper.csで生成したテキストファイル。[HAND_TACTICS.md](Documents/HAND_TACTICS.md)からアクセス可能
+### 3. 開発効率化ツール ([Assets_Editor](Assets_Editor))
+プロジェクト情報を抜粋するためにAIを使用して自作したUnityエディタ拡張です。
+*   **ImageCollector.cs**: ゲーム内の画像を自動収集するツール。
+*   **SceneStructureDumper.cs**: シーン内のオブジェクト構造をテキスト出力し、構成把握を助けるツール。
+
+---
+
+## フォルダ構成
+
+### [Assets_Scripts](Assets_Scripts)
+ゲームシステムのC#スクリプトファイル群。
+(Photon, DOTweenなどの外部アセットは除外しています)
+
+### [Documents](Documents)
+仕様書、設計資料、およびそれに関連する画像素材。
+
+### [Assets_Editor](Assets_Editor)
+Unityエディタ上で動作する自作の拡張スクリプト。
+
+### [CollectedImages](CollectedImages)
+エディタ拡張ツールによって収集された、ゲーム画面やカードのキャプチャ画像。
