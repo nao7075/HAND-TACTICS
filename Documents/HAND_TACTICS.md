@@ -86,6 +86,8 @@
 
 ### **2.1. ゲームフロー、画面遷移図**
 
+#### **2.1.1 全体のゲームフロー、画面遷移図**
+
 ```mermaid
 graph TD  
     Start([タイトル]) -->|TAP SCREEN| Home[ホーム];  
@@ -99,8 +101,25 @@ graph TD
     DeckSelect --> Matching[マッチ選択];  
     Matching -->|オンライン対戦| Battle{{バトル}};
     Matching -->|CPU対戦| Battle{{バトル}};  
-    Battle --retry--> Battle  
+    Battle --Retry--> Battle  
     Battle --> |Home| Home;
+```
+
+#### **2.1.1 バトルのゲームフロー、画面遷移図**
+
+```mermaid
+graph TD
+  Start([バトル開始]) --> TurnDecide[先攻後攻決め※ランダム];
+  TurnDecide --> StartTurn[ターン開始]
+  StartTurn --> JankenProcess[じゃんけん]
+  JankenProcess --> InTurn[自分 / 相手 プレイ]
+  InTurn --> TurnEnd[ターンエンド]
+  TurnEnd --> TurnChange[ターンチェンジ]
+  TurnChange --> StartTurn
+  InTurn ==> GameEnd[ゲーム終了]
+  GameEnd --Retry--> Start
+  GameEnd --Home--> Home[ホーム]
+
 ```
 
 ### **2.2. 勝利条件・基本ルール**
