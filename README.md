@@ -13,7 +13,7 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 ## 確認いただきたいポイント
 
 ### 1. ゲームの主要スクリプト ([Assets_Scripts](Assets_Scripts))
-ゲームの主要スクリプトです。
+Photon, DOTweenなどの外部アセットを除いた、ゲームのC#スクリプト群です。
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
