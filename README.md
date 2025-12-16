@@ -13,12 +13,12 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 ## 確認いただきたいポイント
 
 ### 1. ゲームの主要スクリプト ([Assets_Scripts](Assets_Scripts))
-Photon(PUN2) を用いたオンライン対戦ゲームの主要スクリプトで、詳細は [Documents/ScriptDocs/folders/Assets_Scripts.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務やフィールド、メソッドなどがまとめられています。
+ゲームの主要スクリプトです。
 
 ### 2. 仕様書ドキュメント ([Documents](Documents))
 
 *   **[HAND_TACTICS.md](Documents/HAND_TACTICS.md)**: 詳細なゲームルール、画面遷移図、データ構造などをまとめた仕様書。
-*   **[ScriptDocs](Documents/ScriptDocs)**: クラスや処理の構成、スクリプト同士の呼び出し順などの補足ドキュメント。
+*   **[ScriptDocs](Documents/ScriptDocs)**: 主要スクリプトに関しては [Documents/ScriptDocs/folders/Assets_Scripts.md](Documents/ScriptDocs/folders/Assets_Scripts.md) を参照してください。各スクリプトの責務やフィールド、メソッドなどがまとめられています。
 
 
 ---
