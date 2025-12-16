@@ -8,7 +8,7 @@ Unityプロジェクト全体を含んでいないため、このままでは実
 ## ゲーム概要
 **「運」と「読み合い」が融合した、1v1じゃんけんカードバトル**
 プレイヤーはデッキを構築し、毎ターンの「じゃんけん」とカードプレイを駆使して勝利を目指します。
-実際のビルドは <a href="https://unityroom.com/games/handtactics" target="_blank" rel="noopener">Unityroom</a> で公開しています。
+実際のビルドは <a href="https://unityroom.com/games/handtactics" target="_blank" rel="noopener">Unityroom</a> で公開しています（ブラウザで新しいタブを開きたい場合は右クリックや中クリックでお願いします）。
 
 ## 確認いただきたいポイント
 
