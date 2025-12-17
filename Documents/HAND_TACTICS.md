@@ -24,15 +24,14 @@
 *   
   **3\. 画面仕様詳細・オブジェクト構造**  
   * 3.1. シーン一覧
-  * 3.2. 画面遷移図  
-  * 3.3. 各画面の詳細レイアウト  
-    * 3.3.1 タイトル (Scene: Start)
-    * 3.3.2 ホーム (Scene: Home)
-    * 3.3.3 デッキ一覧(Scene: DeckList)
-    * 3.3.4 デッキ構築 (Scene: Deck)
-    * 3.3.5 対戦デッキ選択 (Scene: DeckSelect)
-    * 3.3.6 マッチ選択 (Scene: Matching)
-    * 3.3.7 バトル (Scene: Battle)
+  * 3.2. 各画面の詳細レイアウト  
+    * 3.2.1 タイトル (Scene: Start)
+    * 3.2.2 ホーム (Scene: Home)
+    * 3.2.3 デッキ一覧(Scene: DeckList)
+    * 3.2.4 デッキ構築 (Scene: Deck)
+    * 3.2.5 対戦デッキ選択 (Scene: DeckSelect)
+    * 3.2.6 マッチ選択 (Scene: Matching)
+    * 3.2.7 バトル (Scene: Battle)
 *   
   **4\. アセット・データリスト**  
   * 4.1. カード構造 (Prefab)  
@@ -107,7 +106,7 @@ graph TD
     Battle --> |Home| Home;
 ```
 
-#### **2.1.1 バトルのゲームフロー**
+#### **2.1.2 バトルのゲームフロー**
 
 ```mermaid
 graph TD
@@ -188,11 +187,11 @@ graph TD
   * マッチ選択 **(Matching)**
   * バトル **(Battle)**
 
-### **3.2. 画面遷移図**
 
-### **3.3. 各画面の詳細レイアウト**
 
-#### **3.3.1. タイトル (Scene: Start)**
+### **3.2. 各画面の詳細レイアウト**
+
+#### **3.2.1. タイトル (Scene: Start)**
 
 * **背景:** 赤・緑・青の3色パネルを背景に、中央に「HAND TACTICS」のロゴ。  
 * **演出:** ✊✌️✋の手のイラストがロゴと共に回転。  
@@ -203,7 +202,7 @@ graph TD
   
 ![alt text](Images/start.png)
 
-#### **3.3.2. ホーム (Scene: Home)**
+#### **3.2.2. ホーム (Scene: Home)**
 
 * **背景:** ダークブルーの背景 (bg_menu) に、カードが上から降り注ぐ演出 (MenuCardSpawner)。  
 * **UI構成:** 画面下部に大きなボタンを配置。  
@@ -214,7 +213,7 @@ graph TD
 ![alt text](Images/home.png)
 ![alt text](Images/move_home.png)
 
-#### **3.3.3. デッキ一覧(Scene: DeckList)**
+#### **3.2.3. デッキ一覧(Scene: DeckList)**
 
 * **レイアウト:** 中央に縦並びのボタンリスト。  
   * **[Defaultを編集] ボタン** : Defaultの情報をもってDeckへシーン遷移。
@@ -225,7 +224,7 @@ graph TD
   
 ![alt text](Images/DeckList.png)
 
-#### **3.3.4. デッキ構築 (Scene: Deck)**
+#### **3.2.4. デッキ構築 (Scene: Deck)**
 
 * **レイアウト:**  
   * **上段 (Deck):** 編集中のデッキ内容。2列×8枚＝16枚が表示される（**[左右の矢印] ボタン**でページ切り替え）。  
@@ -239,7 +238,7 @@ graph TD
 ![alt text](Images/Deck.png)
 ![alt text](Images/Deck2.png)
 
-#### **3.3.5. 対戦デッキ選択 (Scene: DeckSelect)**
+#### **3.2.5. 対戦デッキ選択 (Scene: DeckSelect)**
 
 * **レイアウト:** 中央に縦並びのボタンリスト。  
   * **[Defaultでバトル] ボタン** : Defaultの情報をもってBattleへシーン遷移。
@@ -252,7 +251,7 @@ graph TD
 ![alt text](Images/DeckSelect.png)
 ![alt text](Images/DeckSelect2.png)
 
-#### **3.3.6. マッチ選択 (Scene: Matching)**
+#### **3.2.6. マッチ選択 (Scene: Matching)**
 
 * **レイアウト:** 
   *  **[オンライン対戦する] ボタン** : サーバーに接続し、マッチング開始、マッチング中の表記に変更。マッチングしたら、Battleシーンへ遷移。 
@@ -263,7 +262,7 @@ graph TD
 ![alt text](Images/Matching.png)
 ![alt text](Images/in_matching.png)
 
-#### **3.3.7. バトル (Scene: Battle)**
+#### **3.2.7. バトル (Scene: Battle)**
 
 * **全体レイアウト:**  
   * **フィールド:** 画面中央。カードを配置するプレイエリア。
